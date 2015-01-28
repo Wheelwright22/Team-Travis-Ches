@@ -5,6 +5,7 @@
  */
 package thepacific;
 
+import Model.Map;
 import Model.Player;
 
 /**
@@ -25,6 +26,13 @@ public class ThePacific {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+        
+        Map mapOne = new Map();
+        mapOne.setRowCount(5);
+        mapOne.setColumnCount(5);
+        
+        String mapInfo = mapOne.toString();
+        System.out.println(mapInfo);
     }
     
 }
