@@ -5,6 +5,7 @@
  */
 package thepacific;
 
+import Model.Inventory;
 import Model.Map;
 import Model.Player;
 
@@ -33,6 +34,15 @@ public class ThePacific {
         
         String mapInfo = mapOne.toString();
         System.out.println(mapInfo);
+        
+        Inventory InventoryOne = new Inventory();
+        
+        InventoryOne.setItemType("Tool");
+        InventoryOne.setQuantity(5);
+        InventoryOne.setMaxWeight(100);
+        
+        String InventoryInfo = InventoryOne.toString();
+        System.out.println(InventoryInfo);
     }
     
 }
