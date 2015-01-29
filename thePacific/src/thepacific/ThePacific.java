@@ -5,6 +5,9 @@
  */
 package thepacific;
 
+import Model.Inventory;
+import Model.Jeep;
+import Model.Map;
 import Model.Player;
 
 /**
@@ -25,6 +28,33 @@ public class ThePacific {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+        
+  // map test 
+        Map mapOne = new Map();
+        mapOne.setRowCount(5);
+        mapOne.setColumnCount(5);
+        
+        String mapInfo = mapOne.toString();
+        System.out.println(mapInfo);
+       
+//Inventory 
+        Inventory InventoryOne = new Inventory();
+        
+        InventoryOne.setItemType("Tool");
+        InventoryOne.setQuantity(5);
+        InventoryOne.setMaxWeight(100);
+        
+        String InventoryInfo = InventoryOne.toString();
+        System.out.println(InventoryInfo);
+ //Jeep class test
+        Jeep JeepOne = new Jeep();
+        JeepOne.setMaxWeight(10);
+        JeepOne.setCurrentWeight(5);
+        
+        String JeepInfo = JeepOne.toString();
+        System.out.println(JeepInfo);
+        
+        
     }
     
 }
