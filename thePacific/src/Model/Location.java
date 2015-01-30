@@ -40,27 +40,28 @@ public class Location implements Serializable{
         this.column = column;
     }
 
-    public boolean isVisted() {
+    public boolean isVisited() {
         return visited;
     }
 
-    public void setVisted(boolean visited) {
+    public void setVisited(boolean visited) {
         this.visited = visited;
     }
-    // toString
+    //tostring
 
     @Override
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
     }
-    // equals and hashcode
+    
+    //equals and hashcode
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + this.row;
-        hash = 89 * hash + this.column;
-        hash = 89 * hash + (this.visited ? 1 : 0);
+        int hash = 5;
+        hash = 79 * hash + this.row;
+        hash = 79 * hash + this.column;
+        hash = 79 * hash + (this.visited ? 1 : 0);
         return hash;
     }
 
@@ -84,5 +85,7 @@ public class Location implements Serializable{
         }
         return true;
     }
+    
+
     
 }
