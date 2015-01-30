@@ -10,6 +10,7 @@ import Model.Game;
 import Model.Inventory;
 import Model.Items;
 import Model.Jeep;
+import Model.Location;
 import Model.Map;
 import Model.Player;
 import Model.Scene;
@@ -87,10 +88,6 @@ public class ThePacific {
         
         String GameInfo= GameOne.toString();
         System.out.println(GameInfo);
-  //Location Testing
-        Location LocationOne= new Location();
-        Location.setRow(5)
-        Location.set
         
     }
     
