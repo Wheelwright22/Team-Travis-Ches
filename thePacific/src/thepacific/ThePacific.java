@@ -5,7 +5,9 @@
  */
 package thepacific;
 
+import Model.Actor;
 import Model.Inventory;
+import Model.Items;
 import Model.Jeep;
 import Model.Map;
 import Model.Player;
@@ -53,6 +55,20 @@ public class ThePacific {
         
         String JeepInfo = JeepOne.toString();
         System.out.println(JeepInfo);
+ //Actor test
+        Actor ActorOne = new Actor();
+        ActorOne.setName("Bob Marley");
+        ActorOne.setType("RobCop");
+        
+        String ActorInfo = ActorOne.toString();
+        System.out.println(ActorInfo);
+  //Items test
+        Items ItemsOne = new Items();
+        ItemsOne.setType("Chain Saw");
+        ItemsOne.setDecription("used to cut trees.");
+        
+        String ItemsInfo= ItemsOne.toString();
+        System.out.println(ItemsInfo);
         
         
     }
