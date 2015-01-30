@@ -16,7 +16,7 @@ public class Location implements Serializable{
 //class instance variables
     private int row;
     private int column;
-    private boolean visted;
+    private boolean visited;
     //constructor
 
     public Location() {
@@ -41,17 +41,17 @@ public class Location implements Serializable{
     }
 
     public boolean isVisted() {
-        return visted;
+        return visited;
     }
 
-    public void setVisted(boolean visted) {
-        this.visted = visted;
+    public void setVisted(boolean visited) {
+        this.visited = visited;
     }
     // toString
 
     @Override
     public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + ", visted=" + visted + '}';
+        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
     }
     // equals and hashcode
 
@@ -60,7 +60,7 @@ public class Location implements Serializable{
         int hash = 3;
         hash = 89 * hash + this.row;
         hash = 89 * hash + this.column;
-        hash = 89 * hash + (this.visted ? 1 : 0);
+        hash = 89 * hash + (this.visited ? 1 : 0);
         return hash;
     }
 
@@ -79,7 +79,7 @@ public class Location implements Serializable{
         if (this.column != other.column) {
             return false;
         }
-        if (this.visted != other.visted) {
+        if (this.visited != other.visited) {
             return false;
         }
         return true;
