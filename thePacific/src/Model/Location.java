@@ -14,27 +14,29 @@ import java.util.Objects;
  */
 public class Location implements Serializable{
 //class instance variables
-    private String row;
-    private String column;
+    private Float row;
+    private Float column;
     private String visited;
-//Constructor
+    //constructor
+
     public Location() {
     }
     
-    //Getter & Setter
-    public String getRow() {
+    //getter and setter
+
+    public Float getRow() {
         return row;
     }
 
-    public void setRow(String row) {
+    public void setRow(Float row) {
         this.row = row;
     }
 
-    public String getColumn() {
+    public Float getColumn() {
         return column;
     }
 
-    public void setColumn(String column) {
+    public void setColumn(Float column) {
         this.column = column;
     }
 
@@ -45,18 +47,20 @@ public class Location implements Serializable{
     public void setVisited(String visited) {
         this.visited = visited;
     }
-//toString
+    // toString
+
     @Override
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
     }
-//Equals & Hashcode
+    //equals and hashcode
+
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.row);
-        hash = 53 * hash + Objects.hashCode(this.column);
-        hash = 53 * hash + Objects.hashCode(this.visited);
+        int hash = 5;
+        hash = 13 * hash + Objects.hashCode(this.row);
+        hash = 13 * hash + Objects.hashCode(this.column);
+        hash = 13 * hash + Objects.hashCode(this.visited);
         return hash;
     }
 
@@ -80,6 +84,7 @@ public class Location implements Serializable{
         }
         return true;
     }
+    
 
     
 }

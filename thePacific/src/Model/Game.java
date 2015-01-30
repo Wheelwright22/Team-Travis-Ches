@@ -5,13 +5,14 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Ches
  */
-public class Game {
+public class Game implements Serializable {
     private String winner;
     private double time;
     
