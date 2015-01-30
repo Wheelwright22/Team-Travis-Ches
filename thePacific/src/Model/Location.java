@@ -14,9 +14,9 @@ import java.util.Objects;
  */
 public class Location implements Serializable{
 //class instance variables
-    private Float row;
-    private Float column;
-    private String visited;
+    private int row;
+    private int column;
+    private boolean visted;
     //constructor
 
     public Location() {
@@ -24,43 +24,43 @@ public class Location implements Serializable{
     
     //getter and setter
 
-    public Float getRow() {
+    public int getRow() {
         return row;
     }
 
-    public void setRow(Float row) {
+    public void setRow(int row) {
         this.row = row;
     }
 
-    public Float getColumn() {
+    public int getColumn() {
         return column;
     }
 
-    public void setColumn(Float column) {
+    public void setColumn(int column) {
         this.column = column;
     }
 
-    public String getVisited() {
-        return visited;
+    public boolean isVisted() {
+        return visted;
     }
 
-    public void setVisited(String visited) {
-        this.visited = visited;
+    public void setVisted(boolean visted) {
+        this.visted = visted;
     }
     // toString
 
     @Override
     public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
+        return "Location{" + "row=" + row + ", column=" + column + ", visted=" + visted + '}';
     }
-    //equals and hashcode
+    // equals and hashcode
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 13 * hash + Objects.hashCode(this.row);
-        hash = 13 * hash + Objects.hashCode(this.column);
-        hash = 13 * hash + Objects.hashCode(this.visited);
+        int hash = 3;
+        hash = 89 * hash + this.row;
+        hash = 89 * hash + this.column;
+        hash = 89 * hash + (this.visted ? 1 : 0);
         return hash;
     }
 
@@ -73,18 +73,16 @@ public class Location implements Serializable{
             return false;
         }
         final Location other = (Location) obj;
-        if (!Objects.equals(this.row, other.row)) {
+        if (this.row != other.row) {
             return false;
         }
-        if (!Objects.equals(this.column, other.column)) {
+        if (this.column != other.column) {
             return false;
         }
-        if (!Objects.equals(this.visited, other.visited)) {
+        if (this.visted != other.visted) {
             return false;
         }
         return true;
     }
-    
-
     
 }
