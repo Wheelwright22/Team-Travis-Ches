@@ -88,6 +88,14 @@ public class ThePacific {
         
         String GameInfo= GameOne.toString();
         System.out.println(GameInfo);
+  //Location Testing
+        Location LocationOne= new Location();
+        LocationOne.setColumn(1);
+        LocationOne.setRow(5);
+        LocationOne.setVisited(true);
+                
+        String LocationInfo= LocationOne.toString();
+        System.out.println(LocationInfo);
     }
     
 }
