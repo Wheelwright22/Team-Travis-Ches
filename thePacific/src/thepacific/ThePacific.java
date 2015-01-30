@@ -11,6 +11,7 @@ import Model.Items;
 import Model.Jeep;
 import Model.Map;
 import Model.Player;
+import Model.Scene;
 
 /**
  *
@@ -69,8 +70,15 @@ public class ThePacific {
         
         String ItemsInfo= ItemsOne.toString();
         System.out.println(ItemsInfo);
-  //
-  
+  //scene testing
+            Scene SceneOne= new Scene();
+            SceneOne.setType("The Hatch");
+            SceneOne.setDescription("In this secret location, you will find the bomb.");
+            SceneOne.setTravelTime(8.0);
+            SceneOne.setSymbol("$$$");
+            
+            String SceneInfo= SceneOne.toString();
+            System.out.println(SceneInfo);
         
      
     }
