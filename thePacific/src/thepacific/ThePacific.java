@@ -6,6 +6,7 @@
 package thepacific;
 
 import Model.Actor;
+import Model.Game;
 import Model.Inventory;
 import Model.Items;
 import Model.Jeep;
@@ -79,7 +80,14 @@ public class ThePacific {
             
             String SceneInfo= SceneOne.toString();
             System.out.println(SceneInfo);
+  
+  //game testing
+        Game GameOne= new Game();
+        GameOne.setTime(8.00);
+        GameOne.setWinner("Travis Wheelwright");
         
+        String GameInfo= GameOne.toString();
+        System.out.println(GameInfo);
      
     }
     
