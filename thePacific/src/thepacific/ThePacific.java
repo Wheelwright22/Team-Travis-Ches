@@ -29,7 +29,7 @@ public class ThePacific {
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
         
-  // map test 
+// map test 
         Map mapOne = new Map();
         mapOne.setRowCount(5);
         mapOne.setColumnCount(5);
