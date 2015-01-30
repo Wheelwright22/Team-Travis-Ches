@@ -5,13 +5,14 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Ches
  */
-public class Scene {
+public class Scene implements Serializable {
     private String type;
     private String symbol;
     private String description;
