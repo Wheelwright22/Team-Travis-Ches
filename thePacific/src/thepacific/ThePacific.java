@@ -80,7 +80,6 @@ public class ThePacific {
             
             String SceneInfo= SceneOne.toString();
             System.out.println(SceneInfo);
-  
   //game testing
         Game GameOne= new Game();
         GameOne.setTime(8.00);
@@ -88,7 +87,11 @@ public class ThePacific {
         
         String GameInfo= GameOne.toString();
         System.out.println(GameInfo);
-     
+  //Location Testing
+        Location LocationOne= new Location();
+        Location.setRow(5)
+        Location.set
+        
     }
     
 }
