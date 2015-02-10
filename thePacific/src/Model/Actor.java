@@ -17,11 +17,14 @@ public class Actor implements Serializable{
 
     private String Name;
     private String Type;
-//Constructor
+    private Double coordinates;
+    // constructor
+
     public Actor() {
     }
+    
+    //getter and setter
 
-//Getter & Setter
     public String getName() {
         return Name;
     }
@@ -37,17 +40,28 @@ public class Actor implements Serializable{
     public void setType(String Type) {
         this.Type = Type;
     }
-//tostring
+
+    public Double getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(Double coordinates) {
+        this.coordinates = coordinates;
+    }
+    //toString
+
     @Override
     public String toString() {
-        return "Actor{" + "Name=" + Name + ", Type=" + Type + '}';
+        return "Actor{" + "Name=" + Name + ", Type=" + Type + ", coordinates=" + coordinates + '}';
     }
-//equals & hashcode
+    //equals and hashcode
+
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 89 * hash + Objects.hashCode(this.Name);
-        hash = 89 * hash + Objects.hashCode(this.Type);
+        hash = 73 * hash + Objects.hashCode(this.Name);
+        hash = 73 * hash + Objects.hashCode(this.Type);
+        hash = 73 * hash + Objects.hashCode(this.coordinates);
         return hash;
     }
 
@@ -66,11 +80,10 @@ public class Actor implements Serializable{
         if (!Objects.equals(this.Type, other.Type)) {
             return false;
         }
+        if (!Objects.equals(this.coordinates, other.coordinates)) {
+            return false;
+        }
         return true;
     }
-    
-
-    
-
     
 }

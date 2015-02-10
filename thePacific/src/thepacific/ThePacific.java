@@ -62,6 +62,7 @@ public class ThePacific {
         Actor ActorOne = new Actor();
         ActorOne.setName("Bob Marley");
         ActorOne.setType("RobCop");
+        ActorOne.setCoordinates(5.5);
         
         String ActorInfo = ActorOne.toString();
         System.out.println(ActorInfo);
