@@ -42,8 +42,77 @@ public class GameControlTest {
         double result = instance.calcVolumeOfWaterDrum(height, radius);
         
         //Compare Expected Return Value With Actual Value Returned
-        assertEquals(expResult, result, 0.001);
+        assertEquals(expResult, result, 0.0001);
+        
+ 
+        /*******************************
+         * Test Case #2
+         *******************************/
+        System.out.println("\t Test Case #2");
+        
+        // Input Values For Test Case #2
+        height = -9.0;
+        radius = 2.0;
+        
+        expResult = -1;    //expected output returned value
+        
+        // Call Function To Run Test
+        result = instance.calcVolumeOfWaterDrum(height, radius);
+        
+        //Compare Expected Return Value With Actual Value Returned
+        assertEquals(expResult, result, 0.0001);
+        
+        /*******************************
+         * Test Case #3
+         *******************************/
+        System.out.println("\t Test Case #3");
+        
+        // Input Values For Test Case #3
+        height = 9.0;
+        radius = -2.0;
+        
+        expResult = -1;    //expected output returned value
+        
+        // Call Function To Run Test
+        result = instance.calcVolumeOfWaterDrum(height, radius);
+        
+        //Compare Expected Return Value With Actual Value Returned
+        assertEquals(expResult, result, 0.0001);
+        
+        /*******************************
+         * Test Case #4
+         *******************************/
+        System.out.println("\t Test Case #4");
+        
+        // Input Values For Test Case #4
+        height = 'a';
+        radius = 2.0;
+        
+        expResult = -1;    //expected output returned value
+        
+        // Call Function To Run Test
+        result = instance.calcVolumeOfWaterDrum(height, radius);
+        
+        //Compare Expected Return Value With Actual Value Returned
+        assertEquals(expResult, result, 0.0001);
+        
+        /*******************************
+         * Test Case #5
+         *******************************/
+        System.out.println("\t Test Case #5");
+        
+        // Input Values For Test Case #5
+        height = 9.0;
+        radius = 'z';
+        
+        expResult = -1;    //expected output returned value
+        
+        // Call Function To Run Test
+        result = instance.calcVolumeOfWaterDrum(height, radius);
+        
+        //Compare Expected Return Value With Actual Value Returned
+        assertEquals(expResult, result, 0.0001);
        
     }
-    
-}
+       
+    }
