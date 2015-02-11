@@ -27,8 +27,8 @@ public class InventoryControl {
 		if (radius == Double.NaN){
 		return -1;
                 }
-               double pi= Math.PI;
-		double Volume = (4/3)*pi* Math.pow(radius,3)* numberOfBombs ;
+                double pi= Math.PI;
+		double Volume = (4/3)*pi* numberOfBombs * Math.pow(radius,3);
 	
 		return Volume;
   }

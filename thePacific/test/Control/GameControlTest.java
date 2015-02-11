@@ -17,20 +17,33 @@ public class GameControlTest {
     public GameControlTest() {
     }
 
-    /**
-     * Test of calcVolumeOfWaterDrum method, of class GameControl.
-     */
+
+    
     @Test
     public void testCalcVolumeOfWaterDrum() {
-        System.out.println("calcVolumeOfWaterDrum");
-        double height = 0.0;
-        double radius = 0.0;
+        
+        System.out.println("CalcVolumeOfWaterDrum");
+        
+        /*******************************
+         * Test Case #1
+         *******************************/
+        System.out.println("\t Test Case #1");
+        
+        // Input Values For Test Case #1
+        double height = 9.0;
+        double radius = 2.0;
+        
+        double expResult = 113.0973355292325566;    //expected output returned value
+        
+        // Create Instance Of GameControl Class
         GameControl instance = new GameControl();
-        double expResult = 0.0;
+        
+        // Call Function To Run Test
         double result = instance.calcVolumeOfWaterDrum(height, radius);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        //Compare Expected Return Value With Actual Value Returned
+        assertEquals(expResult, result, 0.001);
+       
     }
     
 }
