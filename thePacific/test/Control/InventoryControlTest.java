@@ -23,17 +23,35 @@ public class InventoryControlTest {
     @Test
     public void testCalcVolumeOfBombs() {
         System.out.println("calcVolumeOfBombs");
-        //test case 1
-        System.out.println("\tTest Case #1");
-        
+        // Test Case #1/ 
+        System.out.println("\tTest case #1");
         double radius = 3.0;
         double numberOfBombs = 2.0;
         InventoryControl instance = new InventoryControl();
-        double expResult = 226.8;
+        double expResult = 226.19;
         double result = instance.calcVolumeOfBombs(radius, numberOfBombs);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result, 0.03);
+        
+         // Test Case 2/ 
+        System.out.println("\tTest case #2");
+        radius = -3.0;
+        numberOfBombs = 2.0;
+     
+        expResult = -1.0;
+        result = instance.calcVolumeOfBombs(radius, numberOfBombs);
+        assertEquals(expResult, result, 0.03);
+      
+          // Test Case 3/ 
+        System.out.println("\tTest case #3");
+        radius = 3.0;
+        numberOfBombs = -2.0;
+     
+        expResult = -1.0;
+        result = instance.calcVolumeOfBombs(radius, numberOfBombs);
+        assertEquals(expResult, result, 0.03);
+        
+    
+      
     }
     
 }
