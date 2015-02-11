@@ -28,7 +28,7 @@ public class InventoryControl {
 		return -1;
                 }
                double pi= Math.PI;
-		double Volume = (4/3)*pi* Math.pow(radius,3)* numberOfBombs ;
+		double Volume = ((4/3)*pi* (Math.pow(radius,3)))* numberOfBombs ;
 	
 		return Volume;
   }

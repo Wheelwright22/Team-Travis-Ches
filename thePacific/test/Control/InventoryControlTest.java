@@ -28,10 +28,13 @@ public class InventoryControlTest {
         
         double radius = 3.0;
         double numberOfBombs = 2.0;
+        double expResult = 169.6460;
+        //create instance of inventory control
         InventoryControl instance = new InventoryControl();
-        double expResult = 226.8;
+        // call function to run test
         double result = instance.calcVolumeOfBombs(radius, numberOfBombs);
-        assertEquals(expResult, result, 0.0);
+        //compare results of expected and actual values
+        assertEquals(expResult, result, 0.0001);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
