@@ -50,8 +50,25 @@ public class InventoryControlTest {
         result = instance.calcVolumeOfBombs(radius, numberOfBombs);
         assertEquals(expResult, result, 0.03);
         
-    
-      
+          // Test Case 4/ 
+        System.out.println("\tTest case #4");
+        radius = 'a';
+        numberOfBombs = 2.0;
+     
+        expResult = -1.0;
+        result = instance.calcVolumeOfBombs(radius, numberOfBombs);
+        assertEquals(expResult, result, 0.03);
+        
+             // Test Case 5/ 
+        System.out.println("\tTest case #5");
+        radius = 3.0;
+        numberOfBombs = 'a';
+  
+        expResult = -1.0;
+        result = instance.calcVolumeOfBombs(radius, numberOfBombs);
+        assertEquals(expResult, result, 0.03);
+        
+        
     }
     
 }

@@ -112,6 +112,40 @@ public class GameControlTest {
         
         //Compare Expected Return Value With Actual Value Returned
         assertEquals(expResult, result, 0.0001);
+        
+        /*******************************
+         * Test Case #6
+         *******************************/
+        System.out.println("\t Test Case #6");
+        
+        // Input Values For Test Case #6
+        height = 9.0;
+        radius = 0.0;
+        
+        expResult = -1;    //expected output returned value
+        
+        // Call Function To Run Test
+        result = instance.calcVolumeOfWaterDrum(height, radius);
+        
+        //Compare Expected Return Value With Actual Value Returned
+        assertEquals(expResult, result, 0.0001);
+        
+        /*******************************
+         * Test Case #7
+         *******************************/
+        System.out.println("\t Test Case #7");
+        
+        // Input Values For Test Case #7
+        height = 9.0;
+        radius = 0.0;
+        
+        expResult = -1;    //expected output returned value
+        
+        // Call Function To Run Test
+        result = instance.calcVolumeOfWaterDrum(height, radius);
+        
+        //Compare Expected Return Value With Actual Value Returned
+        assertEquals(expResult, result, 0.0001);
        
     }
        
