@@ -37,7 +37,7 @@ public class GameControl {
             return -1;
         }
 		
-        double volume = (Math.PI * Math.pow(radius,2) * height);
+        double volume= (Math.PI * Math.pow(radius,2) * height);
         
         return volume;
 
