@@ -28,6 +28,31 @@ public class StartProgramView {
 
     private void displayBanner() {
         System.out.println("\n\n**********************************************");
+        
+        System.out.println("*                                            *"
+                       + "\n* Welcome to the remote island of Shikoku.   *"
+                       + "\n* You have been assigned to a small team of  *"
+                       + "\n* specially trained marines to investigate   *" 
+                       + "\n* reports of bizarre occurrences. People are *"
+                       + "\n* disappearing and nobody has answers.       *");
+                
+        System.out.println("*                                            *"
+                       + "\n* You and your team will search the island,  *"
+                       + "\n* looking for clues on what is causing panic.*"
+                       + "\n* You will need to complete various special  *"
+                       + "\n* activities; helping the locals, collecting *"
+                       + "\n* tools and supplies, building weapons, etc. *"
+                       + "\n* Your mission is to find Shikoku's secret,  *"
+                       + "\n* and stop the madness.                      *");                        
+                                                    
+
+        System.out.println("*                                            *"
+                       + "\n* Good luck soldier, you will need it.       *"
+                       + "\n* Don't let the island change you.           *"
+                       + "\n*                                            *");
+        
+        System.out.println("**********************************************");
+        
     }
 
     private String getPlayersName() {
