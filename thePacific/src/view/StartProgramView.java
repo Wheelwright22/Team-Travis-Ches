@@ -64,7 +64,7 @@ public class StartProgramView {
 
         while (!valid) { // while valid is not yet retrieved.
             //prompt for the players name
-            System.out.println("Enter Your Name");
+            System.out.println("Please Enter Your Name");
 
             //get the name from the keyboard
             playersName = keyboard.nextLine();
@@ -72,7 +72,7 @@ public class StartProgramView {
 
             //if the name is valid
             if (playersName.length() < 2) {
-                System.out.println("Name length must be longer then 2 characters");
+                System.out.println("Name Must Be Longer Than 2 Characters");
                 continue; // repeat again
             }
 
