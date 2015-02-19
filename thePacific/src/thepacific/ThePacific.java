@@ -20,6 +20,9 @@ public class ThePacific {
         // create and test the startProgram 
         StartProgramView StartProgramView = new StartProgramView();
         StartProgramView.startProgram();
+        
+        //get players name function test
+//        StartProgramView.getPlayersName();
     }
     
 }
