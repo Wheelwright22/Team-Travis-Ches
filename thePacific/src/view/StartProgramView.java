@@ -78,15 +78,14 @@ public class StartProgramView {
             playersName = keyboard.nextLine();
             playersName = playersName.trim();
 
-            //if the name is valid
+            //if the name is invalid (If it is less than 2 characters)
             if (playersName.length() < 2) {
                 System.out.println("Name Must Be Longer Than 2 Characters");
                 continue; // repeat again
             }
-
             break; // get out of the repetition 
-
         }
+        
         return playersName; //return the players name
     }
 
