@@ -5,6 +5,8 @@
  */
 package view;
 
+import Control.ProgramControl;
+import Model.Player;
 import java.util.Scanner;
 
 /**
@@ -17,14 +19,20 @@ public class StartProgramView {
     }
 
     public void startProgram() {
-        //Display the banner screen
+        
+        // Display the banner screen
         this.displayBanner();
-        //Get the players name
+        
+        // Get the player's name
         String playersName = this.getPlayersName();
-    //Create a new player
-        //DISPLAY a customized welcome message
-        //  DISPLAY the main menu
-        //END 
+        
+        // Create and save the player object
+        Player player = ProgramControl.createPlayer(playersName);
+        
+        // Display a personalized welcome message
+        this.displayWelcomeMessage(player);
+        
+        // Display the main menu
 
     }
 
@@ -80,6 +88,14 @@ public class StartProgramView {
 
         }
         return playersName; //return the players name
+    }
+
+    public void displayWelcomeMessage(Player player) {
+        System.out.println("\n\n=============================================");
+        System.out.println("\tWelcome to Shikoku " + player.getName());
+        System.out.println("\tBe Adventurous, Be Brave, and Stay Safe.");
+        System.out.println("\t幸運を祈ります! (Good Luck!)");
+        System.out.println("============================================");
     }
 
 }
