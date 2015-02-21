@@ -5,6 +5,8 @@
  */
 package thepacific;
 
+import Model.Game;
+import Model.Player;
 import view.StartProgramView;
 
 /**
@@ -12,6 +14,24 @@ import view.StartProgramView;
  * @author Ches
  */
 public class ThePacific {
+    private static Game currentGame = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        ThePacific.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        ThePacific.player = player;
+    }
+    private static Player player = null;
 
     /**
      * @param args the command line arguments

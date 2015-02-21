@@ -6,16 +6,25 @@
 package Control;
 
 import Model.Player;
+import thepacific.ThePacific;
 
 /**
  *
+<<<<<<< HEAD
  * @author Ches
  */
 public class ProgramControl {
-
-    public static Player createPlayer(String playersName) {
-        System.out.println("\n**** Create PLayer Function called***");
-        return null;
-        }
     
+   
+
+    public static Player createPlayer(String name) {
+       if (name == null){
+           return null;
+       }
+       Player player = new Player();
+       player.setName(name);
+       ThePacific.setPlayer(player); // save the player
+       return player;
+        }
+
 }
