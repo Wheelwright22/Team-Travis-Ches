@@ -26,5 +26,4 @@ public class ProgramControl {
        ThePacific.setPlayer(player); // save the player
        return player;
         }
-
 }
