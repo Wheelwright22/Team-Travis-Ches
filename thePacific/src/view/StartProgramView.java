@@ -25,6 +25,7 @@ public class StartProgramView {
         
         // Get the player's name
         String playersName = this.getPlayersName();
+//<<<<<<< HEAD
     //Create and save the player object
         Player player = ProgramControl.createPlayer(playersName);
         // Display a personalized welcome message
@@ -34,6 +35,16 @@ public class StartProgramView {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.displayMenu();
        
+=======
+        
+        // Create and save the player object
+        Player player = ProgramControl.createPlayer(playersName);
+        
+        // Display a personalized welcome message
+        this.displayWelcomeMessage(player);
+        
+        // Display the main menu
+>>>>>>> origin/master
 
     }
 
