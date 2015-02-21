@@ -5,6 +5,8 @@
  */
 package view;
 
+import Control.ProgramControl;
+import Model.Player;
 import java.util.Scanner;
 
 /**
@@ -21,7 +23,8 @@ public class StartProgramView {
         this.displayBanner();
         //Get the players name
         String playersName = this.getPlayersName();
-    //Create a new player
+    //Create and save the player object
+        Player player = ProgramControl.createPlayer(playersName);
         //DISPLAY a customized welcome message
         //  DISPLAY the main menu
         //END 
