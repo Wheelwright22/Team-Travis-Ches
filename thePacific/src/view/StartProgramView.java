@@ -25,28 +25,18 @@ public class StartProgramView {
         
         // Get the player's name
         String playersName = this.getPlayersName();
-//<<<<<<< HEAD
-    //Create and save the player object
-        Player player = ProgramControl.createPlayer(playersName);
-        // Display a personalized welcome message
-        this.displayWelcomeMessage(player);
-        
-        // Display the main menu
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenu();
-       
-=======
-        
-        // Create and save the player object
-        Player player = ProgramControl.createPlayer(playersName);
-        
-        // Display a personalized welcome message
-        this.displayWelcomeMessage(player);
-        
-        // Display the main menu
->>>>>>> origin/master
 
-    }
+         //Create and save the player object
+        Player player = ProgramControl.createPlayer(playersName);
+        
+        // Display a personalized welcome message
+        this.displayWelcomeMessage(player);
+        
+        //Display the Main Menu
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.displayMenu();
+
+        }
 
     public void displayBanner() {
         System.out.println("\n\n**********************************************");
@@ -96,11 +86,16 @@ public class StartProgramView {
                 continue; // repeat again
             }
             break; // get out of the repetition 
-        }
+            
+    }
         
-        return playersName; //return the players name
+    return playersName; //return the players name
     }
 
+    /**
+     *
+     * @param player
+     */
     public void displayWelcomeMessage(Player player) {
         System.out.println("\n\n=============================================");
         System.out.println("\tWelcome to Shikoku " + player.getName());
@@ -108,5 +103,6 @@ public class StartProgramView {
         System.out.println("\t幸運を祈ります! (Good Luck!)");
         System.out.println("============================================");
     }
+    
 
 }

@@ -3,18 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Control;
-
-import Model.Player;
+package view;
 
 /**
  *
  * @author travi_000
  */
-public class GameControl {
-
-    public static void createNewGame(Player player) {
-        System.out.println("\n*** createNewGame stub function called ***");
+public class GameMenuView {
+    
+    void displayMenu() {
+        System.out.println("\n*** displayMenu Stub function called *** ");
     }
-
 }

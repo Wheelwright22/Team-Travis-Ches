@@ -5,6 +5,7 @@
  */
 package view;
 
+import Control.GameControl;
 import java.util.Scanner;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Scanner;
 public class MainMenuView {
     private final String MENU = "\n"
             +"\n-------------------------------------- "
-            +"\n Main Menu                             "
+            +"\n              Main Menu                "
             +"\n ------------------------------------- "
             +"\nG-Start Game                           "
             +"\nH-Help                                 "
@@ -58,23 +59,32 @@ public class MainMenuView {
        default:
            System.out.println("\n*** Invalid Selection *** Try Again");
            break;
-       
    }
 }
 
     private void startNewGame() {
-        System.out.println("\n Called StartNewGame function");
+        //Create New Game
+        GameControl.createNewGame(thePacific.getPlayer());
+        
+                //display the game
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
+    
     }
 
     private void startExistingGame() {
-       System.out.println("\n Called StartNExistingGame function");}
-
-    private void displayHelpMenu() {
-         System.out.println("\n Called displayHelpMenu function");}
+        System.out.println("\n startExistingGame function called ***");
+    }
 
     private void saveGame() {
-      System.out.println("\n Called Save Game function");
+        System.out.println("\n Called Save Game function ***");
     }
+    
+    private void displayHelpMenu() {
+        System.out.println("\n displayHelpMenu function called ***");
+    }
+
+
 
     private String getInput() {
         boolean valid = false; // indicates if the name is retrieved
