@@ -7,6 +7,7 @@ package view;
 
 import Control.GameControl;
 import java.util.Scanner;
+import thepacific.ThePacific;
 
 /**
  *
@@ -64,7 +65,7 @@ public class MainMenuView {
 
     private void startNewGame() {
         //Create New Game
-        GameControl.createNewGame(thePacific.getPlayer());
+        GameControl.createNewGame(ThePacific.getPlayer());
         
                 //display the game
         GameMenuView gameMenu = new GameMenuView();
