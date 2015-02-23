@@ -17,4 +17,16 @@ public class GameControl {
         System.out.println("\n*** createNewGame stub function called ***");
     }
 
+    double calcVolumeOfWaterDrum(double height, double radius) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    double calcVolumeOfWaterDrum(double height, double radius) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    double calcVolumeOfWaterDrum(double height, double radius) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
