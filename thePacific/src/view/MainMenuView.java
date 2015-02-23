@@ -18,6 +18,7 @@ public class MainMenuView {
             +"\n-------------------------------------- "
             +"\n              Main Menu                "
             +"\n ------------------------------------- "
+            +"\nN-New Game"
             +"\nG-Start Game                           "
             +"\nH-Help                                 "
             +"\nS-Save Game                            "
@@ -88,27 +89,27 @@ public class MainMenuView {
 
 
     private String getInput() {
-        boolean valid = false; // indicates if the name is retrieved
+          boolean valid = false; // indicates if the name is retrieved
         String input = null;
         Scanner keyboard = new Scanner(System.in);//keyboard input stream
 
         while (!valid) { // while valid is not yet retrieved.
             //prompt for the players name
-            System.out.println("PLease Make Selection");
+            System.out.println("Please Make Your Selection");
 
             //get the name from the keyboard
             input = keyboard.nextLine();
             input = input.trim();
 
             //if the name is invalid (If it is less than 2 characters)
-            if (input.length() > 1) {
-                System.out.println("One Letter Capitilized");
+            if (input.length() != 1) {
+                System.out.println("One Letter Capitalized");
                 continue; // repeat again
             }
             break; // get out of the repetition 
-    }
- return input;
     } 
+        return input;
+    }
 }
 
 

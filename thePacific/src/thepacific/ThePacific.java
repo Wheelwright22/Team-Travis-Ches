@@ -14,15 +14,8 @@ import view.StartProgramView;
  * @author Ches
  */
 public class ThePacific {
-    private static Game currentGame = null;
-
-    public static Game getCurrentGame() {
-        return currentGame;
-    }
-
-    public static void setCurrentGame(Game currentGame) {
-        ThePacific.currentGame = currentGame;
-    }
+    private static Game currentGame= null;
+    private static Player player = null;
 
     public static Player getPlayer() {
         return player;
@@ -31,11 +24,17 @@ public class ThePacific {
     public static void setPlayer(Player player) {
         ThePacific.player = player;
     }
-    private static Player player = null;
 
-    /**
-     * @param args the command line arguments
-     */
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        ThePacific.currentGame = currentGame;
+    }
+ 
+     
+     
     public static void main(String[] args) {
         // create and test the startProgram 
         StartProgramView StartProgramView = new StartProgramView();
@@ -44,5 +43,11 @@ public class ThePacific {
         //get players name function test
 //        StartProgramView.getPlayersName();
     }
+
     
+
+
+ 
+
+  
 }
