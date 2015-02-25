@@ -57,7 +57,7 @@ public class TalkGeneralMenuView { //or stror menu//
            break;
    }
 }
-
+        //THIS NEEDS TO BE DONE Create a Control layer class, called generaterandomquestion. Create a stub function for each set of 5 statements and then call it below under each function; missions, suspicious, and island history.
     private void missions() {
         //System.out.println("\nOur shipment of materials never made it. It was taken out by the roaring waves of the ocean. You need to gather supplies and tools. Search high and low for them, especially in houses.");
         //System.out.println("\nThere is a odd-looking wall near the science labs. Reports say it smells like death. Research it.");
