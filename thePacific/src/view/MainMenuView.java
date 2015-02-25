@@ -44,7 +44,7 @@ public class MainMenuView {
 
     private void doAction(char choice) {
      switch (choice){
-       case 'N': // creat and start a new game 
+       case 'N': // create and start a new game 
             this.startNewGame();
             break;
        case 'G'://start existing game
@@ -68,7 +68,7 @@ public class MainMenuView {
         //Create New Game
         GameControl.createNewGame(ThePacific.getPlayer());
         
-                //display the game
+        //display the game
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
     
