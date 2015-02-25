@@ -35,6 +35,10 @@ public class StartProgramView {
         //Display the Main Menu
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.displayMenu();
+        
+        //Display the Chief/General Talking Menu
+        TalkGeneralMenuView talkgeneralMenu = new TalkGeneralMenuView();
+        talkgeneralMenu.displayMenu();
 
         }
 
