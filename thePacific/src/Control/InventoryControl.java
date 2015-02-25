@@ -11,7 +11,7 @@ package Control;
  * @author Ches
  */
 public class InventoryControl {
-  public double  calcVolumeOfBombs(double radius,double numberOfBombs){
+  public static double  calcVolumeOfBombs(double radius,double numberOfBombs){
 		
 		 if (numberOfBombs < 1){                 
                      //zero bombs?
@@ -33,4 +33,7 @@ public class InventoryControl {
              
 		return Volume;
   }
+
+    
+    
 }
