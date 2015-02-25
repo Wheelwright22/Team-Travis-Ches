@@ -42,6 +42,10 @@ public class StartProgramView {
         //Display the Chief/General Talking Menu
         TalkGeneralMenuView talkgeneralMenu = new TalkGeneralMenuView();
         talkgeneralMenu.displayMenu();
+        
+        //Make the Bomb Function
+        BombView bombView = new BombView();
+        bombView.displayMenu();
 
         }
 
