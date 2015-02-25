@@ -56,10 +56,9 @@ private String getInput() {
             input = keyboard.nextLine();
             input = input.trim();
 
-            //Trying to Run the Error checking, i want it to check for NaN instead of length
-            // or even making sure its not a negative number
+        
             if (input.length() != 1) {
-                System.out.println("Error Checking");
+                System.out.println("Can not be more than 9");
                 continue; // repeat again
             }
             break; // get out of the repetition 
