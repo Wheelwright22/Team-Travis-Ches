@@ -50,7 +50,7 @@ public class TalkGeneralMenuView { //or stror menu//
             this.islandhistory();
             break;
        case 'G':
-           System.out.println("Good Luck Soldier.");
+           System.out.println("Good Luck Soldier. See You Around.");
            return;
        default:
            System.out.println("\n*** Invalid Selection *** Try Again");
