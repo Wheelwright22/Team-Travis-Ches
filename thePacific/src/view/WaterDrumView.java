@@ -22,17 +22,19 @@ public class WaterDrumView {
               //You need to put at least gallons of water into the barrel. Which barrel will hold that much water and allow you to
               //Enter the height of the barrel you chose.  
               //If volume of barrel is less than the number X,.. "The Barrel isnt heavy enough to push the switch down. Please choose another barrel size."
+              //Would you like to examine it?
+              //It's not heavy enough, you need to use a bigger barrel!
       
      public void displayMenu() {
         char selection = ' ';
         
             double volume;
             System.out.println(MENU);// displays the main menu
-            do {
+            
             double input = this.getInput(); // get the users selection
 
             volume = this.doAction(input);
-            } while (volume == -1);
+  
             System.out.printf("The volume of water is %.2f liters.", volume); // do action based on the selection + %.2f will cut off the volume to 2 decimals.
     
     
@@ -55,16 +57,18 @@ private Double getInput() {
         while (!valid) { // while valid is not yet retrieved.
             //prompt for the barrel height.
             System.out.println("Enter The Height of The Barrel That You Chose");
-
+                              
             //Get the height from the keyboard.
             height = keyboard .nextDouble();  //nextLine is for strings & nextDouble is for numbers
             
-            if (height > 10 && height < 0) {
+            if (height > 10 || height < 0) {
                 System.out.println("\nPlease Enter A Height Between 1-10");
+                continue;
             }
             
             else
                 break;     //It's like using break;
+            
             //System.out.println("Enter The Radius Of The Barrel");
 
             //Get the radius from the keyboard.
