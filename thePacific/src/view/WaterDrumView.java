@@ -14,11 +14,17 @@ import java.util.Scanner;
  */
 public class WaterDrumView {
       private final String MENU = "\n"
-            +"\nYou have come across what appears to be an ancient weighing scale."
-            +"\nYou notice a rusty underneath it. You could probably put something"
-            +"\nheavy on top to push it down. There are a lot of empty gun powder"
-            +"\nbarrels of various sizes. Choose one that.."
-            +"\nHow lucky, there is a deep well full of water 10 feet away.";
+            +"\n ------------------------------------------ "
+            +"\n|    You have come across what apprears    |"
+            +"\n|   to be an ancient weighing scale. You   |"
+            +"\n| notice a rusty swtich underneath it. You |"
+            +"\n|   could probably put something heavy on  |"
+            +"\n|  top to push it down. There are a lot of |"
+            +"\n|   empty gun powder barrels of various    |"
+            +"\n|          sizes. Choose one that...       |"
+            +"\n ------------------------------------------ ";
+            
+            //+"\nHow lucky, there is a deep well full of water 10 feet away.";
               //You need to put at least gallons of water into the barrel. Which barrel will hold that much water and allow you to
               //Enter the height of the barrel you chose.  
               //If volume of barrel is less than the number X,.. "The Barrel isnt heavy enough to push the switch down. Please choose another barrel size."
@@ -56,7 +62,8 @@ private Double getInput() {
 
         while (!valid) { // while valid is not yet retrieved.
             //prompt for the barrel height.
-            System.out.println("Enter The Height of The Barrel That You Chose");
+            System.out.println("   Please Enter The Height Of Your Barrel");
+                                
                               
             //Get the height from the keyboard.
             height = keyboard .nextDouble();  //nextLine is for strings & nextDouble is for numbers
