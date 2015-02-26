@@ -39,18 +39,19 @@ public class StartProgramView {
         //Display the Fight Menu
         FightMenu fightMenu = new FightMenu();
         fightMenu.displayMenu();
+        
         //Display the Chief/General Talking Menu
         TalkGeneralMenuView talkgeneralMenu = new TalkGeneralMenuView();
         talkgeneralMenu.displayMenu();
         
-        /*Make the Bomb Function
-        BombView bombView = new BombView();
-        bombView.displayMenu();*/
-        
         //Display the Water Drum Puzzle Menu();
         WaterDrumView waterDrumView = new WaterDrumView();
         waterDrumView.displayMenu();
-
+        
+        //Make the Bomb Function
+        BombView bombView = new BombView();
+        bombView.displayMenu();
+        
         }
 
     public void displayBanner() {
