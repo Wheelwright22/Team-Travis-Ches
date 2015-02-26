@@ -43,9 +43,13 @@ public class StartProgramView {
         TalkGeneralMenuView talkgeneralMenu = new TalkGeneralMenuView();
         talkgeneralMenu.displayMenu();
         
-        //Make the Bomb Function
+        /*Make the Bomb Function
         BombView bombView = new BombView();
-        bombView.displayMenu();
+        bombView.displayMenu();*/
+        
+        //Display the Water Drum Puzzle Menu();
+        WaterDrumView waterDrumView = new WaterDrumView();
+        waterDrumView.displayMenu();
 
         }
 

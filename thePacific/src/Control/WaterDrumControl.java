@@ -10,7 +10,7 @@ package Control;
  * @author travi_000
  */
 public class WaterDrumControl {
-    public double calcVolumeOfWaterDrum(double height, double radius){
+    public double calcVolumeOfWaterDrum(double height/*,double radius*/){
         
         if (height == Double.NaN ){
            //Height is not number.
@@ -24,7 +24,8 @@ public class WaterDrumControl {
             //Height is out of range / boundary.
             return -1;
         }
-	if (radius == Double.NaN ){
+	/*
+        if (radius == Double.NaN ){
             //Radius is not a number.
             return -1;
         }
@@ -36,8 +37,9 @@ public class WaterDrumControl {
             //Radius is out of range / boundary.
             return -1;
         }
-		
-        double volume= (Math.PI * Math.pow(radius,2) * height);
+	*/	
+        double radius = 2;
+        double volume = (Math.PI * Math.pow(radius,2) * height);
         
         return volume;
 
