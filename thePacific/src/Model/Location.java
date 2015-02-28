@@ -12,6 +12,8 @@ import java.util.Objects;
  *
  * @author travi_000
  */
+
+    //Method
 public class Location implements Serializable{
     
     //Class Instance Variables / Attributes
