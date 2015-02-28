@@ -14,7 +14,6 @@ import java.util.Objects;
  */
 public class Actor implements Serializable{
     
-
     private String Name;
     private String Type;
     private Double coordinates;

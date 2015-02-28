@@ -13,17 +13,17 @@ import java.util.Objects;
  * @author travi_000
  */
 public class Location implements Serializable{
-//class instance variables
+    
+    //Class Instance Variables / Attributes
     private int row;
     private int column;
     private boolean visited;
-    //constructor
-
+    
+    //Constructor Function
     public Location() {
     }
     
-    //getter and setter
-
+    //Getters and Setters
     public int getRow() {
         return row;
     }
@@ -47,14 +47,14 @@ public class Location implements Serializable{
     public void setVisited(boolean visited) {
         this.visited = visited;
     }
-    //tostring
-
+    
+    //ToString
     @Override
     public String toString() {
         return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
     }
     
-    //equals and hashcode
+    //Hashcode
 
     @Override
     public int hashCode() {
@@ -65,6 +65,7 @@ public class Location implements Serializable{
         return hash;
     }
 
+    //Equals
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
