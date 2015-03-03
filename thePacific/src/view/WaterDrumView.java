@@ -96,12 +96,3 @@ private Double getInput() {
  
         
 }
-
-    
-  
-//get input function
-//Prompt
-//Read In (get the next line
-//get the next value
-//read in(get the next value
-//prompt)//
