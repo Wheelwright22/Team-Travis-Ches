@@ -11,7 +11,7 @@ package Control;
  * @author Ches
  */
 public class InventoryControl {
-  public static double  calcVolumeOfBombs(double radius,double numberOfBombs){
+  public static double  calcVolumeOfBombs(double numberOfBombs){
 		
 		 if (numberOfBombs < 1){                 
                      //zero bombs?
@@ -21,13 +21,8 @@ public class InventoryControl {
 		if (numberOfBombs == Double.NaN) {
 		return -1;
                 }
-		 if (radius < 0.1){
-		return -1;
-                 }
-		if (radius == Double.NaN){
-		return -1;
-                }
-               
+		
+               double radius = 3;
               
 		double Volume = (((4.0/3.0)* Math.PI *((radius*radius)*radius) ))* numberOfBombs ;
              

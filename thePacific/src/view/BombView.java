@@ -21,14 +21,17 @@ public class BombView {
      public void displayMenu() {
         char selection = ' ';
         
-        do{
+            double volume;
             System.out.println(MENU);// displays the main menu
-            String input = this.getInput(); // get the users selection
-            double numberOfBombs = Double.parseDouble(input);
             
             
-            this.doAction(numberOfBombs); // do action based on the selection
-            }while (selection != 'E'); // an selecetion is not a exit
+            double input = this.getInput(); // get the users selection
+          
+            
+            
+          volume=this.doAction(input); // do action based on the selection
+          System.out.printf("The volume of the Bombs is %.2f liters ", volume);
+       
     
     
 }
@@ -36,16 +39,17 @@ private double doAction(double numberOfBombs) {
    
           double radius = 3;
          
-    double amountOfGunpowder = InventoryControl.calcVolumeOfBombs(radius, numberOfBombs);
+    double amountOfGunpowder = new InventoryControl().calcVolumeOfBombs(numberOfBombs);
     
     return amountOfGunpowder;
     
    
 }
             
-private String getInput() {
+private double getInput() {
            boolean valid = false; // indicates if the name is retrieved
-        String input = null;
+        double numberOfBombs = 0.0;
+        double radius = 0.0;
         Scanner keyboard = new Scanner(System.in);//keyboard input stream
 
         while (!valid) { // while valid is not yet retrieved.
@@ -53,17 +57,17 @@ private String getInput() {
             System.out.println("Enter Number Of Bombs");
 
             //get the name from the keyboard
-            input = keyboard.nextLine();
-            input = input.trim();
+            numberOfBombs = keyboard.nextDouble();
+            
 
         
-            if (input.length() != 1) {
-                System.out.println("Can not be more than 9");
+            if (numberOfBombs > 5|| numberOfBombs < 1) {
+                System.out.println("Can not be more than 5 or less than 1");
                 continue; // repeat again
-            }
+            } else
             break; // get out of the repetition 
     } 
-        return input;
+        return numberOfBombs;
     }
             
  
