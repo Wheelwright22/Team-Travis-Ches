@@ -57,7 +57,7 @@ public class FightMenu {
 
         while (!valid) { // while valid is not yet retrieved.
             //prompt for the players name
-            System.out.println("What Will You DO!");
+            System.out.println("What Will You Do!");
 
             //get the name from the keyboard
             input = keyboard.nextLine();
