@@ -74,7 +74,7 @@ private Double getInput() {
             }
             
             else
-                break;     //It's like using break;
+                break;     
             
             //System.out.println("Enter The Radius Of The Barrel");
 
@@ -96,3 +96,6 @@ private Double getInput() {
  
         
 }
+
+
+//IMPLEMENT! IF volumeOfWater < 70.0, repeat & output this message: "You're Barrel Isn't Heavy Enough, Pick A Bigger Barrel If You Want To Push Down The Switch"
