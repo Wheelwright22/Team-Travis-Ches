@@ -31,7 +31,10 @@ public class MainMenuView extends View {
     @Override
     public boolean doAction(Object obj) {
      
-     char choice = (char) obj;
+     String value = (String) obj;
+     
+     value = value.toUpperCase(); //convert to all upper case
+     char choice = value.charAt(0);
              
      switch (choice){
        case 'N': // create and start a new game 
@@ -47,12 +50,12 @@ public class MainMenuView extends View {
            this.saveGame();
            break;
        case 'E':
-
+           break;
        default:
            System.out.println("\n*** Invalid Selection *** Try Again");
-           break;
+           return false;
    }
-        return false;
+        return true;
 }
 
     private void startNewGame() {
@@ -77,18 +80,8 @@ public class MainMenuView extends View {
         System.out.println("\n displayHelpMenu function called ***");
     }
 
-    
+
     public void doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public String getInput() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

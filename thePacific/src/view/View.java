@@ -12,32 +12,31 @@ import java.util.Scanner;
  * @author travi_000
  */
 public abstract class View implements InterfaceView {
-    
+
     private String promptMessage;
 
     public View(String promptMessage) {
         this.promptMessage = promptMessage;
     }
 
-    
     @Override
     public void displayMenu() {
         String value;
-        
-        do{
+
+        do {
             System.out.println(this.promptMessage);// displays the main menu
             value = this.getInput(); // get the users selection
-             this.doAction(value); // do action based on the selection
-            
-        }while (!value.equals("E")); // an selecetion is not a exit
-        
-}
-        @Override
-        public String getInput() {
+            this.doAction(value); // do action based on the selection
+
+        } while (!value.equals("E")); // an selecetion is not a exit
+
+    }
+
+    @Override
+    public String getInput() {
         Scanner keyboard = new Scanner(System.in);//keyboard input stream
         boolean valid = false; // indicates if the name is retrieved
         String selection = null;
-        
 
         while (!valid) { // while valid is not yet retrieved.
             //prompt for the players name
@@ -53,7 +52,7 @@ public abstract class View implements InterfaceView {
                 continue; // repeat again
             }
             break; // get out of the repetition 
-    } 
+        }
         return selection;
     }
 
@@ -64,6 +63,5 @@ public abstract class View implements InterfaceView {
     public void setPromptMessage(String promptMessage) {
         this.promptMessage = promptMessage;
     }
-    
-}
 
+}
