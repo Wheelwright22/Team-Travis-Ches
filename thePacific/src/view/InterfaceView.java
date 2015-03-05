@@ -11,8 +11,8 @@ package view;
  */
 public interface InterfaceView {
     
-    public void display();
+    public void displayMenu();
     public String getInput();
-    public void doAction(String value);
+    public boolean doAction(Object obj);
     
 }

@@ -6,15 +6,16 @@
 package view;
 
 import Control.GameControl;
-import java.util.Scanner;
 import thepacific.ThePacific;
 
 /**
  *
  * @author Ches
  */
-public class MainMenuView {
-    private final String MENU = "\n"
+public class MainMenuView extends View {
+            
+    public MainMenuView() {
+       super("\n"
             +"\n-------------------------------------- "
             +"\n              Main Menu                "
             +"\n ------------------------------------- "
@@ -23,26 +24,15 @@ public class MainMenuView {
             +"\nH-Help                                 "
             +"\nS-Save Game                            "
             +"\nE-Exit                                 "
-            +"\n-------------------------------------- ";
+            +"\n-------------------------------------- ");
     
-            
-
-   public void displayMenu() {
-        char selection = ' ';
-        do{
-            System.out.println(MENU);// displays the main menu
-            String input = this.getInput(); // get the users selection
-            selection = input.charAt(0);// get the first character string
-            
-            this.doAction(selection); // do action based on the selection
-            
-        }while (selection != 'E'); // an selecetion is not a exit
-    
-}
-
-    
-
-    private void doAction(char choice) {
+    }
+   
+    @Override
+    public boolean doAction(Object obj) {
+     
+     char choice = (char) obj;
+             
      switch (choice){
        case 'N': // create and start a new game 
             this.startNewGame();
@@ -57,11 +47,12 @@ public class MainMenuView {
            this.saveGame();
            break;
        case 'E':
-           return;
+
        default:
            System.out.println("\n*** Invalid Selection *** Try Again");
            break;
    }
+        return false;
 }
 
     private void startNewGame() {
@@ -86,30 +77,21 @@ public class MainMenuView {
         System.out.println("\n displayHelpMenu function called ***");
     }
 
-
-
-    private String getInput() {
-          boolean valid = false; // indicates if the name is retrieved
-        String input = null;
-        Scanner keyboard = new Scanner(System.in);//keyboard input stream
-
-        while (!valid) { // while valid is not yet retrieved.
-            //prompt for the players name
-            System.out.println("Please Make Your Selection");
-
-            //get the name from the keyboard
-            input = keyboard.nextLine();
-            input = input.trim();
-
-            //if the name is invalid (If it is less than 2 characters)
-            if (input.length() != 1) {
-                System.out.println("One Letter Capitalized");
-                continue; // repeat again
-            }
-            break; // get out of the repetition 
-    } 
-        return input;
+    
+    public void doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
 
 
