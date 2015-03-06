@@ -21,14 +21,15 @@ public abstract class View implements InterfaceView {
 
     @Override
     public void displayMenu() {
-        String value;
+        String value = "";
+        boolean done = false;
 
         do {
             System.out.println(this.promptMessage);// displays the main menu
             value = this.getInput(); // get the users selection
-            this.doAction(value); // do action based on the selection
+            done = this.doAction(value); // do action based on the selection
 
-        } while (!value.equals("E")); // an selecetion is not a exit
+        } while (!done); // an selecetion is not a exit
 
     }
 
