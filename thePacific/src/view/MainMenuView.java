@@ -16,10 +16,10 @@ public class MainMenuView extends View {
             
     public MainMenuView() {
        super("\n"
-            +"\n-------------------------------------- "
-            +"\n              Main Menu                "
             +"\n ------------------------------------- "
-            +"\nN-New Game"
+            +"\n|              Main Menu              |"
+            +"\n ------------------------------------- "
+            +"\nN-New Game                             "
             +"\nG-Start Game                           "
             +"\nH-Help                                 "
             +"\nS-Save Game                            "
