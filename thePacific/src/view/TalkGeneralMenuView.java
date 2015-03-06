@@ -5,59 +5,54 @@
  */
 package view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author travi_000
  */
-public class TalkGeneralMenuView { //or stror menu//
- 
-      private final String MENU = "\n"
-            +"\n ------------------------------------- "
-            +"\n|        Talk To The General          |"
-            +"\n ------------------------------------- "
-            +"\nM - Ask About Missions & Tasks         "
-            +"\nS - Have You Seen Anything Suspicious? "
-            +"\nH - Tell Me About The Island           "
-            +"\nG - See You Later!                     "
-            +"\n-------------------------------------- ";
-    
-   public void displayMenu() {
-        char selection = ' ';
-        do{
-            
-            System.out.println(MENU);// Displays the talking menu for the chief
-            
-            String input = this.getInput(); // get the users selection
-            selection = input.charAt(0);// get the first character string
-            
-            this.doAction(selection); // do action based on the selection
-            
-        }while (selection != 'G'); // a selection is not "Goodbye"
-    
-}
-   
-    private void doAction(char choice) {
-     switch (choice){
-       case 'M':// Ask About Missions & Tasks
-            this.missions();
-            break;
-       case 'S':// Ask About Suspicious Material
-            this.suspicious();
-            break;
-       case 'H':// Ask About The Island's History
-            this.islandhistory();
-            break;
-       case 'G':
-           System.out.println("Good Luck Soldier. See You Around.");
-           return;
-       default:
-           System.out.println("\n*** Invalid Selection *** Try Again");
-           break;
-   }
-}
-        //THIS NEEDS TO BE DONE Create a Control layer class, called generaterandomquestion. Create a stub function for each set of 5 statements and then call it below under each function; missions, suspicious, and island history.
+public class TalkGeneralMenuView extends View { //or stror menu//
+
+    public TalkGeneralMenuView() {
+        super("\n"
+                + "\n ------------------------------------- "
+                + "\n|        Talk To The General          |"
+                + "\n ------------------------------------- "
+                + "\nM - Ask About Missions & Tasks         "
+                + "\nS - Have You Seen Anything Suspicious? "
+                + "\nH - Tell Me About The Island           "
+                + "\nE - See You Later!                     "
+                + "\n-------------------------------------- ");
+    }
+
+    @Override
+    public boolean doAction(Object obj) {
+     
+     String value = (String) obj;
+     
+     value = value.toUpperCase(); //convert to all upper case
+     char choice = value.charAt(0);
+             
+        switch (choice) {
+            case 'M':// Ask About Missions & Tasks
+                this.missions();
+                break;
+            case 'S':// Ask About Suspicious Material
+                this.suspicious();
+                break;
+            case 'H':// Ask About The Island's History
+                this.islandhistory();
+                break;
+            case 'E':
+                System.out.println("Good Luck Soldier. See You Around.");
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection *** Try Again");
+                return false;
+        }
+        return true;
+    }
+
+    //THIS NEEDS TO BE DONE Create a Control layer class, called generaterandomquestion. Create a stub function for each set of 5 statements and then call it below under each function; missions, suspicious, and island history.
+
     private void missions() {
         //System.out.println("\nOur shipment of materials never made it. It was taken out by the roaring waves of the ocean. You need to gather supplies and tools. Search high and low for them, especially in houses.");
         //System.out.println("\nThere is a odd-looking wall near the science labs. Reports say it smells like death. Research it.");
@@ -80,30 +75,7 @@ public class TalkGeneralMenuView { //or stror menu//
         //System.out.println("\nOn the island of Shikoku (四国) , there are a total of 88 Temples. They were once visited by the great monk Kobo Daishi."); 
         //System.out.println("\nShikoki (四国) is the smallest and least populous of the 4 main islands of Japan. It covers about 7,259 square miles.");
         //System.out.println("\nThe island of Shikoki (四国) was founded in the year 660 BC by the first Emperor Jimmu.");
-       
+
     }
-    
-    private String getInput() {
-          boolean valid = false; // Indicates if the selection is retrieved.
-        String input = null;
-        Scanner keyboard = new Scanner(System.in);// Keyboard input stream.
 
-        while (!valid) { // While valid is not yet retrieved.
-            //Prompt for the selection
-            System.out.println("Please Make Your Selection");
-
-            //Get the input from the keyboard.
-            input = keyboard.nextLine();
-            input = input.trim();
-
-            //If the choice is anything but a single capitolized letter.
-            if (input.length() != 1) {
-                System.out.println("One Letter Capitalized");
-                continue; // Repeat again.
-            }
-            break; // Gets out of the repetition. 
-    } 
-        return input;
-    }
-    
 }
