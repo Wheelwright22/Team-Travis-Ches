@@ -32,7 +32,7 @@ public class WaterDrumView {
     //Would you like to examine it?
     //It's not heavy enough, you need to use a bigger barrel!
     
-    
+ 
     public void displayMenu() {
         char selection = ' ';
 
