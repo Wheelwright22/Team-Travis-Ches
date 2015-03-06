@@ -36,6 +36,10 @@ public class StartProgramView {
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.displayMenu();
         
+        //Display the Help Menu
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.displayMenu();
+        
         //Display the Fight Menu
         FightMenu fightMenu = new FightMenu();
         fightMenu.displayMenu();

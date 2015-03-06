@@ -16,10 +16,10 @@ public class FightMenu extends View {
     public FightMenu() {
         super(
                 "\n"
-                + "\n---------------------------------------"
-                + "\n             ***FIGHT***               "
-                + "\n          What Will You Do?            "
-                + "\n---------------------------------------"
+                + "\n -------------------------------------- "
+                + "\n|             ***FIGHT***              |"
+                + "\n|         What Will You Do?            |"
+                + "\n -------------------------------------- "
                 + "\nS- Shoot                               "
                 + "\nK- Knife                               "
                 + "\nE- Run                                 "
