@@ -56,6 +56,10 @@ public class StartProgramView {
         BombView bombView = new BombView();
         bombView.displayMenu();
         
+        //Display the Store Menu
+        StoreView storeView = new StoreView();
+        storeView.displayMenu();
+        
         }
 
     public void displayBanner() {
