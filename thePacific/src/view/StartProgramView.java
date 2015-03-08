@@ -56,6 +56,11 @@ public class StartProgramView {
         BombView bombView = new BombView();
         bombView.displayMenu();
         
+        // display INfection Rate View
+        
+        InfectionView infectionView = new InfectionView();
+        infectionView.displayMenu();
+        
         }
 
     public void displayBanner() {
