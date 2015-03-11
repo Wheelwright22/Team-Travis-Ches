@@ -5,7 +5,11 @@
  */
 package Control;
 
+import Model.Game;
+import Model.Inventory;
+import Model.Jeep;
 import Model.Player;
+import thepacific.ThePacific;
 
 /**
  *
@@ -14,7 +18,22 @@ import Model.Player;
 public class GameControl {
 
     public static void createNewGame(Player player) {
-        System.out.println("\n*** createNewGame stub function called ***");
+       Game game = new Game(); // create new game
+       ThePacific.setCurrentGame(game);//save in ThePacific
+       
+       game.setPlayer(player); //save player in game
+       
+       //creat the inventory list and save in the game
+       Inventory[] inventoryList = GameControl.createInventoryList();
+       game.setInventory(inventoryList);
+       
+       Jeep jeep = new Jeep();//creat the jeep
+       game.setJeep(jeep); // save the jeep
+       
+       Map map = MapControl.createMap(); // create teh map 
+       game.setMap(map); // save the map
+       
+       
     }
 
     double calcVolumeOfWaterDrum(double height, double radius) {

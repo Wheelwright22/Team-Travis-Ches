@@ -12,41 +12,48 @@ import java.util.Objects;
  *
  * @author travi_000
  */
-public class Actor implements Serializable{
+public enum Actor implements Serializable{
     
-    private String Name;
-    private String Type;
-    private Double coordinates;
+    General_Smith("The General, He leads this Invasion!!"),
+    Lieutenant_Maverick("A superior officer, show some respect"),
+    Sergeant_Sir("The Leader of your squad"),
+    Private("this is the player"),
+    Grunt("other non important characters"),
+    Zombie("A zombie thats roaming the Island"),
+    Zombie_Hitler("the boss zombie, patient 0"),
+    Store_Owner_Kim("The owner of the Happy Mart");    
+    
+    
+ 
+    private final String Type;
+    private final Point coordinates;
     // constructor
 
     public Actor() {
     }
+
+    Actor(String type) {
+this.type = type;
+coordinates = new Point(1,1);
+}
     
     //getter and setter
 
-    public String getName() {
-        return Name;
-    }
+    
 
-    public void setName(String Name) {
-        this.Name = Name;
-    }
+   
 
     public String getType() {
         return Type;
     }
 
-    public void setType(String Type) {
-        this.Type = Type;
-    }
+    
 
-    public Double getCoordinates() {
+    public Point getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(Double coordinates) {
-        this.coordinates = coordinates;
-    }
+    
     //toString
 
     @Override

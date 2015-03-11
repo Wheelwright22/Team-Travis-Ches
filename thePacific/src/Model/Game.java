@@ -16,7 +16,52 @@ public class Game implements Serializable {
     private String winner;
     private double time;
     
+    private Actor[] actor;
+    private Map map;
+    private Jeep jeep;
+    private Player player;
+    private Inventory[] inventory;
   // constuctor function
+
+    public Actor[] getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor[] actor) {
+        this.actor = actor;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Jeep getJeep() {
+        return jeep;
+    }
+
+    public void setJeep(Jeep jeep) {
+        this.jeep = jeep;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Inventory[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory[] inventory) {
+        this.inventory = inventory;
+    }
 
     public Game() {
     }
