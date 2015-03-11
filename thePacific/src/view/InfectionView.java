@@ -5,6 +5,9 @@
  */
 package view;
 
+import Control.InfectionRate;
+import java.util.Scanner;
+
 /**
  *
  * @author Ches
@@ -17,6 +20,42 @@ public class InfectionView extends View {
             );
     }
     @Override
-public boolean
+public boolean doAction(Object obj) {
+    double population = 1000;
+    double Infected = 100;
     
+    double daysInMonth = Double.parseDouble((String) obj);
+    
+    double InfectRate = new InfectionRate().calcInfectionRate(daysInMonth);
+    
+    return true;
+}
+  @Override
+    public String getInput() {
+           boolean valid = false; // indicates if the name is retrieved
+        String daysInMonth = null;
+        //which caused me to change this variable to a  string
+        double population = 0.0;
+        double Infected = 0.0;
+        Scanner keyboard = new Scanner(System.in);//keyboard input stream
+
+        while (!valid) { // while valid is not yet retrieved.
+            //prompt for the players name
+            System.out.println("Enter Number Of Bombs");
+
+            //get the name from the keyboard
+            daysInMonth = keyboard.next();
+            // which also caused me to change this from keyboard.nextDouble
+            
+            // i had to do this step below so i can run the checks below
+            double days = Double.parseDouble(daysInMonth);
+        
+            if (days > 31|| days < 28) {
+                System.out.println("Can not be more than 31 or less than 28");
+                continue; // repeat again
+            } else
+            break; // get out of the repetition 
+    } 
+        return daysInMonth;
+    }  
 }
