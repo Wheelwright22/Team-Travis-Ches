@@ -20,7 +20,7 @@ public class Game implements Serializable {
     private Map map;
     private Jeep jeep;
     private Player player;
-    private Inventory[] inventory;
+    private Item[] item;
   // constuctor function
 
     public Actor[] getActor() {

@@ -5,6 +5,7 @@
  */
 package Model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -29,11 +30,11 @@ public enum Actor implements Serializable{
     private final Point coordinates;
     // constructor
 
-    public Actor() {
+    private Actor() {
     }
 
-    Actor(String type) {
-this.type = type;
+    Actor(String Type) {
+this.Type = Type;
 coordinates = new Point(1,1);
 }
     
