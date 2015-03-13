@@ -5,6 +5,7 @@
  */
 package Model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -14,12 +15,28 @@ import java.util.Objects;
  */
 public enum Actor implements Serializable{
     
+    General_Smith("The 4-Star General Himself, He Leads The Ivestigation."),
+    Lieutenant_Maverick("A Superior Officer, Show Some Respect!"),
+    Sergeant_Sir("The Leader of Your Squad."),
+    Private("This Is You, A Brand New Marine!"),
+    Grunt("Other Non-Important Characters."),
+    Zombie("A Crazy Experiment Gone Wrong. They Roam The Island."),
+    Zombie_Hitler("The Main Zombie In Charge, Patience = 0."),
+    Store_Owner_Kim("The Proud Owner of The Happy Mart");    
+    
+    
+ 
     private final String Type;
-    private final Double coordinates;
+    private final Point coordinates;
     // constructor
 
-    public Actor() {
+    private Actor() {
     }
+
+    Actor(String Type) {
+this.Type = Type;
+coordinates = new Point(1,1);
+}
     
     //Getter and Setter Functions
 
@@ -27,9 +44,10 @@ public enum Actor implements Serializable{
         return Type;
     }
 
-    public Double getCoordinates() {
+    public Point getCoordinates() {
         return coordinates;
     }
+
 
     //toString
 

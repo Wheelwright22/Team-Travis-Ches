@@ -12,12 +12,35 @@ import java.util.Objects;
  *
  * @author travi_000
  */
-public class Items implements Serializable{
+public enum Item implements Serializable{
+    
+  
+        M16,
+        Bombs,
+        Knife,
+        Apple,
+        Durian,
+        Lychee,
+        Shovel,
+        Ammo,
+        Pistol,
+        Tire,
+        Sickle;
     
     private String type;
     private String decription;
+    private int RequiredAmount;
+
+    public int getRequiredAmount() {
+        return RequiredAmount;
+    }
+
+    public void setRequiredAmount(int RequiredAmount) {
+        this.RequiredAmount = RequiredAmount;
+    }
     //Constructor
-    public Items() {
+    public Item() {
+        
     }
 
 //Getter & Setter 
@@ -59,7 +82,7 @@ public class Items implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Items other = (Items) obj;
+        final Item other = (Item) obj;
         if (!Objects.equals(this.type, other.type)) {
             return false;
         }

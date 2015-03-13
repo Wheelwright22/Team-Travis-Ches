@@ -59,6 +59,10 @@ public class StartProgramView {
         //Display the Store Menu
         StoreView storeView = new StoreView();
         storeView.displayMenu();
+        // display INfection Rate View
+        
+        InfectionView infectionView = new InfectionView();
+        infectionView.displayMenu();
         
         }
 
