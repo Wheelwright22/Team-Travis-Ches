@@ -115,6 +115,14 @@ public class Game implements Serializable {
         }
         return true;
     }
+
+    public void setItem(Item[] itemList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setItem(Item[] itemList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

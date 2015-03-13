@@ -6,6 +6,7 @@
 package Model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -20,6 +21,8 @@ public class Location implements Serializable{
     private int row;
     private int column;
     private boolean visited;
+    private Scene scene;
+    private ArrayList<Actor> actors;
     
     //Constructor Function
     public Location() {

@@ -26,6 +26,8 @@ public enum Item implements Serializable{
         Pistol,
         Tire,
         Sickle;
+        
+        
     
     private String type;
     private String decription;
@@ -90,6 +92,14 @@ public enum Item implements Serializable{
             return false;
         }
         return true;
+    }
+
+    public void setDescription(String m16_Rifle) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setQuantityInStock(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

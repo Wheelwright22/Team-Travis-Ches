@@ -12,18 +12,43 @@ import java.io.Serializable;
  * @author Ches
  */
 public class Map implements Serializable {
-    
+
     private double rowCount;
     private double columnCount;
-    
-    //constructor
+    private Location[][] locations;
 
+    //Constructor Function
     public Map() {
     }
-    
-    
-    //getter and setter
 
+    public Map(int rowCount, int columnCount) {
+
+        if (rowCount < 1 || columnCount < 1) {
+            System.out.println("The Number Of Rows And Columns Must Be > Zero");
+            return;
+        }
+
+        this.rowCount = rowCount;
+        this.columnCount = columnCount;
+
+        //Create 2-D Array For Location Objects 
+        this.locations = new Location[rowCount][columnCount];
+
+        for (int row = 0; row < rowCount; row++) {
+            for (int column = 0; column < columnCount; column++) {
+                // Create And Initialize A New Location Object Instance
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setVisited(false);
+
+                //Assigns The Location Object To The Current Position In The Array
+                locations[row][column] = location;
+            }
+        }
+    }
+
+    //Getter and Setter Functions
     public double getRowCount() {
         return rowCount;
     }
@@ -39,13 +64,13 @@ public class Map implements Serializable {
     public void setColumnCount(double columnCount) {
         this.columnCount = columnCount;
     }
-  //toString function
+    //toString function
 
     @Override
     public String toString() {
         return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
     }
-  // equal and hashcode
+    // equal and hashcode
 
     @Override
     public int hashCode() {
@@ -72,6 +97,5 @@ public class Map implements Serializable {
         }
         return true;
     }
-    
-    
+
 }

@@ -6,6 +6,7 @@
 package Control;
 
 import Model.Map;
+import Model.Scene;
 
 /**
  *
@@ -13,9 +14,6 @@ import Model.Map;
  */
 public class MapControl {
 
-    static Map createMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     static void moveActorsToStartingLocation(Map map) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

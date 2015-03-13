@@ -7,9 +7,11 @@ package Control;
 
 import Model.Game;
 import Model.Inventory;
+import Model.Item;
 import Model.Jeep;
 import Model.Map;
 import Model.Player;
+import com.sun.org.apache.bcel.internal.Constants;
 import thepacific.ThePacific;
 
 /**
@@ -19,34 +21,29 @@ import thepacific.ThePacific;
 public class GameControl {
 
     public static void createNewGame(Player player) {
-       Game game = new Game(); // create new game
-       ThePacific.setCurrentGame(game);//save in ThePacific
-       
-       game.setPlayer(player); //save player in game
-       
-       //creat the inventory list and save in the game
-       Item[] itemList = GameControl.createItemList();
-       game.setItem(itemList);
-       
-       Jeep jeep = new Jeep();//creat the jeep
-       game.setJeep(jeep); // save the jeep
-       
-       Map map = MapControl.createMap(); // create teh map 
-       game.setMap(map); // save the map
-       
-       //move actors to starting position
-       MapControl.moveActorsToStartingLocation(map);
-       
-    }
-    
-        
-        
-        
-        
-    }
-    
+        Game game = new Game(); // create new game
+        ThePacific.setCurrentGame(game);//save in ThePacific
 
-    private static Item[] createItemList() {
+        game.setPlayer(player); //save player in game
+
+        //Create The Inventory List And Save In The Game.
+        Item[] itemList = GameControl.createItemList();
+        game.setItem(itemList);
+
+        Jeep jeep = new Jeep();//creat the jeep
+        game.setJeep(jeep); // save the jeep
+
+        Map map = MapControl.createMap(); // create teh map 
+        game.setMap(map); // save the map
+
+        //move actors to starting position
+        MapControl.moveActorsToStartingLocation(map);
+
+    }
+
+
+
+private static Item[] createItemList() {
       Item[] inventory = new Item[Constants.NUMBER_OF_INVENTORY_ITEMS];
       
       Item M16 = new Item();
@@ -116,9 +113,6 @@ public class GameControl {
       inventory[Item.Sickle.ordinal()] = Sickle;
       
       return Item;
-     
-      
-      
     }
 
     double calcVolumeOfWaterDrum(double height, double radius) {

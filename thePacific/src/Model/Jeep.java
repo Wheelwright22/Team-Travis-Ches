@@ -13,14 +13,20 @@ import java.io.Serializable;
  */
 public class Jeep implements Serializable{
     
+    private String description;
     private double maxWeight;
     private double currentWeight;
-    //constructor
-
+   
+    //Constructor Function
     public Jeep() {
+       this.description = "\nYou're Looking At A Piece Of Art: A 1968 Jeep M715"
+                        + "\nKaiser! Fully Restored And Fully Functional, What "
+                        + "\nA Sight! It Has A Huge Bed To Carry Lots Of Items.";
+       this.maxWeight =1000;
+       this.currentWeight =0;
     }
     
-    //getter and setter
+    //Getter and Setter Functions
 
     public double getMaxWeight() {
         return maxWeight;
