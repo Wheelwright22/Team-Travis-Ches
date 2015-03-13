@@ -25,12 +25,12 @@ public class StoreView extends View { //or stror menu//
 
     @Override
     public boolean doAction(Object obj) {
-     
-     String value = (String) obj;
-     
-     value = value.toUpperCase(); //convert to all upper case
-     char choice = value.charAt(0);
-             
+
+        String value = (String) obj;
+
+        value = value.toUpperCase(); //convert to all upper case
+        char choice = value.charAt(0);
+
         switch (choice) {
             case 'B':// Buy Items
                 this.buyitems();
@@ -52,7 +52,6 @@ public class StoreView extends View { //or stror menu//
     }
 
     //THIS NEEDS TO BE DONE Create a Control layer class, called generaterandomquestion. Create a stub function for each set of 5 statements and then call it below under each function; missions, suspicious, and island history.
-
     private void buyitems() {
         System.out.println("\nBuy Items Here!");
     }

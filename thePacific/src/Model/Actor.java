@@ -12,41 +12,25 @@ import java.util.Objects;
  *
  * @author travi_000
  */
-public class Actor implements Serializable{
+public enum Actor implements Serializable{
     
-    private String Name;
-    private String Type;
-    private Double coordinates;
+    private final String Type;
+    private final Double coordinates;
     // constructor
 
     public Actor() {
     }
     
-    //getter and setter
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String Name) {
-        this.Name = Name;
-    }
+    //Getter and Setter Functions
 
     public String getType() {
         return Type;
-    }
-
-    public void setType(String Type) {
-        this.Type = Type;
     }
 
     public Double getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(Double coordinates) {
-        this.coordinates = coordinates;
-    }
     //toString
 
     @Override
