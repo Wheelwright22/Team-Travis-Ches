@@ -17,13 +17,35 @@ public class Scene implements Serializable {
     private String symbol;
     private String description;
     private double travelTime;
+    private boolean setBlocked;
+    
+    
+    
     
  // Constructor Function
 
     public Scene() {
     }
 
-    //getter and setter functions
+private static Scene[] createScenes() throws MapContolException {
+    BufferedImage image =null;
+    
+    Game game = thePacific.getCurrentGame();
+    
+    Scene[] scenes = new Scene[SceneType.values().length];
+    
+    Scene startingScene = new Scene();
+    startingScene.setDescription(
+                "\n Welcome to the island of Shikoku. You...");
+    startingScene.setSymbol(" ST ");
+    startingScene.setBlocked(false);
+    startingScene.setTravelTime(100);
+    scenes[SceneType.start.ordinal()] = startingScene;   
+}
+    
+    
+    
+    //Getter and Setter Functions
     public String getType() {
         return type;
     }
@@ -95,6 +117,14 @@ public class Scene implements Serializable {
             return false;
         }
         return true;
+    }
+
+    private void setBlocked(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setMapSymbol(String _st_) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
