@@ -9,6 +9,7 @@ import Model.Game;
 import Model.Map;
 import Model.Scene;
 import javax.swing.ImageIcon;
+import thepacific.ThePacific;
 
 /**
  *
@@ -53,7 +54,7 @@ public enum SceneType {
 private static Scene[] createScenes() throws MapContolException {
    BufferedImage image =null;
     
-    Game game = thePacific.getCurrentGame();
+    Game game = ThePacific.getCurrentGame();
     
     Scene[] scenes = new Scene[SceneType.values().length];
     

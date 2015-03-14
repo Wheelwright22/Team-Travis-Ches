@@ -22,6 +22,7 @@ import thepacific.ThePacific;
 public class GameControl {
 
     public static void createNewGame(Player player) {
+        
         Game game = new Game(); // create new game
         ThePacific.setCurrentGame(game);//save in ThePacific
 
