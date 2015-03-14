@@ -5,8 +5,10 @@
  */
 package Model;
 
+import Control.MapControl;
 import java.io.Serializable;
 import java.util.Objects;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -27,8 +29,8 @@ public class Scene implements Serializable {
     public Scene() {
     }
 
-/*private static Scene[] createScenes() throws MapContolException {
-    BufferedImage image =null;
+private static Scene[] createScenes() throws MapContolException {
+   / BufferedImage image =null;
     
     Game game = thePacific.getCurrentGame();
     
@@ -40,15 +42,25 @@ public class Scene implements Serializable {
     startingScene.setSymbol(" ST ");
     startingScene.setBlocked(false);
     startingScene.setTravelTime(240);
-    ImageIcon startingSceneImage = MapControl.getImage(startingScene,
-            "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
-    startingScene.setIcon(startingSceneImage);
+    //ImageIcon startingSceneImage = MapControl.getImage(startingScene,
+    //        "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
+    //startingScene.setIcon(startingSceneImage);
     scenes[SceneType.start.ordinal()] = startingScene; 
     
     Scene finishScene = new Scene();
     finishScene.setDescription(
-            
-} */
+                "\nCongratulations. You have defeated zombie Hitler and have"
+               +"save the island of Shikoku! The locals are so happy that you"
+               +"helped solved the mystery! It's too bad though that the"
+               +"scientists responsible for all of this got away...!");
+    finishScene.setMapSymbol(" FN ");
+    finishScene.setBlocked(false);
+    finishScene.setTravelTime(Double.POSITIVE_INFINITY);
+    //ImageIcon finishSceneImage = MapControl.getImage(finishScene,
+    //        "/citbyui/cit260/ThePaciic/images/finish.jpg");
+    //    finishScene.setIcon(finishSceneImage);
+    scenes[SceneType.finish.ordinal()] = finishScene;
+} 
 
     
     

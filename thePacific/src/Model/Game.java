@@ -15,7 +15,6 @@ import java.util.Objects;
 public class Game implements Serializable {
     private String winner;
     private double time;
-    
     private Actor[] actor;
     private Map map;
     private Jeep jeep;
