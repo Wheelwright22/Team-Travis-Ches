@@ -28,14 +28,12 @@ public enum Actor implements Serializable{
  
     private final String Type;
     private final Point coordinates;
-    // constructor
+   
+    // Constructor
 
-    private Actor() {
-    }
-
-    Actor(String Type) {
-this.Type = Type;
-coordinates = new Point(1,1);
+Actor(String Type) {
+    this.Type = Type;
+    coordinates = new Point(1,1);
 }
     
     //Getter and Setter Functions
@@ -47,44 +45,4 @@ coordinates = new Point(1,1);
     public Point getCoordinates() {
         return coordinates;
     }
-
-
-    //toString
-
-    @Override
-    public String toString() {
-        return "Actor{" + "Name=" + Name + ", Type=" + Type + ", coordinates=" + coordinates + '}';
-    }
-    //equals and hashcode
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 73 * hash + Objects.hashCode(this.Name);
-        hash = 73 * hash + Objects.hashCode(this.Type);
-        hash = 73 * hash + Objects.hashCode(this.coordinates);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Actor other = (Actor) obj;
-        if (!Objects.equals(this.Name, other.Name)) {
-            return false;
-        }
-        if (!Objects.equals(this.Type, other.Type)) {
-            return false;
-        }
-        if (!Objects.equals(this.coordinates, other.coordinates)) {
-            return false;
-        }
-        return true;
-    }
-    
 }

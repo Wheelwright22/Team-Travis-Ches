@@ -55,12 +55,12 @@ public class Game implements Serializable {
         this.player = player;
     }
 
-    public Inventory[] getInventory() {
-        return inventory;
+    public Item[] getItem() {
+        return item;
     }
 
-    public void setInventory(Inventory[] inventory) {
-        this.inventory = inventory;
+    public void setItem (Item[] item) {
+        this.item = item;
     }
 
     public Game() {
@@ -114,15 +114,5 @@ public class Game implements Serializable {
             return false;
         }
         return true;
-    }
-
-    public void setItem(Item[] itemList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setItem(Item[] itemList) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
+    }    
 }

@@ -27,7 +27,7 @@ public class Scene implements Serializable {
     public Scene() {
     }
 
-private static Scene[] createScenes() throws MapContolException {
+/*private static Scene[] createScenes() throws MapContolException {
     BufferedImage image =null;
     
     Game game = thePacific.getCurrentGame();
@@ -39,10 +39,13 @@ private static Scene[] createScenes() throws MapContolException {
                 "\n Welcome to the island of Shikoku. You...");
     startingScene.setSymbol(" ST ");
     startingScene.setBlocked(false);
-    startingScene.setTravelTime(100);
+    startingScene.setTravelTime(240);
+    ImageIcon startingSceneImage = MapControl.getImage(startingScene,
+            "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
+    startingScene.setIcon
     scenes[SceneType.start.ordinal()] = startingScene;   
-}
-    
+} */
+
     
     
     //Getter and Setter Functions
