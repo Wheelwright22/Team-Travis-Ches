@@ -11,6 +11,7 @@ import Model.Item;
 import Model.Jeep;
 import Model.Map;
 import Model.Player;
+import Model.Scene;
 import com.sun.org.apache.bcel.internal.Constants;
 import thepacific.ThePacific;
 
@@ -39,6 +40,10 @@ public class GameControl {
         //move actors to starting position
         MapControl.moveActorsToStartingLocation(map);
 
+    }
+
+    static void assignScenesToLocations(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     double calcVolumeOfWaterDrum(double height, double radius) {
