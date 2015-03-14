@@ -42,8 +42,12 @@ public class Scene implements Serializable {
     startingScene.setTravelTime(240);
     ImageIcon startingSceneImage = MapControl.getImage(startingScene,
             "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
-    startingScene.setIcon
-    scenes[SceneType.start.ordinal()] = startingScene;   
+    startingScene.setIcon(startingSceneImage);
+    scenes[SceneType.start.ordinal()] = startingScene; 
+    
+    Scene finishScene = new Scene();
+    finishScene.setDescription(
+            
 } */
 
     

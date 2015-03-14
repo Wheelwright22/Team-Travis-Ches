@@ -12,38 +12,43 @@ import java.util.Scanner;
  *
  * @author Ches
  */
-public class BombView extends View {
-    public BombView(){
-      super ("\n *****Bomb Factory******"
+public class BombView {
+      private final String MENU = "\n *****Bomb Factory******"
             +"\nYou need to fill the bombs with the right amount of Gunpowder"
             +"\nLucky for you the factory has a calculator"
-            +"\nEnter how many bombs you would like");
+            +"\nEnter how many bombs you would like";
     
-    }
-   @Override
-public boolean doAction(Object obj) {
-   double numberOfBombs = Double.parseDouble((String)obj);
+     public void displayMenu() {
+        char selection = ' ';
+        
+            double volume;
+            System.out.println(MENU);// displays the main menu
+            
+            
+            double input = this.getInput(); // get the users selection
+          
+            
+            
+          volume=this.doAction(input); // do action based on the selection
+          System.out.printf("The volume of the Bombs is %.2f liters ", volume);
+       
+    
+    
+}
+private double doAction(double numberOfBombs) {
+   
           double radius = 3;
          
     double amountOfGunpowder = new InventoryControl().calcVolumeOfBombs(numberOfBombs);
-    // travis here is where the issue is. i originally had 
-    // return amountOfGunpowder; but because thats not a boolean it didnt work
-    // so i put return true for now just so i can push it
-    return true;
+    
+    return amountOfGunpowder;
     
    
 }
             
-    /**
-     *
-     * @return
-     */
-    // also travis i had to change this to a String so it matches our View class
-    @Override
-    public String getInput() {
+private double getInput() {
            boolean valid = false; // indicates if the name is retrieved
-        String numberOfBombs = null;
-        //which caused me to change this variable to a  string
+        double numberOfBombs = 0.0;
         double radius = 0.0;
         Scanner keyboard = new Scanner(System.in);//keyboard input stream
 
@@ -52,13 +57,11 @@ public boolean doAction(Object obj) {
             System.out.println("Enter Number Of Bombs");
 
             //get the name from the keyboard
-            numberOfBombs = keyboard.next();
-            // which also caused me to change this from keyboard.nextDouble
+            numberOfBombs = keyboard.nextDouble();
             
-            // i had to do this step below so i can run the checks below
-            double bombs = Double.parseDouble(numberOfBombs);
+
         
-            if (bombs > 5|| bombs < 1) {
+            if (numberOfBombs > 5|| numberOfBombs < 1) {
                 System.out.println("Can not be more than 5 or less than 1");
                 continue; // repeat again
             } else
