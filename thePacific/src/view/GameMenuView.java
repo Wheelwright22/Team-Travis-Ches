@@ -31,8 +31,22 @@ public class GameMenuView {
     }
 
     private void viewInventory() {
-      System.out.println("viewInventory stub function called"); //To change body of generated methods, choose Tools | Templates.
+    Item[] item = GameControl.getSortedItemList();
+    
+    System.out.println("\nList of Inventory Items");
+    System.outprintln("Description" + "\t" + "Required" +
+            "\t" + "In Stock");
+    
+    //for each inventory item
+    for (Item item: item){
+        //Display the description, the required amount and amount in stock
+        System.out.println(item.getDescription() + "\t " +
+                item.getRequiredAmount() + "\t" +
+                item.getQuantityInStock());
+    
+}
     }
+    
 
     private void displayMap() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

@@ -42,6 +42,27 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
 
     }
+    public static Item[] getSortedInventoryList() {
+        Item[] origianlItemList = ThePacific.getCurrentGame().getItem();
+        
+        Item[] itemList = originalItemList.clone();
+        
+        Item tempItem;
+        for (int i = 0; i < itemList.length -1; i++) {
+            for (int j = 0; j < itemList.length -1-i; j++){
+                    if ( itemList[j].getDecription().
+                            compareToIgnoreCase(itemList[j+1].getDescription())>0){
+                        tempItem = itemList[j];
+                        itemList[j] = itemList[j+1];
+                        itemList[j+1] = tempItemList;
+                    
+                         }
+                    }
+        }
+    return itemList;
+    }
+    
+   
 
     static void assignScenesToLocations(Map map, Scene[] scenes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
