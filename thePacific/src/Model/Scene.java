@@ -5,8 +5,10 @@
  */
 package Model;
 
+import Control.MapControl;
 import java.io.Serializable;
 import java.util.Objects;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -139,11 +141,11 @@ private static Scene[] createScenes() throws MapContolException {
         return true;
     }
 
-    private void setBlocked(boolean b) {
+    public void setBlocked(boolean b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void setMapSymbol(String _st_) {
+    public void setMapSymbol(String _st_) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

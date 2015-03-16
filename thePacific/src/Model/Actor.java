@@ -25,15 +25,15 @@ public enum Actor implements Serializable{
     Store_Owner_Kim("The Proud Owner of The Happy Mart");    
     
     
- 
+    //Class Instance Variables
     private final String Type;
     private final Point coordinates;
    
     // Constructor
 
-Actor(String Type) {
-    this.Type = Type;
-    coordinates = new Point(1,1);
+    Actor(String Type) {
+        this.Type = Type;
+        coordinates = new Point(1,1);
 }
     
     //Getter and Setter Functions

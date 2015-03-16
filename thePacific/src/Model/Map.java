@@ -13,8 +13,9 @@ import java.io.Serializable;
  */
 public class Map implements Serializable {
 
-    private double rowCount;
-    private double columnCount;
+    //Class Instance Variables
+    private int rowCount;
+    private int columnCount;
     private Location[][] locations;
 
     //Constructor Function
@@ -49,21 +50,35 @@ public class Map implements Serializable {
     }
 
     //Getter and Setter Functions
-    public double getRowCount() {
+    public int getRowCount() {
         return rowCount;
     }
 
-    public void setRowCount(double rowCount) {
+    public void setRowCount(int rowCount) {
         this.rowCount = rowCount;
     }
 
-    public double getColumnCount() {
+    public int getColumnCount() {
         return columnCount;
     }
 
-    public void setColumnCount(double columnCount) {
+    public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
+    
+    private static Scene[] createScenes() {
+        System.out.println("Called the createScenes Function!");
+        return null;
+    }
+
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+    
     //toString function
 
     @Override
