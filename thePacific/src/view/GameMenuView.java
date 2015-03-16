@@ -41,11 +41,11 @@ public class GameMenuView {
             "\t" + "In Stock");
     
     //for each inventory item
-    for (Item item: item){
+    for (Item inventitem: item){
         //Display the description, the required amount and amount in stock
-        System.out.println(item.getDescription() + "\t " +
-                item.getRequiredAmount() + "\t" +
-                item.getQuantityInStock());
+        System.out.println(inventitem.getDescription() + "\t " +
+                inventitem.getRequiredAmount() + "\t" +
+                inventitem.getQuantityInStock());
     
 }
     }
