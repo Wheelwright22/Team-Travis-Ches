@@ -16,8 +16,7 @@ public class StoreView extends View { //or stror menu//
                 + "\n ------------------------------------- "
                 + "\n|      Welcome To The Happy Mart      |"
                 + "\n ------------------------------------- "
-                + "\nB - Buy                                "
-                + "\nS - Sell                               "
+                + "\nB - Buy Something                      "
                 + "\nT - Talk To Store Owner                "
                 + "\nE - Exit Store                         "
                 + "\n-------------------------------------- ");
@@ -35,9 +34,6 @@ public class StoreView extends View { //or stror menu//
             case 'B':// Buy Items
                 this.buyitems();
                 break;
-            case 'S':// Sell
-                this.sellitems();
-                break;
             case 'T':// Talk To Store Owner
                 this.smalltalk();
                 break;
@@ -54,10 +50,6 @@ public class StoreView extends View { //or stror menu//
     //THIS NEEDS TO BE DONE Create a Control layer class, called generaterandomquestion. Create a stub function for each set of 5 statements and then call it below under each function; missions, suspicious, and island history.
     private void buyitems() {
         System.out.println("\nBuy Items Here!");
-    }
-
-    private void sellitems() {
-        System.out.println("\nSell Items Here!");
     }
 
     private void smalltalk() {

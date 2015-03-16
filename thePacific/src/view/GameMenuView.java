@@ -5,6 +5,9 @@
  */
 package view;
 
+import Control.GameControl;
+import Model.Item;
+
 /**
  *
  * @author travi_000
@@ -31,10 +34,10 @@ public class GameMenuView {
     }
 
     private void viewInventory() {
-    Item[] item = GameControl.getSortedItemList();
+    Item[] item = GameControl.getSortedInventoryList();
     
     System.out.println("\nList of Inventory Items");
-    System.outprintln("Description" + "\t" + "Required" +
+    System.out.println("Description" + "\t" + "Required" +
             "\t" + "In Stock");
     
     //for each inventory item
@@ -49,10 +52,10 @@ public class GameMenuView {
     
 
     private void displayMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         System.out.println("Calls The DisplayMap Stub Function.");
     }
 
     private void viewActors() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("Calls The viewActors Stub Function.");
     }
 }

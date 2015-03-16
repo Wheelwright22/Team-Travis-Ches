@@ -6,8 +6,10 @@
 package Control;
 
 import Model.Game;
+import Model.Location;
 import Model.Map;
 import Model.Scene;
+import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import thepacific.ThePacific;
 
@@ -43,16 +45,20 @@ public class MapControl {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-public enum SceneType {
-    beach,
-    river,
-    village,
-    choclate,
-    zbase;
+    public enum SceneType{
+        start,
+        beach,
+        jungle,
+        hatch,
+        bombmaker,
+        village,
+        zbase,
+        base,
+        finish;
 }
 
 private static Scene[] createScenes() throws MapContolException {
-   BufferedImage image =null;
+   BufferedImage image = null;
     
     Game game = ThePacific.getCurrentGame();
     
@@ -85,4 +91,33 @@ private static Scene[] createScenes() throws MapContolException {
         
     return null;
 } 
+
+ private static void assignScenesToLocations(Map map,Scene[] scenes){
+        Location[][] locations = map.getLocations();
+        
+        //Start Point
+        locations[0][0].setScene(scenes [SceneType.start.ordinal()]);
+        locations[0][1].setScene(scenes [SceneType.start.ordinal()]);
+        locations[0][2].setScene(scenes [SceneType.start.ordinal()]);
+        locations[0][3].setScene(scenes [SceneType.start.ordinal()]);
+        locations[0][4].setScene(scenes [SceneType.start.ordinal()]);
+        locations[0][5].setScene(scenes [SceneType.start.ordinal()]);
+        locations[0][6].setScene(scenes [SceneType.start.ordinal()]);
+        locations[0][7].setScene(scenes [SceneType.start.ordinal()]);
+        locations[0][8].setScene(scenes [SceneType.start.ordinal()]);
+        locations[0][9].setScene(scenes [SceneType.start.ordinal()]);
+        
+        
+        //Finish Point
+        locations[0][0].setScene(scenes [SceneType.finish.ordinal()]);
+        locations[0][1].setScene(scenes [SceneType.finish.ordinal()]);
+        locations[0][2].setScene(scenes [SceneType.finish.ordinal()]);
+        locations[0][3].setScene(scenes [SceneType.finish.ordinal()]);
+        locations[0][4].setScene(scenes [SceneType.finish.ordinal()]);
+        locations[0][5].setScene(scenes [SceneType.finish.ordinal()]);
+        locations[0][6].setScene(scenes [SceneType.finish.ordinal()]);
+        locations[0][7].setScene(scenes [SceneType.finish.ordinal()]);
+        locations[0][8].setScene(scenes [SceneType.finish.ordinal()]);
+        locations[0][9].setScene(scenes [SceneType.finish.ordinal()]);
+    }
 }

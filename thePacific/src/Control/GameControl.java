@@ -6,13 +6,11 @@
 package Control;
 
 import Model.Game;
-import Model.Inventory;
 import Model.Item;
 import Model.Jeep;
 import Model.Map;
 import Model.Player;
 import Model.Scene;
-import com.sun.org.apache.bcel.internal.Constants;
 import thepacific.ThePacific;
 
 /**
@@ -29,7 +27,7 @@ public class GameControl {
         game.setPlayer(player); //save player in game
 
         //Create The Inventory List And Save In The Game.
-        Item[] itemList = GameControl.createItemList();
+        Item[] itemList = Item.createItemList();
         game.setItem(itemList);
 
         Jeep jeep = new Jeep();//creat the jeep
@@ -43,18 +41,18 @@ public class GameControl {
 
     }
     public static Item[] getSortedInventoryList() {
-        Item[] origianlItemList = ThePacific.getCurrentGame().getItem();
+        Item[] originalItemList = ThePacific.getCurrentGame().getItem();
         
         Item[] itemList = originalItemList.clone();
         
         Item tempItem;
         for (int i = 0; i < itemList.length -1; i++) {
             for (int j = 0; j < itemList.length -1-i; j++){
-                    if ( itemList[j].getDecription().
-                            compareToIgnoreCase(itemList[j+1].getDescription())>0){
+                    if ( itemList[j].getDescription().
+                            compareToIgnoreCase(itemList[j +1].getDescription())> 0){
                         tempItem = itemList[j];
                         itemList[j] = itemList[j+1];
-                        itemList[j+1] = tempItemList;
+                        itemList[j+1] = tempItem;
                     
                          }
                     }
@@ -62,8 +60,7 @@ public class GameControl {
     return itemList;
     }
     
-   
-
+    
     static void assignScenesToLocations(Map map, Scene[] scenes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

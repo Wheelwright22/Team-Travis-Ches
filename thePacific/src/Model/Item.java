@@ -33,16 +33,9 @@ public enum Item implements Serializable{
         
     
     private String type;
-    private String decription;
+    private String description;
     private int RequiredAmount;
 
-    public int getRequiredAmount() {
-        return RequiredAmount;
-    }
-
-    public void setRequiredAmount(int RequiredAmount) {
-        this.RequiredAmount = RequiredAmount;
-    }
     //Constructor
 public static Item[] createItemList() {
       Item[] item = new Item[10];
@@ -125,26 +118,41 @@ public static Item[] createItemList() {
         this.type = type;
     }
 
-    public String getDecription() {
-        return decription;
+    public Object getDescription() {
+        return description;
     }
 
     public void setDecription(String decription) {
-        this.decription = decription;
+        this.description = decription;
+    }
+    
+    private void setQuantityInStock(int i) {
+       System.out.println("This Will Run The Stub Function");
+    }
+    
+    public String getQuantityInStock() {
+        System.out.println("This Will Run The Stub Function");  
+            return null;
+    }
+    
+    public int getRequiredAmount() {
+        return RequiredAmount;
     }
 
+    public void setRequiredAmount(int i) {
+        this.RequiredAmount = RequiredAmount;
+    }
+    
+    
 //toString
     @Override
     public String toString() {
-        return "Items{" + "type=" + type + ", decription=" + decription + '}';
+        return "Items{" + "type=" + type + ", decription=" + description + '}';
     }
     public void setDescription(String m16_Rifle) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setQuantityInStock(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     
     

@@ -28,45 +28,7 @@ public class Scene implements Serializable {
 
     public Scene() {
     }
-
-private static Scene[] createScenes() throws MapContolException {
-    BufferedImage image =null;
-    
-    Game game = thePacific.getCurrentGame();
-    
-    Scene[] scenes = new Scene[SceneType.values().length];
-    
-    Scene startingScene = new Scene();
-    startingScene.setDescription(
-                "\n Welcome to the island of Shikoku. You...");
-    startingScene.setSymbol(" ST ");
-    startingScene.setBlocked(false);
-    startingScene.setTravelTime(240);
-    ImageIcon startingSceneImage = MapControl.getImage(startingScene,
-            "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
-    startingScene.setIcon
-    scenes[SceneType.start.ordinal()] = startingScene;   
-} */
-
-    
-    public enum SceneType{
-        start,
-        beach,
-        jungle,
-        hatch,
-        bombmaker,
-        village,
-        zbase,
-        base;
-        
-    }
-    
-    private static void assignScenesToLocations(Map map,Scene[] scenes){
-        Location[][] locations = map.getLocations();
-        
-        //start point
-        locations[0][0].setScene(scenes[SceneType.beach.ordinal()]);
-    }
+  
     //Getter and Setter Functions
     public String getType() {
         return type;
