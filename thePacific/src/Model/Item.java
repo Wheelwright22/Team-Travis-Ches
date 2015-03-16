@@ -13,10 +13,7 @@ import java.util.Objects;
  *
  * @author travi_000
  */
-public class Item {
-    
-    public Item() {
-    }
+
 
 public enum Item implements Serializable{
     

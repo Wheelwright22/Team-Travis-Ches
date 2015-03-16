@@ -27,7 +27,7 @@ public class Scene implements Serializable {
     public Scene() {
     }
 
-/*private static Scene[] createScenes() throws MapContolException {
+private static Scene[] createScenes() throws MapContolException {
     BufferedImage image =null;
     
     Game game = thePacific.getCurrentGame();
@@ -47,7 +47,24 @@ public class Scene implements Serializable {
 } */
 
     
+    public enum SceneType{
+        start,
+        beach,
+        jungle,
+        hatch,
+        bombmaker,
+        village,
+        zbase,
+        base;
+        
+    }
     
+    private static void assignScenesToLocations(Map map,Scene[] scenes){
+        Location[][] locations = map.getLocations();
+        
+        //start point
+        locations[0][0].setScene(scenes[SceneType.beach.ordinal()]);
+    }
     //Getter and Setter Functions
     public String getType() {
         return type;
