@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Game implements Serializable {
     private String winner;
     private double time;
-    private Actor[] actor;
+    private Actor[] actors;
     private Map map;
     private Jeep jeep;
     private Player player;
@@ -23,11 +23,11 @@ public class Game implements Serializable {
   // constuctor function
 
     public Actor[] getActor() {
-        return actor;
+        return actors;
     }
 
     public void setActor(Actor[] actor) {
-        this.actor = actor;
+        this.actors = actor;
     }
 
     public Map getMap() {

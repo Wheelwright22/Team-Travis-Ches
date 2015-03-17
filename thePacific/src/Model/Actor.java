@@ -15,25 +15,30 @@ import java.util.Objects;
  */
 public enum Actor implements Serializable{
     
-    General_Smith("The 4-Star General Himself, He Leads The Ivestigation."),
-    Lieutenant_Maverick("A Superior Officer, Show Some Respect!"),
-    Sergeant_Sir("The Leader of Your Squad."),
-    Private("This Is You, A Brand New Marine!"),
-    Grunt("Other Non-Important Characters."),
-    Zombie("A Crazy Experiment Gone Wrong. They Roam The Island."),
-    Zombie_Hitler("The Main Zombie In Charge, Patience = 0."),
-    Store_Owner_Kim("The Proud Owner of The Happy Mart");    
-    
+    General_Smith("The 4-Star General Himself, He Leads The Ivestigation.", 10),
+    Private("This Is You, A Brand New Marine!", 5),
+    Lieutenant_Maverick("A Superior Officer, Show Some Respect!", 9),
+    Grunt("Other Non-Important Characters.", 4),
+    Sergeant_Sir("The Leader of Your Squad.", 7), 
+    Zombie("A Crazy Experiment Gone Wrong. They Roam The Island.", 7),
+    Zombie_Hitler("The Main Zombie In Charge, Patience = 0.", 10),
+    Store_Owner_Kim("The Proud Owner of The Happy Mart", 3);    
+
+    public static Object ordinal(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     //Class Instance Variables
     private final String Type;
     private final Point coordinates;
+    private final int Strength;
    
     // Constructor
 
-    Actor(String Type) {
+    Actor(String Type, int Strength) {
         this.Type = Type;
         coordinates = new Point(1,1);
+        this.Strength = Strength;
 }
     
     //Getter and Setter Functions
@@ -44,5 +49,19 @@ public enum Actor implements Serializable{
 
     public Point getCoordinates() {
         return coordinates;
+    }
+    
+        public int getStrength() {
+        return Strength;
+    }
+
+    public Object getDescription() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    private static class Strength {
+
+        public Strength() {
+        }
     }
 }
