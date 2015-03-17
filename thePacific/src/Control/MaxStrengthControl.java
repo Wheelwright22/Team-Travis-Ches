@@ -48,21 +48,20 @@ public class MaxStrengthControl {
             int = Actor.ordinal(i).getStrength;
             if (list[i] > maxStrength) {
             }
-                then {
-                maxStrength = list[i];          
+            then {
+                maxStrength = list[i];
+            }
+            return maxStrength;
         }
-        return maxStrength;
     }
 
-
-
-/*BEGIN
-maxValue = list[0]
-FOR index = 1 TO list.length -1
- IF ( list[index] > maxValue)
- THEN
- maxValue = list[index]
- ENDIF
-ENDFOR
-RETURN maxValue
-END */
+    /*BEGIN
+     maxValue = list[0]
+     FOR index = 1 TO list.length -1
+     IF ( list[index] > maxValue)
+     THEN
+     maxValue = list[index]
+     ENDIF
+     ENDFOR
+     RETURN maxValue
+     END */
