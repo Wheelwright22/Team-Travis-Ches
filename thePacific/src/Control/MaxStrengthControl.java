@@ -23,14 +23,14 @@ public class MaxStrengthControl {
         Actor[] actorList = unsortedActorList.clone();
 
         //Bubblesorting The Actor List Into Alphabetical Order.
-        Actor tempActorList;
+        Actor tempActor;
         for (int i = 0; i < actorList.length - 1; i++) {
             for (int j = 0; j < actorList.length - 1 - i; j++) {
                 if (actorList[j].getDescription().
                         compareToIgnoreCase(actorList[j + 1].getDescription()) > 0) {
-                    tempActorList = actorList[j];
+                    tempActor = actorList[j];
                     actorList[j] = actorList[j + 1];
-                    actorList[j + 1] = tempActorList;
+                    actorList[j + 1] = tempActor;
                 }
 
             }
