@@ -44,12 +44,13 @@ public class MaxStrengthControl {
         int i = 1;
         for (i = 1; i < list.length - 1; i++) {
             if (list[i] > maxStrength) {
-            }
+            
             then {
                 maxStrength = list[i];
             }
-            return maxStrength;
         }
+            return maxStrength;
+        
     }
 
     /*BEGIN
