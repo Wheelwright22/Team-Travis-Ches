@@ -29,11 +29,11 @@ public class GameMenuView {
             case 'A':  //View The Actors
                 this.viewActors();
                 break;
-            case 'h'://view average health of all players.
+            case 'h'://Views The Max Strength Of The Actors
                 this.viewMaxStrength();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Please Try again");
+                System.out.println("\n*** Invalid Selection ***");
                 return false;    
         }
         return true;
