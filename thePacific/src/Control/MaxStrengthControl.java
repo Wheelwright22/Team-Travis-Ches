@@ -43,7 +43,6 @@ public class MaxStrengthControl {
         int maxStrength = list[0];
         int i = 1;
         for (i = 1; i < list.length - 1; i++) {
-            int = Actor.ordinal(i).getStrength;
             if (list[i] > maxStrength) {
             }
             then {
