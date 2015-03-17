@@ -38,21 +38,20 @@ public class MaxStrengthControl {
     }
 
     //Find The Largest Value In A List
-    public static double findMaxStrength(int[] list) {
+    public static int findMaxStrength(int[] list) {
 
         int maxStrength = list[0];
         int i = 1;
         for (i = 1; i < list.length - 1; i++) {
             if (list[i] > maxStrength) {
-            
-            then {
+       
                 maxStrength = list[i];
             }
         }
             return maxStrength;
         
     }
-
+}
     /*BEGIN
      maxValue = list[0]
      FOR index = 1 TO list.length -1

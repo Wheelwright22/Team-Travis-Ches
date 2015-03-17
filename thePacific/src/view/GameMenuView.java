@@ -30,7 +30,7 @@ public class GameMenuView {
                 this.viewActors();
                 break;
             case 'h'://Views The Max Strength Of The Actors
-                this.viewMaxStrength();
+                this.viewMaxStrength(Strin[]);
                 break;
             default:
                 System.out.println("\n*** Invalid Selection ***");
@@ -64,7 +64,7 @@ public class GameMenuView {
     private void viewActors() {
        System.out.println("Calls The viewActors Stub Function.");
     }
-      private void viewMaxStrength(String[] arg) {
-        
+      private void viewMaxStrength() {
+        //Needs to call the findMaxStrength
     }
 }
