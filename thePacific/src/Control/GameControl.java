@@ -20,7 +20,7 @@ import thepacific.ThePacific;
 public class GameControl {
 
     public static void createNewGame(Player player) {
-        
+
         Game game = new Game(); // create new game
         ThePacific.setCurrentGame(game);//save in ThePacific
 
@@ -40,27 +40,27 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
 
     }
+
     public static Item[] getSortedInventoryList() {
         Item[] originalItemList = ThePacific.getCurrentGame().getItem();
-        
+
         Item[] itemList = originalItemList.clone();
-        
+
         Item tempItem;
-        for (int i = 0; i < itemList.length -1; i++) {
-            for (int j = 0; j < itemList.length -1-i; j++){
-                    if ( itemList[j].getDescription().
-                            compareToIgnoreCase(itemList[j +1].getDescription())> 0){
-                        tempItem = itemList[j];
-                        itemList[j] = itemList[j+1];
-                        itemList[j+1] = tempItem;
-                    
-                         }
-                    }
+        for (int i = 0; i < itemList.length - 1; i++) {
+            for (int j = 0; j < itemList.length - 1 - i; j++) {
+                if (itemList[j].getDescription().
+                        compareToIgnoreCase(itemList[j + 1].getDescription()) > 0) {
+                    tempItem = itemList[j];
+                    itemList[j] = itemList[j + 1];
+                    itemList[j + 1] = tempItem;
+
+                }
+            }
         }
-    return itemList;
+        return itemList;
     }
-    
-    
+
     static void assignScenesToLocations(Map map, Scene[] scenes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

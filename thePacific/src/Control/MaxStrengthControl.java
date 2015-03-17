@@ -32,9 +32,7 @@ public class MaxStrengthControl {
                     actorList[j] = actorList[j + 1];
                     actorList[j + 1] = tempActor;
                 }
-
             }
-
         }
         return actorList;
     }
