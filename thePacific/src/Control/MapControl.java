@@ -5,10 +5,12 @@
  */
 package Control;
 
+import Model.Actor;
 import Model.Game;
 import Model.Location;
 import Model.Map;
 import Model.Scene;
+import java.awt.Point;
 import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import thepacific.ThePacific;
@@ -50,7 +52,6 @@ public class MapControl {
         beach,
         jungle,
         hatch,
-        bombmaker,
         village,
         zbase,
         base,
@@ -139,4 +140,19 @@ private static Scene[] createScenes() throws MapContolException {
         locations[5][4].setScene(scenes [SceneType.scene.ordinal()]);
         locations[5][5].setScene(scenes [SceneType.scene.ordinal()]);
     }
+ 
+ public static int moveActorToLocation(Actor actor, Point coordinates) {
+ 
+     Map map = ThePacific.getCurrentGame().getMap();
+     int newRow = coordinates.x-1;
+     int newColumn = coordinates.y-1;
+     
+     if (newRow <0 || newRow >= map.getRowCount() ||
+         newColumn < 0 || newColumn >= map.getColumnCount()) {
+            return -1;
+     }
+     return 0;
+ }
+ 
+ 
 }
