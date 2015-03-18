@@ -28,7 +28,10 @@ public class InventoryControl {
              
 		return Volume;
   }
-
-    
-    
+  double[] AmmoList = new double[5];
+  
+  int guns = 5;
+  
 }
+ 
+    
