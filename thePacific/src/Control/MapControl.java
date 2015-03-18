@@ -5,6 +5,7 @@
  */
 package Control;
 
+import Exceptions.MapControlException;
 import Model.Actor;
 import Model.Game;
 import Model.Location;
@@ -59,7 +60,7 @@ public class MapControl {
         finish;
 }
 
-private static Scene[] createScenes() throws MapContolException {
+private static Scene[] createScenes() throws MapControlException {
    BufferedImage image = null;
     
     Game game = ThePacific.getCurrentGame();
