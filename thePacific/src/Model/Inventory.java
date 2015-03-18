@@ -17,8 +17,9 @@ public class Inventory implements Serializable{
     private String ItemType;
     private double Quantity;
     private double maxWeight;
-    
-    //constructor function
+       
+//constructor function
+   
 
     public Inventory() {
     }
@@ -88,7 +89,6 @@ public class Inventory implements Serializable{
         }
         return true;
     }
-    
     
     }
     

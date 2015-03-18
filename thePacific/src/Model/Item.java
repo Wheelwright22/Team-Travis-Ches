@@ -13,11 +13,10 @@ import java.util.Objects;
  *
  * @author travi_000
  */
+public class Item {
 
+public enum ItemType {
 
-public enum Item implements Serializable{
-    
-  
         M16,
         Bombs,
         Knife,
@@ -30,11 +29,12 @@ public enum Item implements Serializable{
         Tire,
         Sickle;
         
-        
+}
     
     private String type;
     private String description;
     private int RequiredAmount;
+    private int QuantityInStock;
 
     //Constructor
 public static Item[] createItemList() {
@@ -44,67 +44,67 @@ public static Item[] createItemList() {
       M16.setDescription("M16 Rifle");
       M16.setQuantityInStock(0);
       M16.setRequiredAmount(0);
-      item[Item.M16.ordinal()] = M16;
+      item[ItemType.M16.ordinal()] = M16;
       
        Item Bombs = new Item();
       Bombs.setDescription("Bomb");
       Bombs.setQuantityInStock(0);
       Bombs.setRequiredAmount(0);
-      item[Item.Bombs.ordinal()] = Bombs;
+      item[ItemType.Bombs.ordinal()] = Bombs;
       
        Item Knife = new Item();
       Knife.setDescription("Knife");
       Knife.setQuantityInStock(0);
       Knife.setRequiredAmount(0);
-      item[Item.Knife.ordinal()] = Knife;
+      item[ItemType.Knife.ordinal()] = Knife;
       
        Item Apple = new Item();
       Apple.setDescription("Apple");
       Apple.setQuantityInStock(0);
       Apple.setRequiredAmount(0);
-      item[Item.Apple.ordinal()] = Apple;
+      item[ItemType.Apple.ordinal()] = Apple;
       
        Item Durian = new Item();
       Durian.setDescription("Durian");
       Durian.setQuantityInStock(0);
       Durian.setRequiredAmount(0);
-      item[Item.Durian.ordinal()] = Durian;
+      item[ItemType.Durian.ordinal()] = Durian;
       
        Item Lychee = new Item();
       Lychee.setDescription("Lychee");
       Lychee.setQuantityInStock(0);
       Lychee.setRequiredAmount(0);
-      item[Item.Lychee.ordinal()] = Lychee;
+      item[ItemType.Lychee.ordinal()] = Lychee;
       
       Item Shovel = new Item();
       Shovel.setDescription("Shovel");
       Shovel.setQuantityInStock(0);
       Shovel.setRequiredAmount(0);
-      item[Item.Shovel.ordinal()] = Shovel;
+      item[ItemType.Shovel.ordinal()] = Shovel;
       
       Item Ammo = new Item();
       Ammo.setDescription("Ammo");
       Ammo.setQuantityInStock(0);
       Ammo.setRequiredAmount(0);
-      item[Item.Ammo.ordinal()] = Ammo;
+      item[ItemType.Ammo.ordinal()] = Ammo;
       
       Item Pistol = new Item();
       Pistol.setDescription("Pistol");
       Pistol.setQuantityInStock(0);
       Pistol.setRequiredAmount(0);
-      item[Item.Pistol.ordinal()] = Pistol;
+      item[ItemType.Pistol.ordinal()] = Pistol;
       
       Item Tire = new Item();
       Tire.setDescription("Tire");
       Tire.setQuantityInStock(0);
       Tire.setRequiredAmount(0);
-      item[Item.Tire.ordinal()] = Tire;
+      item[ItemType.Tire.ordinal()] = Tire;
       
       Item Sickle = new Item();
       Sickle.setDescription("Sickle");
       Sickle.setQuantityInStock(0);
       Sickle.setRequiredAmount(0);
-      item[Item.Sickle.ordinal()] = Sickle;
+      item[ItemType.Sickle.ordinal()] = Sickle;
       
       return item;
     }

@@ -17,20 +17,26 @@ public class GameMenuView {
     void displayMenu() {
         System.out.println("\n*** displayMenu Stub function called *** ");
     }
-    public void doAction(char selection){
+    public boolean doAction(Object obj){
+        char selection = ((String) obj).toLowerCase().charAt(0);
         switch (selection){
             case 'V'://Travel to new my location
                 this.displayMap();
-            break;
-            case 'I':
+                break;
+            case 'I':  //Display The Inventory
                 this.viewInventory();
                 break;
-            case 'A':
+            case 'A':  //View The Actors
                 this.viewActors();
                 break;
-                
-            
+            case 'h'://Views The Max Strength Of The Actors
+                this.viewMaxStrength(Strin[]);
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection ***");
+                return false;    
         }
+        return true;
     }
 
     private void viewInventory() {
@@ -57,5 +63,8 @@ public class GameMenuView {
 
     private void viewActors() {
        System.out.println("Calls The viewActors Stub Function.");
+    }
+      private void viewMaxStrength() {
+        //Needs to call the findMaxStrength
     }
 }
