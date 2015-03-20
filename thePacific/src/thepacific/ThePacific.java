@@ -32,7 +32,6 @@ public class ThePacific {
     public static void setCurrentGame(Game currentGame) {
         ThePacific.currentGame = currentGame;
     }
- 
      
      
     public static void main(String[] args) {
@@ -41,8 +40,15 @@ public class ThePacific {
        
         StartProgramView.startProgram();
         
-        //get players name function test
-//        StartProgramView.getPlayersName();
+        // create and test the startProgram 
+                StartProgramView startProgramView = new StartProgramView();
+        try{
+        startProgramView.display();
+        } catch (Throwable te){
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
     }
 
     
