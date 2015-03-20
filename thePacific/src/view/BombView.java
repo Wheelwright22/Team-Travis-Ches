@@ -38,12 +38,15 @@ public class BombView {
 private double doAction(double numberOfBombs) {
    
           double radius = 3;
-         
+     try{    
     double amountOfGunpowder = new InventoryControl().calcVolumeOfBombs(numberOfBombs);
     
     return amountOfGunpowder;
-    
-   
+     }
+   catch(CWExeption e){
+           System.out.println(e.getMessage());
+           }
+     
 }
             
 private double getInput() {
