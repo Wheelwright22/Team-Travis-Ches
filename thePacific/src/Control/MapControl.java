@@ -36,10 +36,19 @@ public class MapControl {
         
     }
 
-    static void moveActorsToStartingLocation(Map map) {
-    System.out.println("Calling THe MoveActorsToStartLocation Function");    
+    public static int moveActorsToStartingLocation(Map map) 
+                            throws MapControlException {
+       // For Every Actor
+       Actor[] actors = Actor.values();
+       
+       for (Actor actor : actors) {
+           Point coordinates = actor.getCoordinates();
+           MapControl.moveActorToLocation(actor, coordinates);
+       }
+        return 0;
     }
 
+    
     private static Scene[] createScenes() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -108,7 +117,7 @@ private static Scene[] createScenes() throws MapControlException {
      Scene village = new Scene();
     village.setDescription(
                 "\n a small village, theres no one in sight");
-    village.setSymbol(" ST ");
+    village.setSymbol(" V ");
     village.setBlocked(false);
     village.setTravelTime(240);
     ImageIcon villageImage = MapControl.getImage(village,
@@ -135,7 +144,7 @@ private static Scene[] createScenes() throws MapControlException {
       Scene happymart = new Scene();
     happymart.setDescription(
                 "\n a small village, theres no one in sight");
-    happymart.setSymbol(" :) ");
+    happymart.setSymbol(" HM ");
     happymart.setBlocked(false);
     happymart.setTravelTime(240);
     ImageIcon happymartImage = MapControl.getImage(happymart,
@@ -207,18 +216,18 @@ private static Scene[] createScenes() throws MapControlException {
         locations[5][5].setScene(scenes [SceneType.finish.ordinal()]);
     }
  
- public static int moveActorToLocation(Actor actor, Point coordinates) {
- 
+ public static void moveActorToLocation(Actor actor, Point coordinates)
+                         throws MapControlException {
      Map map = ThePacific.getCurrentGame().getMap();
      int newRow = coordinates.x-1;
      int newColumn = coordinates.y-1;
      
      if (newRow <0 || newRow >= map.getRowCount() ||
          newColumn < 0 || newColumn >= map.getColumnCount()) {
-            return -1;
-     }
-     return 0;
+            throw new MapControlException("Cannot move actor to location "
+                                         + coordinates.x + ", " + coordinates.y
+                                         + " because that location is outside"
+                                         + " the bounds of the map.");
+ 
  }
- 
- 
-}
+ }

@@ -5,6 +5,7 @@
  */
 package Control;
 
+import Exceptions.MapControlException;
 import Model.Game;
 import Model.Item;
 import Model.Jeep;
@@ -19,7 +20,7 @@ import thepacific.ThePacific;
  */
 public class GameControl {
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(Player player) throws MapControlException {
 
         Game game = new Game(); // create new game
         ThePacific.setCurrentGame(game);//save in ThePacific

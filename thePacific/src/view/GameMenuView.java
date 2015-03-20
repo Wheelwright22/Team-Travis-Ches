@@ -6,6 +6,8 @@
 package view;
 
 import Control.GameControl;
+import Control.MaxStrengthControl;
+import Model.Actor;
 import Model.Item;
 
 /**
@@ -29,9 +31,9 @@ public class GameMenuView {
             case 'A':  //View The Actors
                 this.viewActors();
                 break;
-            case 'h'://Views The Max Strength Of The Actors
-                this.viewMaxStrength(Strin[]);
-                break;
+            case 'S'://Views The Max Strength Of The Actors
+                this.viewMaxStrength();
+                break; 
             default:
                 System.out.println("\n*** Invalid Selection ***");
                 return false;    
@@ -62,9 +64,10 @@ public class GameMenuView {
     }
 
     private void viewActors() {
-       System.out.println("Calls The viewActors Stub Function.");
+      Actor[] sortedActorList = MaxStrengthControl.getSortedActorList();
+        System.out.println(sortedActorList);
     }
       private void viewMaxStrength() {
-        //Needs to call the findMaxStrength
+       MaxStrengthControl.calculateMaxStrength();    
     }
 }

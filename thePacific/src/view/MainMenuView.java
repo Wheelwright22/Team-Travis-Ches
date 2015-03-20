@@ -6,6 +6,9 @@
 package view;
 
 import Control.GameControl;
+import Exceptions.MapControlException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import thepacific.ThePacific;
 
 /**
@@ -37,8 +40,14 @@ public class MainMenuView extends View {
      char choice = value.charAt(0);
              
      switch (choice){
-       case 'N': // create and start a new game 
-            this.startNewGame();
+       case 'N': {
+         try {
+             // create and start a new game
+             this.startNewGame();
+         } catch (MapControlException ex) {
+             Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+         }
+     }
             break;
        case 'G'://start existing game
            this.startExistingGame();
@@ -58,7 +67,7 @@ public class MainMenuView extends View {
         return true;
 }
 
-    private void startNewGame() {
+    private void startNewGame() throws MapControlException {
         //Create New Game
         GameControl.createNewGame(ThePacific.getPlayer());
         

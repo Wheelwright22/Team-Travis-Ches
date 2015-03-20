@@ -6,6 +6,9 @@
 package Control;
 
 import Model.Actor;
+import static java.nio.file.Files.list;
+import static java.rmi.Naming.list;
+import static java.util.Collections.list;
 import thepacific.ThePacific;
 
 /**
@@ -14,6 +17,8 @@ import thepacific.ThePacific;
  */
 public class MaxStrengthControl {
 
+    // This Function Sorts The Actors Into Alphabetical Order.
+    // This Funtion Will Be Called In GameMenuView.java
     public static Actor[] getSortedActorList() {
 
         //This Gets The Actor List.
@@ -37,8 +42,19 @@ public class MaxStrengthControl {
         return actorList;
     }
 
+    
+      public static double calculateMaxStrength() {
+        
+        Actor[] Strength = Actor.values();
+        
+        double findMaxStrength = MaxStrengthControl.findMaxStrength(Strength);
+        return findMaxStrength;
+    }
+    
+
+    
     //Find The Largest Value In A List
-    public static int findMaxStrength(int[] list) {
+    public static double findMaxStrength(Actor[] Strength) {
 
         int maxStrength = list[0];
         int i = 1;
@@ -51,6 +67,7 @@ public class MaxStrengthControl {
             return maxStrength;
         
     }
+
 }
     /*BEGIN
      maxValue = list[0]
