@@ -6,6 +6,7 @@
 package view;
 
 import Control.WaterDrumControl;
+import Exceptions.WaterDrumControlException;
 import java.util.Scanner;
 
 /**
@@ -33,7 +34,7 @@ public class WaterDrumView {
     //It's not heavy enough, you need to use a bigger barrel!
     
  
-    public void displayMenu() {
+    public void displayMenu() throws WaterDrumControlException {
         char selection = ' ';
 
         double volume;
@@ -47,7 +48,7 @@ public class WaterDrumView {
 
     }
 
-    private double doAction(double height) {
+    private double doAction(double height) throws WaterDrumControlException {
 
         double volumeOfWater = new WaterDrumControl().calcVolumeOfWaterDrum(height);
 

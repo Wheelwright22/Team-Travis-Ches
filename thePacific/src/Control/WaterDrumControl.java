@@ -5,39 +5,29 @@
  */
 package Control;
 
+import Exceptions.WaterDrumControlException;
+
 /**
  *
  * @author travi_000
  */
 public class WaterDrumControl {
-    public double calcVolumeOfWaterDrum(double height/*,double radius*/){
+    public double calcVolumeOfWaterDrum(double height) throws WaterDrumControlException{
         
         if (height == Double.NaN ){
            //Height is not number.
-           return -1; 
+        throw new WaterDrumControlException("Your Input Is Not A Number.");
         }
         if (height <= 0){
             //Height is 0 or a negative number?
-            return -1;
+        throw new WaterDrumControlException("Your Input Is Too Low.");
         }
         if (height > 10){
             //Height is out of range / boundary.
-            return -1;
+        throw new WaterDrumControlException("Your Input Is Too High.");
         }
-	/*
-        if (radius == Double.NaN ){
-            //Radius is not a number.
-            return -1;
-        }
-	if (radius <= 0){
-            //Radius is 0 or a negative number?
-            return -1;
-        }
-	if (radius > 3){
-            //Radius is out of range / boundary.
-            return -1;
-        }
-	*/	
+        
+        
         double radius = 2;
         double volume = (Math.PI * Math.pow(radius,2) * height);
         

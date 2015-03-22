@@ -6,6 +6,7 @@
 package view;
 
 import Control.ProgramControl;
+import Exceptions.WaterDrumControlException;
 import Model.Player;
 import java.util.Scanner;
 
@@ -18,7 +19,7 @@ public class StartProgramView {
     public StartProgramView() {
     }
 
-    public void startProgram() {
+    public void startProgram() throws WaterDrumControlException {
         
         // Display the banner screen
         this.displayBanner();
