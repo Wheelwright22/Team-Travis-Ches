@@ -37,8 +37,6 @@ public class ThePacific {
     public static void main(String[] args) {
         // create and test the startProgram 
         StartProgramView StartProgramView = new StartProgramView();
-       
-        StartProgramView.startProgram();
         
         // create and test the startProgram 
                 StartProgramView startProgramView = new StartProgramView();
