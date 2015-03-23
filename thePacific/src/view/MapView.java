@@ -5,6 +5,7 @@
  */
 package view;
 
+import Control.MapControl;
 import Model.Location;
 import Model.Map;
 import Model.Scene;
@@ -39,10 +40,10 @@ public class MapView {
                 + "\n ------------------------ "
                 + "\n|    Map Symbol Guide    |"
                 + "\n ------------------------ "
-                + "\n     J = Jungle           "
-                + "\n     H = Secret Hatch     "
-                + "\n     B = Beach            "
-                + "\n     V = Village          "
+                + "\n    JN = Jungle           "
+                + "\n    SH = Secret Hatch     "
+                + "\n    BC = Beach            "
+                + "\n    VL = Village          "
                 + "\n    ST = Starting Scene   "
                 + "\n    US = U.S. Army Base   "
                 + "\n    ZB = Zombie Base      "

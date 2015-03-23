@@ -38,16 +38,12 @@ public class BombView {
 private double doAction(double numberOfBombs) {
    
           double radius = 3;
-     try{    
-    double amountOfGunpowder = new InventoryControl().calcVolumeOfBombs(numberOfBombs);
+
+    double amountOfGunpowder = InventoryControl.calcVolumeOfBombs(numberOfBombs);
     
     return amountOfGunpowder;
      }
-   catch(CWExeption e){
-           System.out.println(e.getMessage());
-           }
-     
-}
+
             
 private double getInput() {
            boolean valid = false; // indicates if the name is retrieved

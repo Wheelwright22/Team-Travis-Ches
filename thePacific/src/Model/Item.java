@@ -118,7 +118,7 @@ public static Item[] createItemList() {
         this.type = type;
     }
 
-    public Object getDescription() {
+    public String getDescription() {
         return description;
     }
 

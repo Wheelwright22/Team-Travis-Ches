@@ -22,7 +22,7 @@ import thepacific.ThePacific;
  */
 public class MapControl {
     
-    public static Map createMap() {
+    public static Map createMap() throws MapControlException {
         //Create The Map
         Map map = new Map(5,5);      
                
@@ -46,11 +46,6 @@ public class MapControl {
            MapControl.moveActorToLocation(actor, coordinates);
        }
         return 0;
-    }
-
-    
-    private static Scene[] createScenes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private static ImageIcon getImage(Scene startingScene, String citbyuicit260ThePacificimagesstartingPoin) {
@@ -87,7 +82,7 @@ private static Scene[] createScenes() throws MapControlException {
      Scene jungle = new Scene();
     jungle.setDescription(
                 "\n A Dark Mysterious Jungle. you cant see very far ahead of you, the trees are too thick");
-    jungle.setSymbol(" J ");
+    jungle.setSymbol(" JN ");
     jungle.setBlocked(false);
     jungle.setTravelTime(240);
     
@@ -95,7 +90,7 @@ private static Scene[] createScenes() throws MapControlException {
      Scene hatch = new Scene();
     hatch.setDescription(
                 "\n Theres a hatch here, theres no visible latch or handle.");
-    hatch.setSymbol(" H ");
+    hatch.setSymbol(" SH ");
     hatch.setBlocked(false);
     hatch.setTravelTime(240);
 
@@ -104,7 +99,7 @@ private static Scene[] createScenes() throws MapControlException {
     beach.setDescription(
                 "\n a Beautiful beach with white sand, the gulls calling in the wind, and the wave"
                         + "slowly crashing against the shore.");
-    beach.setSymbol(" B ");
+    beach.setSymbol(" BC ");
     beach.setBlocked(false);
     beach.setTravelTime(240);
 
@@ -112,7 +107,7 @@ private static Scene[] createScenes() throws MapControlException {
      Scene village = new Scene();
     village.setDescription(
                 "\n a small village, theres no one in sight");
-    village.setSymbol(" V ");
+    village.setSymbol(" VL ");
     village.setBlocked(false);
     village.setTravelTime(240);
 

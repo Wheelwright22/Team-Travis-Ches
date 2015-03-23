@@ -55,7 +55,7 @@ public enum Actor implements Serializable{
         return Strength;
     }
 
-    public Object getDescription() {
+    public String getDescription() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
