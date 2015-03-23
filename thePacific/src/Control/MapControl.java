@@ -212,5 +212,6 @@ private static Scene[] createScenes() throws MapControlException {
                                          + " because that location is outside"
                                          + " the bounds of the map.");
  
- }
- }
+        }
+    }
+}
