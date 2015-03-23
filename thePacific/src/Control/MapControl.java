@@ -89,7 +89,7 @@ private static Scene[] createScenes() throws MapControlException {
     
      Scene hatch = new Scene();
     hatch.setDescription(
-                "\n Theres a hatch here, theres no visible latch or handle.");
+                "\n Theres a hatch here, theres no visible latch or handle. Just A Small Unbreakable Window.");
     hatch.setSymbol(" SH ");
     hatch.setBlocked(false);
     hatch.setTravelTime(240);

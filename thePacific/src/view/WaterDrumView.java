@@ -75,15 +75,6 @@ public class WaterDrumView {
             } else {
                 break;
             }
-
-            //System.out.println("Enter The Radius Of The Barrel");
-            //Get the radius from the keyboard.
-            // radius = keyboard.nextDouble();  //nextLine is for strings & nextDouble is for numbers
-           // if (radius > 2 && radius < 1) {
-            //     System.out.println("Please Enter A Radius Between 1 And 2");
-            //     continue; // repeat again
-            // }
-            // break; // get out of the repetition 
         }
         return height;
 

@@ -53,7 +53,7 @@ public class MapView {
             System.out.print(i + " | ");
             for (int j = 0; j< map.getColumnCount(); j++) {
                 Location location = locations[i][j];
-                String symbol = Scene.getScene().getSymbol();
+                String symbol = location.getScene().getSymbol();
                 System.out.print(symbol + " | ");
             }
             System.out.println("#################################");
