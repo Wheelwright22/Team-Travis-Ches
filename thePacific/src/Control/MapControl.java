@@ -82,8 +82,7 @@ private static Scene[] createScenes() throws MapControlException {
     startingScene.setSymbol(" ST ");
     startingScene.setBlocked(false);
     startingScene.setTravelTime(240);
-    ImageIcon startingSceneImage = MapControl.getImage(startingScene,
-           "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
+    
     
      Scene jungle = new Scene();
     jungle.setDescription(
@@ -91,18 +90,15 @@ private static Scene[] createScenes() throws MapControlException {
     jungle.setSymbol(" J ");
     jungle.setBlocked(false);
     jungle.setTravelTime(240);
-    ImageIcon JungleImage = MapControl.getImage(jungle,
-           "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
-    //startingScene.setIcon(startingSceneImage);
-    //scenes[SceneType.start.ordinal()] = startingScene; 
+    
+    
      Scene hatch = new Scene();
     hatch.setDescription(
                 "\n Theres a hatch here, theres no visible latch or handle.");
     hatch.setSymbol(" H ");
     hatch.setBlocked(false);
     hatch.setTravelTime(240);
-    ImageIcon hatchImage = MapControl.getImage(hatch,
-           "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
+
     
      Scene beach = new Scene();
     beach.setDescription(
@@ -111,8 +107,7 @@ private static Scene[] createScenes() throws MapControlException {
     beach.setSymbol(" B ");
     beach.setBlocked(false);
     beach.setTravelTime(240);
-    ImageIcon beachImage = MapControl.getImage(beach,
-           "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
+
     
      Scene village = new Scene();
     village.setDescription(
@@ -120,8 +115,7 @@ private static Scene[] createScenes() throws MapControlException {
     village.setSymbol(" V ");
     village.setBlocked(false);
     village.setTravelTime(240);
-    ImageIcon villageImage = MapControl.getImage(village,
-           "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
+
     
     Scene base = new Scene();
     base.setDescription(
@@ -129,8 +123,7 @@ private static Scene[] createScenes() throws MapControlException {
     base.setSymbol(" US ");
     base.setBlocked(false);
     base.setTravelTime(240);
-    ImageIcon baseImage = MapControl.getImage(base,
-           "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
+
     
      Scene zbase = new Scene();
     zbase.setDescription(
@@ -138,8 +131,7 @@ private static Scene[] createScenes() throws MapControlException {
     zbase.setSymbol(" ZB ");
     zbase.setBlocked(false);
     zbase.setTravelTime(240);
-    ImageIcon zbaseImage = MapControl.getImage(zbase,
-           "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
+
     
       Scene happymart = new Scene();
     happymart.setDescription(
@@ -147,8 +139,7 @@ private static Scene[] createScenes() throws MapControlException {
     happymart.setSymbol(" HM ");
     happymart.setBlocked(false);
     happymart.setTravelTime(240);
-    ImageIcon happymartImage = MapControl.getImage(happymart,
-           "/citbyui/cit260/ThePacific/images/startingPoint.jpg");
+
     
     
     Scene finishScene = new Scene();
@@ -160,10 +151,7 @@ private static Scene[] createScenes() throws MapControlException {
     finishScene.setMapSymbol(" FN ");
     finishScene.setBlocked(false);
     finishScene.setTravelTime(Double.POSITIVE_INFINITY);
-    ImageIcon finishSceneImage = MapControl.getImage(finishScene,
-            "/citbyui/cit260/ThePaciic/images/finish.jpg");
-        //finishScene.setIcon(finishSceneImage);
-    //scenes[SceneType.finish.ordinal()] = finishScene;
+    
         
     return null;
 } 
