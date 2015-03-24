@@ -53,6 +53,9 @@ public class ThePacific {
                 
                 if (ThePacific.logFile != null)
                     ThePacific.outFile.close();
+                
+                if (ThePacific.logFile != null)
+                    ThePacific.outFile.close();
             } catch (IOException ex) {
                 System.out.println("Error Closing File!");
             }
