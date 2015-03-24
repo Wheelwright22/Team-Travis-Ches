@@ -5,7 +5,10 @@
  */
 package view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import thepacific.ThePacific;
 
 /**
  *
@@ -14,6 +17,9 @@ import java.util.Scanner;
 public abstract class View implements InterfaceView {
 
     private String promptMessage;
+    
+    protected final BufferedReader keyboard = ThePacific.getInFile();
+    protected final PrintWriter console = ThePacific.getOutFile();
 
     public View(String promptMessage) {
         this.promptMessage = promptMessage;
@@ -25,7 +31,7 @@ public abstract class View implements InterfaceView {
         boolean done = false;
 
         do {
-            System.out.println(this.promptMessage);// displays the main menu
+            this.console.println(this.promptMessage);// displays the main menu
             value = this.getInput(); // get the users selection
             done = this.doAction(value); // do action based on the selection
 
@@ -35,25 +41,28 @@ public abstract class View implements InterfaceView {
 
     @Override
     public String getInput() {
-        Scanner keyboard = new Scanner(System.in);//keyboard input stream
+        //keyboard input stream
         boolean valid = false; // indicates if the name is retrieved
         String selection = null;
-
-        while (!valid) { // while valid is not yet retrieved.
-            //prompt for the players name
-            System.out.println("Please Make Your Selection");
+        try{
+                 while (!valid) { // while valid is not yet retrieved.
+               
 
             //get the name from the keyboard
-            selection = keyboard.nextLine();
+            selection = keyboard.readLine();
             selection = selection.trim();
 
             //if the name is invalid (If it is less than 2 characters)
             if (selection.length() < 1) {
-                System.out.println("*** Invalid Selection, Try Again! ***");
+                ErrorView.display(this.getClass().getName(), "You Must Enter A Value.");
                 continue; // repeat again
             }
             break; // get out of the repetition 
         }
+                 
+        }  catch(Exception e){
+                ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
+                 }
         return selection;
     }
 

@@ -38,7 +38,9 @@ public class ThePacific {
             ThePacific.inFile = new BufferedReader(new InputStreamReader(System.in));
             
             ThePacific.outFile = new PrintWriter (System.out, true);
-            
+         //open log file
+            String filePath ="log.txt";
+            ThePacific.logFile = new PrintWriter(filePath);
     } catch (Exception e) {
     }
     finally {
@@ -47,6 +49,9 @@ public class ThePacific {
                     ThePacific.inFile.close();
                 
                 if (ThePacific.outFile != null)
+                    ThePacific.outFile.close();
+                
+                if (ThePacific.logFile != null)
                     ThePacific.outFile.close();
             } catch (IOException ex) {
                 System.out.println("Error Closing File!");

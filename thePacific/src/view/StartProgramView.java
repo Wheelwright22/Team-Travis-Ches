@@ -14,7 +14,7 @@ import java.util.Scanner;
  *
  * @author Ches
  */
-public class StartProgramView {
+public class StartProgramView  {
 
     public StartProgramView() {
     }
@@ -99,14 +99,14 @@ public class StartProgramView {
     public String getPlayersName() {
         boolean valid = false; // indicates if the name is retrieved
         String playersName = null;
-        Scanner keyboard = new Scanner(System.in);//keyboard input stream
-
+       //keyboard input stream
+      try{
         while (!valid) { // while valid is not yet retrieved.
             //prompt for the players name
             System.out.println("Please Enter Your Name");
 
             //get the name from the keyboard
-            playersName = keyboard.nextLine();
+            playersName = keyboard.readLine();
             playersName = playersName.trim();
 
             //if the name is invalid (If it is less than 2 characters)
@@ -117,6 +117,9 @@ public class StartProgramView {
             break; // get out of the repetition 
             
     }
+      } catch(Exception e){
+          System.out.println("Error reading input: " + e.getMessage());
+      }
         
     return playersName; //return the players name
     }
