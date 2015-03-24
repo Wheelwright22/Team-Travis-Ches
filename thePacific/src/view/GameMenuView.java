@@ -14,12 +14,29 @@ import Model.Item;
  *
  * @author travi_000
  */
-public class GameMenuView {
+public class GameMenuView extends View {
     
-    void displayMenu() {
-        System.out.println("\n*** displayMenu Stub function called *** ");
+        public GameMenuView() {
+        super(
+                "\n"
+                + "\n ------------------------------------- "
+                + "\n|              Game Menu              |"
+                + "\n ------------------------------------- "
+                + "\nV - Look At The Map                    "
+                + "\nI - View Inventory                     "
+                + "\nA - View The Actors                    "
+                + "\nS - View Max Strength                  "
+                + "\nF - Display The Fight Menu             "
+                + "\nE - Exit The Help Menu                 "
+                + "\n-------------------------------------- ");
     }
-    public boolean doAction(Object obj){
+    
+public GameMenuView(String promptMessage) {
+        super(promptMessage);
+    }        
+
+@Override   
+public boolean doAction(Object obj){
         char selection = ((String) obj).toLowerCase().charAt(0);
         switch (selection){
             case 'V'://Travel to new my location
@@ -34,6 +51,11 @@ public class GameMenuView {
             case 'S'://Views The Max Strength Of The Actors
                 this.viewMaxStrength();
                 break; 
+            case 'F'://Views The Fight Menu
+                this.viewFight();
+                break; 
+            case 'E': //Quits And Returns To The Main Menu
+                return true;
             default:
                 System.out.println("\n*** Invalid Selection ***");
                 return false;    
@@ -48,7 +70,7 @@ public class GameMenuView {
     System.out.println("Description" + "\t" + "Required" +
             "\t" + "In Stock");
     
-    //for each inventory item
+    //For Each Inventory Item
     for (Item inventitem: item){
         //Display the description, the required amount and amount in stock
         System.out.println(inventitem.getDescription() + "\t " +
@@ -58,7 +80,6 @@ public class GameMenuView {
 }
     }
     
-
     private void displayMap() {
          System.out.println("Calls The DisplayMap Stub Function.");
     }
@@ -68,6 +89,12 @@ public class GameMenuView {
         System.out.println(sortedActorList);
     }
       private void viewMaxStrength() {
-       MaxStrengthControl.calculateMaxStrength();    
+       System.out.println("The Max strength of the player is " + MaxStrengthControl.calculateMaxStrength());    
+    }
+
+    //Display The Fight Menu
+    private void viewFight() {
+        FightMenu fightMenu = new FightMenu();
+        fightMenu.displayMenu();
     }
 }
