@@ -37,14 +37,14 @@ public boolean doAction(Object obj) {
         //which caused me to change this variable to a  string
         double population = 0.0;
         double Infected = 0.0;
-        Scanner keyboard = new Scanner(System.in);//keyboard input stream
-
+        //keyboard input stream
+      try{
         while (!valid) { // while valid is not yet retrieved.
             //prompt for the players name
             System.out.println("Enter Number Of Bombs");
 
             //get the name from the keyboard
-            daysInMonth = keyboard.next();
+            daysInMonth = keyboard.readLine();
             // which also caused me to change this from keyboard.nextDouble
             
             // i had to do this step below so i can run the checks below
@@ -55,7 +55,10 @@ public boolean doAction(Object obj) {
                 continue; // repeat again
             } else
             break; // get out of the repetition 
-    } 
+         } 
+      }catch(Exception e){
+            System.out.println("Error Reading Input: " + e.getMessage());
+            }
         return daysInMonth;
     }  
 }

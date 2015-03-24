@@ -15,6 +15,7 @@ import thepacific.ThePacific;
 public class ErrorView {
     
     private static final PrintWriter errorFile = ThePacific.getOutFile();
+    private static final PrintWriter logFile = ThePacific.getLogFile();
     
     public static void display(String className, String errorMessage) {
         
@@ -22,6 +23,8 @@ public class ErrorView {
                     "------------------------------------------------------"
                   + "\n- ERROR - " + errorMessage
                   + "\n----------------------------------------------------");
+        //log error
+        logFile.println(className + "-" + errorMessage);
     }
     
 }
