@@ -19,9 +19,8 @@ public class StartProgramView extends View{
     @Override
     public boolean doAction(Object obj) {
     
-       /*
-        // Display the banner screen
-        this.displayBanner();
+       /*    THESE NEED TO BE IMPLEMENTED INTO MENUS!
+        
         
         //Display the Chief/General Talking Menu
         TalkGeneralMenuView talkgeneralMenu = new TalkGeneralMenuView();
@@ -38,13 +37,16 @@ public class StartProgramView extends View{
         //Display the Store Menu
         StoreView storeView = new StoreView();
         storeView.displayMenu();
-        // display INfection Rate View
         
+        // Display Infection Rate Function
         InfectionView infectionView = new InfectionView();
         infectionView.displayMenu();
 
         */
-  
+         
+        // Display the banner screen
+        
+        System.out.println(this.getPromptMessage());
         
         // Get the player's name
         String playersName = this.getPlayersName();
@@ -55,9 +57,9 @@ public class StartProgramView extends View{
         // Display a personalized welcome message
         this.displayWelcomeMessage(player);
         
+        //Display the Main Menu
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.displayMenu();
-        
         return false;
         
         }

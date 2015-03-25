@@ -38,12 +38,14 @@ public class ThePacific {
             ThePacific.inFile = new BufferedReader(new InputStreamReader(System.in));
             
             ThePacific.outFile = new PrintWriter (System.out, true);
-         //open log file
+         
+            //open log file
+            
             String filePath ="log.txt";
             ThePacific.logFile = new PrintWriter(filePath);
     } catch (Exception e) {
     }
-    finally {
+    /*finally {
             try {
                 if (ThePacific.inFile != null)
                     ThePacific.inFile.close();
@@ -60,21 +62,20 @@ public class ThePacific {
                 System.out.println("Error Closing File!");
             }
         ThePacific.outFile.close();
-        }
+        }*/
         
      // Create and Test The StartProgram 
-        StartProgramView StartProgramView = new StartProgramView();
+        StartProgramView startProgramView = new StartProgramView();
         
         // create and test the startProgram 
-        StartProgramView startProgramView = new StartProgramView();
-        try{
+        //StartProgramView startProgramView = new StartProgramView();
+        //try{
         startProgramView.displayMenu();
-        } catch (Throwable te){
+     /*  } catch (Throwable te){
             System.out.println(te.getMessage());
-            te.printStackTrace();
-            startProgramView.displayMenu();
-        }    
-        
+            te.printStackTrace(); */
+    //    }    
+       
    
     }
 
