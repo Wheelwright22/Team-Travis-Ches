@@ -11,8 +11,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import view.StartProgramView;
 
 /**
@@ -34,18 +32,18 @@ public class ThePacific {
         
         try {
             
-         //Open Character Stream Files For The End User Input And Output
-            ThePacific.inFile = new BufferedReader(new InputStreamReader(System.in));
-            
+            //Open Character Stream Files For The End User Input And Output
+            ThePacific.inFile = new BufferedReader(new InputStreamReader(System.in));           
             ThePacific.outFile = new PrintWriter (System.out, true);
          
-            //open log file
-            
+            //Open Log File            
             String filePath ="log.txt";
             ThePacific.logFile = new PrintWriter(filePath);
-    } catch (Exception e) {
+   
+        } catch (Exception e) {
+            
     }
-    /*finally {
+    finally {
             try {
                 if (ThePacific.inFile != null)
                     ThePacific.inFile.close();
@@ -62,21 +60,19 @@ public class ThePacific {
                 System.out.println("Error Closing File!");
             }
         ThePacific.outFile.close();
-        }*/
+        }
         
-     // Create and Test The StartProgram 
+        // Create and Test The StartProgram 
         StartProgramView startProgramView = new StartProgramView();
         
-        // create and test the startProgram 
-        //StartProgramView startProgramView = new StartProgramView();
-        //try{
+        try{
         startProgramView.displayMenu();
-     /*  } catch (Throwable te){
+        } catch (Throwable te) {
             System.out.println(te.getMessage());
-            te.printStackTrace(); */
-    //    }    
+            te.printStackTrace();
+        startProgramView.displayMenu();
+        }    
        
-   
     }
 
     public static Player getPlayer() {
