@@ -11,8 +11,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import view.StartProgramView;
 
 /**
@@ -34,14 +32,16 @@ public class ThePacific {
         
         try {
             
-         //Open Character Stream Files For The End User Input And Output
-            ThePacific.inFile = new BufferedReader(new InputStreamReader(System.in));
-            
+            //Open Character Stream Files For The End User Input And Output
+            ThePacific.inFile = new BufferedReader(new InputStreamReader(System.in));           
             ThePacific.outFile = new PrintWriter (System.out, true);
-         //open log file
+         
+            //Open Log File            
             String filePath ="log.txt";
             ThePacific.logFile = new PrintWriter(filePath);
-    } catch (Exception e) {
+   
+        } catch (Exception e) {
+            
     }
     finally {
             try {
@@ -62,20 +62,17 @@ public class ThePacific {
         ThePacific.outFile.close();
         }
         
-     // Create and Test The StartProgram 
-        StartProgramView StartProgramView = new StartProgramView();
-        
-        // create and test the startProgram 
+        // Create and Test The StartProgram 
         StartProgramView startProgramView = new StartProgramView();
+        
         try{
         startProgramView.displayMenu();
-        } catch (Throwable te){
+        } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
-            startProgramView.displayMenu();
+        startProgramView.displayMenu();
         }    
-        
-   
+       
     }
 
     public static Player getPlayer() {

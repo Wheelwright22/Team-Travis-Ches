@@ -54,6 +54,7 @@ public class MaxStrengthControl {
 
     //Find The Largest Value In A List
     public static double findMaxStrength(Actor[] Strength) {
+        int[] list = null;
 
         int maxStrength = list[0];
         int i = 1;
