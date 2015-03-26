@@ -23,7 +23,7 @@ public class MainMenuView extends View {
             +"\n|              Main Menu              |"
             +"\n ------------------------------------- "
             +"\nN-New Game                             "
-            +"\nG-Start Game                           "
+            +"\nG-Start Existing Game                  "
             +"\nH-Help                                 "
             +"\nS-Save Game                            "
             +"\nE-Exit                                 "

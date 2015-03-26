@@ -91,7 +91,7 @@ public boolean doAction(Object obj){
       private void viewMaxStrength() {
        System.out.println("The Max strength of the player is " + MaxStrengthControl.calculateMaxStrength());    
     }
-
+      
     //Display The Fight Menu
     private void viewFight() {
         FightMenu fightMenu = new FightMenu();
