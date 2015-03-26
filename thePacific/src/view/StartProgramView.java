@@ -6,7 +6,6 @@
 package view;
 
 import Control.ProgramControl;
-import Exceptions.WaterDrumControlException;
 import Model.Player;
 import java.util.Scanner;
 
@@ -18,31 +17,12 @@ public class StartProgramView {
     public StartProgramView() {
     }
 
-    public void startProgram() throws WaterDrumControlException {
-        
+    @Override
+    public boolean doAction(Object obj) {
+    
+       /*
         // Display the banner screen
         this.displayBanner();
-        
-        // Get the player's name
-        String playersName = this.getPlayersName();
-
-         //Create and save the player object
-        Player player = ProgramControl.createPlayer(playersName);
-        
-        // Display a personalized welcome message
-        this.displayWelcomeMessage(player);
-        
-        //Display the Main Menu
-        MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.displayMenu();
-        
-        //Display the Help Menu
-        HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.displayMenu();
-        
-        //Display the Fight Menu
-        FightMenu fightMenu = new FightMenu();
-        fightMenu.displayMenu();
         
         //Display the Chief/General Talking Menu
         TalkGeneralMenuView talkgeneralMenu = new TalkGeneralMenuView();
@@ -63,35 +43,47 @@ public class StartProgramView {
         
         InfectionView infectionView = new InfectionView();
         infectionView.displayMenu();
+
+        */
+  
+        
+        // Get the player's name
+        String playersName = this.getPlayersName();
+
+         //Create and save the player object
+        Player player = ProgramControl.createPlayer(playersName);
+        
+        // Display a personalized welcome message
+        this.displayWelcomeMessage(player);
+        
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.displayMenu();
+        
+        return false;
         
         }
 
-    public void displayBanner() {
-        System.out.println("\n\n**********************************************");
-        
-        System.out.println("*                                            *"
+    public StartProgramView() {
+        super("\n\n**********************************************"
                        + "\n* Welcome to the remote island of Shikoku.   *"
                        + "\n* You have been assigned to a small team of  *"
                        + "\n* specially trained marines to investigate   *" 
                        + "\n* reports of bizarre occurrences. People are *"
-                       + "\n* disappearing and nobody has answers.       *");
-                
-        System.out.println("*                                            *"
+                       + "\n* disappearing and nobody has answers.       *"
+                       + "\n*                                            *"
+                       + "\n*                                            *"
                        + "\n* You and your team will search the island,  *"
                        + "\n* looking for clues on what is causing panic.*"
                        + "\n* You will need to complete various special  *"
                        + "\n* activities; helping the locals, collecting *"
                        + "\n* tools and supplies, building weapons, etc. *"
                        + "\n* Your mission is to find Shikoku's secret,  *"
-                       + "\n* and stop the madness.                      *");                        
-                                                    
-
-        System.out.println("*                                            *"
+                       + "\n* and stop the madness.                      *"                       
+                       + "\n*                                            *"
                        + "\n* Good luck soldier, you will need it.       *"
                        + "\n* Don't let the island change you.           *"
-                       + "\n*                                            *");
-        
-        System.out.println("**********************************************");
+                       + "\n*                                            *"
+                       + "\n***********************************************");
         
     }
 
@@ -134,11 +126,7 @@ public class StartProgramView {
         System.out.println("\t幸運を祈ります! (Good Luck!)");
         System.out.println("============================================");
     }
-    
-// get selection for menu
 
-    public void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+
+
 }

@@ -71,7 +71,7 @@ public class MainMenuView extends View {
         //Create New Game
         GameControl.createNewGame(ThePacific.getPlayer());
         
-        //display the game
+        //Display The Game
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
     
@@ -105,12 +105,8 @@ public class MainMenuView extends View {
     }
     
     private void displayHelpMenu() {
-        System.out.println("\n displayHelpMenu function called ***");
-    }
-
-
-    public void doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.displayMenu();
     }
 
 }

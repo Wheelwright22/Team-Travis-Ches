@@ -53,6 +53,9 @@ public class ThePacific {
                 
                 if (ThePacific.logFile != null)
                     ThePacific.outFile.close();
+                
+                if (ThePacific.logFile != null)
+                    ThePacific.outFile.close();
             } catch (IOException ex) {
                 System.out.println("Error Closing File!");
             }
@@ -63,13 +66,13 @@ public class ThePacific {
         StartProgramView StartProgramView = new StartProgramView();
         
         // create and test the startProgram 
-                StartProgramView startProgramView = new StartProgramView();
+        StartProgramView startProgramView = new StartProgramView();
         try{
-        startProgramView.display();
+        startProgramView.displayMenu();
         } catch (Throwable te){
             System.out.println(te.getMessage());
             te.printStackTrace();
-            startProgramView.display();
+            startProgramView.displayMenu();
         }    
         
    

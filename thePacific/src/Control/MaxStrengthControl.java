@@ -52,7 +52,6 @@ public class MaxStrengthControl {
     }
     
 
-    
     //Find The Largest Value In A List
     public static double findMaxStrength(Actor[] Strength) {
 
