@@ -14,7 +14,29 @@ import java.util.Scanner;
  * @author Ches
  */
 public class StartProgramView extends View {
-    public StartProgramView() {
+
+        public StartProgramView() {
+        super("\n\n**********************************************"
+                       + "\n* Welcome to the remote island of Shikoku.   *"
+                       + "\n* You have been assigned to a small team of  *"
+                       + "\n* specially trained marines to investigate   *" 
+                       + "\n* reports of bizarre occurrences. People are *"
+                       + "\n* disappearing and nobody has answers.       *"
+                       + "\n*                                            *"
+                       + "\n*                                            *"
+                       + "\n* You and your team will search the island,  *"
+                       + "\n* looking for clues on what is causing panic.*"
+                       + "\n* You will need to complete various special  *"
+                       + "\n* activities; helping the locals, collecting *"
+                       + "\n* tools and supplies, building weapons, etc. *"
+                       + "\n* Your mission is to find Shikoku's secret,  *"
+                       + "\n* and stop the madness.                      *"                       
+                       + "\n*                                            *"
+                       + "\n* Good luck soldier, you will need it.       *"
+                       + "\n* Don't let the island change you.           *"
+                       + "\n*                                            *"
+                       + "\n***********************************************");
+        
     }
 
     @Override
@@ -64,30 +86,6 @@ public class StartProgramView extends View {
         return false;
         
         }
-
-    public StartProgramView() {
-        super("\n\n**********************************************"
-                       + "\n* Welcome to the remote island of Shikoku.   *"
-                       + "\n* You have been assigned to a small team of  *"
-                       + "\n* specially trained marines to investigate   *" 
-                       + "\n* reports of bizarre occurrences. People are *"
-                       + "\n* disappearing and nobody has answers.       *"
-                       + "\n*                                            *"
-                       + "\n*                                            *"
-                       + "\n* You and your team will search the island,  *"
-                       + "\n* looking for clues on what is causing panic.*"
-                       + "\n* You will need to complete various special  *"
-                       + "\n* activities; helping the locals, collecting *"
-                       + "\n* tools and supplies, building weapons, etc. *"
-                       + "\n* Your mission is to find Shikoku's secret,  *"
-                       + "\n* and stop the madness.                      *"                       
-                       + "\n*                                            *"
-                       + "\n* Good luck soldier, you will need it.       *"
-                       + "\n* Don't let the island change you.           *"
-                       + "\n*                                            *"
-                       + "\n***********************************************");
-        
-    }
 
     public String getPlayersName() {
         boolean valid = false; // indicates if the name is retrieved
