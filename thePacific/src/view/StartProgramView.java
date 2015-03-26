@@ -13,8 +13,9 @@ import java.util.Scanner;
  *
  * @author Ches
  */
-public class StartProgramView extends View{
-
+public class StartProgramView extends View {
+    public StartProgramView() {
+    }
 
     @Override
     public boolean doAction(Object obj) {
