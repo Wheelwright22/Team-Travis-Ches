@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class StartProgramView extends View {
 
         public StartProgramView() {
-        super("\n\n**********************************************"
+                   super("\n\n*********************************************"
                        + "\n* Welcome to the remote island of Shikoku.   *"
                        + "\n* You have been assigned to a small team of  *"
                        + "\n* specially trained marines to investigate   *" 

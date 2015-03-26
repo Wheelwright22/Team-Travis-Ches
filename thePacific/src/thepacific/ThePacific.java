@@ -18,67 +18,67 @@ import view.StartProgramView;
  * @author Ches
  */
 public class ThePacific {
-    
-    private static Game currentGame= null;
+
+    private static Game currentGame = null;
     private static Player player = null;
-    
+
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
-    
+
     private static PrintWriter logFile = null;
 
-    
     public static void main(String[] args) {
-        
+        StartProgramView startProgramView = null;
         try {
-            
+
             //Open Character Stream Files For The End User Input And Output
-            ThePacific.inFile = new BufferedReader(new InputStreamReader(System.in));           
-            ThePacific.outFile = new PrintWriter (System.out, true);
-         
+            ThePacific.inFile = new BufferedReader(new InputStreamReader(System.in));
+            ThePacific.outFile = new PrintWriter(System.out, true);
+
             //Open Log File            
-            String filePath ="log.txt";
+            String filePath = "log.txt";
             ThePacific.logFile = new PrintWriter(filePath);
-   
-        } catch (Exception e) {
-            
-    }
-    finally {
-            try {
-                if (ThePacific.inFile != null)
-                    ThePacific.inFile.close();
-                
-                if (ThePacific.outFile != null)
-                    ThePacific.outFile.close();
-                
-                if (ThePacific.logFile != null)
-                    ThePacific.outFile.close();
-                
-                if (ThePacific.logFile != null)
-                    ThePacific.outFile.close();
-            } catch (IOException ex) {
-                System.out.println("Error Closing File!");
-            }
-        ThePacific.outFile.close();
-        }
-        
-        // Create and Test The StartProgram 
-        StartProgramView startProgramView = new StartProgramView();
-        
-        try{
-        startProgramView.displayMenu();
+            startProgramView = new StartProgramView();
+            startProgramView.displayMenu();
+
         } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
-        startProgramView.displayMenu();
-        }    
-       
+            startProgramView.displayMenu();
+        }
+
+    
+
+    
+        finally {
+            try {
+            if (ThePacific.inFile != null) {
+                ThePacific.inFile.close();
+            }
+
+            if (ThePacific.outFile != null) {
+                ThePacific.outFile.close();
+            }
+
+            if (ThePacific.logFile != null) {
+                ThePacific.outFile.close();
+            }
+
+            if (ThePacific.logFile != null) {
+                ThePacific.outFile.close();
+            }
+        } catch (IOException ex) {
+            System.out.println("Error Closing File!");
+        }
+        ThePacific.outFile.close();
     }
 
-    public static Player getPlayer() {
+}
+
+public static Player getPlayer() {
         return player;
     }
-    
+
     public static void setPlayer(Player player) {
         ThePacific.player = player;
     }
@@ -90,9 +90,8 @@ public class ThePacific {
     public static void setCurrentGame(Game currentGame) {
         ThePacific.currentGame = currentGame;
     }
-     
 
-     public static PrintWriter getOutFile() {
+    public static PrintWriter getOutFile() {
         return outFile;
     }
 
@@ -107,7 +106,7 @@ public class ThePacific {
     public static void setInFile(BufferedReader inFile) {
         ThePacific.inFile = inFile;
     }
-        
+
     public static PrintWriter getLogFile() {
         return logFile;
     }
@@ -115,6 +114,5 @@ public class ThePacific {
     public static void setLogFile(PrintWriter logFile) {
         ThePacific.logFile = logFile;
     }
-    
-    
+
 }

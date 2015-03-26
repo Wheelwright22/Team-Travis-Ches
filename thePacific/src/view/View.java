@@ -18,12 +18,15 @@ public abstract class View implements InterfaceView {
 
     private String promptMessage;
     
-    protected final BufferedReader keyboard = ThePacific.getInFile();
-    protected final PrintWriter console = ThePacific.getOutFile();
+    protected BufferedReader keyboard;
+    protected PrintWriter console;
 
     public View(String promptMessage) {
         this.promptMessage = promptMessage;
+        this.keyboard = ThePacific.getInFile();
+        this.console = ThePacific.getOutFile();
     }
+    
 
     @Override
     public void displayMenu() {

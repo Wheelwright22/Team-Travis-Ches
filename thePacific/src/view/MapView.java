@@ -21,11 +21,27 @@ public class MapView {
         Map map = ThePacific.getCurrentGame().getMap();
         Location[][] locations = map.getLocations();
         System.out.println(
-                  "                            "
-                + "\n ------------------------ "
+                  "\n ------------------------ "
                 + "\n|      Shikoku Map       |"
-                + "\n ------------------------ "
-                + "\n ____ ____ ____ ____ ____ "
+                + "\n ------------------------ ");
+        System.out.println("\n      1 ,  2 ,  3 ,  4 ,  5"
+                + "\n#############################");
+               
+        for (int i = 0; i < map.getRowCount(); i++) {
+            System.out.print(i + " | ");
+            for (int j = 0; j< map.getColumnCount(); j++) {
+                Location location = locations[i][j];
+                String symbol = location.getScene().getSymbol();
+                System.out.print(symbol + " | ");
+            }
+            System.out.println("################################");
+        }
+        return locations;
+    }
+
+    
+    
+             /* + "\n ____ ____ ____ ____ ____ "
                 + "\n|    |    |    |    |    |" 
                 + "\n|____|____|____|____|____|"
                 + "\n|    |    |    |    |    |" 
@@ -49,18 +65,10 @@ public class MapView {
                 + "\n    ZB = Zombie Base      "
                 + "\n    HM = Happy Mart       "
                 + "\n    FN = Finishing Scene  ");
-        for (int i = 0; i < map.getRowCount(); i++) {
-            System.out.print(i + " | ");
-            for (int j = 0; j< map.getColumnCount(); j++) {
-                Location location = locations[i][j];
-                String symbol = location.getScene().getSymbol();
-                System.out.print(symbol + " | ");
-            }
-            System.out.println("#################################");
-        }
-        return locations;
-    }
-
+    
+    
+    */
+    
 
      /*       
         locations[0][0] = start
