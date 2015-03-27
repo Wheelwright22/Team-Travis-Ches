@@ -6,6 +6,7 @@
 package Model;
 
 import java.io.Serializable;
+import view.ErrorView;
 
 /**
  *
@@ -25,7 +26,7 @@ public class Map implements Serializable {
     public Map(int rowCount, int columnCount) {
 
         if (rowCount < 1 || columnCount < 1) {
-            System.out.println("The Number Of Rows And Columns Must Be > Zero");
+            ErrorView.display(this.getClass().getName(),"The Number Of Rows And Columns Must Be > Zero");
             return;
         }
 

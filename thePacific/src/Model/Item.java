@@ -14,6 +14,7 @@ import java.util.Objects;
  * @author travi_000
  */
 public class Item {
+    private int quantityInStock;
 
 public enum ItemType {
 
@@ -126,13 +127,12 @@ public static Item[] createItemList() {
         this.description = decription;
     }
     
-    private void setQuantityInStock(int i) {
-       System.out.println("This Will Run The Stub Function");
+    private void setQuantityInStock(int quantityInStock) {
+        this.quantityInStock = quantityInStock;
     }
     
-    public String getQuantityInStock() {
-        System.out.println("This Will Run The Stub Function");  
-            return null;
+    public int getQuantityInStock() {
+        return quantityInStock;
     }
     
     public int getRequiredAmount() {
