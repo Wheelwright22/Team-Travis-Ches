@@ -45,18 +45,18 @@ public class FightMenu extends View {
             case 'E':// Run Away
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 return false;
         }
         return true;
     }
 
     private void shootGun() {
-        System.out.println("Shoot Gun function called");
+        this.console.println("Shoot Gun function called");
     }
 
     private void useKnife() {
-        System.out.println("USe Knife Function Called");
+        this.console.println("USe Knife Function Called");
     }
 
 }

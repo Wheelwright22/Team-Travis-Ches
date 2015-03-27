@@ -66,14 +66,14 @@ public boolean doAction(Object obj){
     private void viewInventory() {
     Item[] item = GameControl.getSortedInventoryList();
     
-    System.out.println("\nList of Inventory Items");
-    System.out.println("Description" + "\t" + "Required" +
+    this.console.println("\nList of Inventory Items");
+    this.console.println("Description" + "\t" + "Required" +
             "\t" + "In Stock");
     
     //For Each Inventory Item
     for (Item inventitem: item){
         //Display the description, the required amount and amount in stock
-        System.out.println(inventitem.getDescription() + "\t " +
+        this.console.println(inventitem.getDescription() + "\t " +
                 inventitem.getRequiredAmount() + "\t" +
                 inventitem.getQuantityInStock());
     
@@ -81,15 +81,15 @@ public boolean doAction(Object obj){
     }
     
     private void displayMap() {
-         System.out.println("Calls The DisplayMap Stub Function.");
+         this.console.println("Calls The DisplayMap Stub Function.");
     }
 
     private void viewActors() {
       Actor[] sortedActorList = MaxStrengthControl.getSortedActorList();
-        System.out.println(sortedActorList);
+        this.console.println(sortedActorList);
     }
       private void viewMaxStrength() {
-       System.out.println("The Max strength of the player is " + MaxStrengthControl.calculateMaxStrength());    
+       this.console.println("The Max strength of the player is " + MaxStrengthControl.calculateMaxStrength());    
     }
       
     //Display The Fight Menu
