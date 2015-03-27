@@ -78,7 +78,7 @@ public class MainMenuView extends View {
     }
 
     private void startExistingGame() {
-        System.out.println("\n\nEnter the file path for file where the game" + "is to be saved");
+        this.console.println("\n\nEnter The File Path For File Where The Game" + " Is To Be Saved:");
         
         String filePath = this.getInput();
         
@@ -93,7 +93,7 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("Enter the File Path" + "where you would like to save your game.");
+        this.console.println("Enter The File Path" + " Where You Would Like To Save Your Game.");
         String filePath = this.getInput();
         
         try{

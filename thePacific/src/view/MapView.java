@@ -15,26 +15,30 @@ import thepacific.ThePacific;
  *
  * @author travi_000
  */
-public class MapView {
+public class MapView extends View {
+
+    public MapView(String promptMessage) {
+        super(promptMessage);
+    }
     
     Location[][] displayMap() {
         Map map = ThePacific.getCurrentGame().getMap();
         Location[][] locations = map.getLocations();
-        System.out.println(
+        this.console.println(
                   "\n ------------------------ "
                 + "\n|      Shikoku Map       |"
                 + "\n ------------------------ ");
-        System.out.println("\n      1 ,  2 ,  3 ,  4 ,  5"
+        this.console.println("\n      1 ,  2 ,  3 ,  4 ,  5"
                 + "\n#############################");
                
         for (int i = 0; i < map.getRowCount(); i++) {
-            System.out.print(i + " | ");
+            this.console.println(i + " | ");
             for (int j = 0; j< map.getColumnCount(); j++) {
                 Location location = locations[i][j];
                 String symbol = location.getScene().getSymbol();
-                System.out.print(symbol + " | ");
+                this.console.println(symbol + " | ");
             }
-            System.out.println("################################");
+            this.console.println("################################");
         }
         return locations;
     }
@@ -115,5 +119,10 @@ public class MapView {
 
 
 */
+
+    @Override
+    public boolean doAction(Object obj) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

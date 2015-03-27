@@ -69,7 +69,7 @@ public class StartProgramView extends View {
          
         // Display the banner screen
         
-        System.out.println(this.getPromptMessage());
+        this.console.println(this.getPromptMessage());
         
         // Get the player's name
         String playersName = this.getPlayersName();
@@ -94,7 +94,7 @@ public class StartProgramView extends View {
       try{
         while (!valid) { // while valid is not yet retrieved.
             //prompt for the players name
-            System.out.println("Please Enter Your Name");
+            this.console.println("Please Enter Your Name");
 
             //get the name from the keyboard
             playersName = keyboard.readLine();
@@ -102,7 +102,7 @@ public class StartProgramView extends View {
 
             //if the name is invalid (If it is less than 2 characters)
             if (playersName.length() < 2) {
-                System.out.println("Name Must Be Longer Than 2 Characters");
+                ErrorView.display(this.getClass().getName(),"\nName Must Be Longer Than 2 Characters");
                 continue; // repeat again
             }
             break; // get out of the repetition 
@@ -120,11 +120,11 @@ public class StartProgramView extends View {
      * @param player
      */
     public void displayWelcomeMessage(Player player) {
-        System.out.println("\n\n=============================================");
-        System.out.println("\tWelcome to Shikoku " + player.getName());
-        System.out.println("\tBe Adventurous, Be Brave, and Stay Safe.");
-        System.out.println("\t幸運を祈ります! (Good Luck!)");
-        System.out.println("============================================");
+        this.console.println("\n\n=============================================");
+        this.console.println("\tWelcome to Shikoku " + player.getName());
+        this.console.println("\tBe Adventurous, Be Brave, and Stay Safe.");
+        this.console.println("\t幸運を祈ります! (Good Luck!)");
+        this.console.println("============================================");
     }
 
 

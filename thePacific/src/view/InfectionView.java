@@ -41,7 +41,7 @@ public boolean doAction(Object obj) {
       try{
         while (!valid) { // while valid is not yet retrieved.
             //prompt for the players name
-            System.out.println("Enter Number Of Bombs");
+            this.console.println("Enter Number Of Bombs");
 
             //get the name from the keyboard
             daysInMonth = keyboard.readLine();

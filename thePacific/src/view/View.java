@@ -50,7 +50,7 @@ public abstract class View implements InterfaceView {
         try{
                  while (!valid) { // while valid is not yet retrieved.
                
-            System.out.print("Enter your name: ");
+            this.console.println("Enter your name: ");
             //get the name from the keyboard
             selection = keyboard.readLine();
             selection = selection.trim();
