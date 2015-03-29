@@ -6,6 +6,7 @@
 package Control;
 
 import Model.Actor;
+import Model.Item;
 import static java.nio.file.Files.list;
 import static java.rmi.Naming.list;
 import static java.util.Collections.list;
@@ -42,6 +43,37 @@ public class MaxStrengthControl {
         return actorList;
     }
 
+        public static Item[] getSortedItemList() {
+
+        //This Gets The Actor List.
+        Item[] unsortedItemList = ThePacific.getCurrentGame().getActor();
+
+        //This Command Makes A Clone Of The Original List.
+        Item[] itemList = unsortedItemList.clone();
+
+        //Bubblesorting The Actor List Into Alphabetical Order.
+        Item tempItem;
+        for (int i = 0; i < itemList.length - 1; i++) {
+            for (int j = 0; j < itemList.length - 1 - i; j++) {
+                if (itemList[j].getDescription().
+                        compareToIgnoreCase(itemList[j + 1].getDescription()) > 0) {
+                    tempItem = itemList[j];
+                    itemList[j] = itemList[j + 1];
+                    itemList[j + 1] = tempItem;
+                }
+            }
+        }
+        return itemList;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
       public static double calculateMaxStrength() {
         

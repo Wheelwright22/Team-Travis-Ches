@@ -8,6 +8,7 @@ package view;
 import Control.GameControl;
 import Control.MaxStrengthControl;
 import Model.Actor;
+import Model.Item;
 import java.util.Scanner;
 
 /**
@@ -15,6 +16,10 @@ import java.util.Scanner;
  * @author Ches
  */
 public class FightMenu extends View {
+
+    private static void strengthPrint(String filePath) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public FightMenu() {
         super(
@@ -71,7 +76,7 @@ public class FightMenu extends View {
     }
 
     private void itemPrint() {
-        Actor[] sortedActorList = MaxStrengthControl.getSortedActorList();
+        Item[] sortedItemList = MaxStrengthControl.getSortedItemList();
         
         this.console.println("\n\nEnter The File Path For Items" + " To Be Saved:");
         
@@ -88,9 +93,9 @@ public class FightMenu extends View {
         this.console.println("Item" + "\t" + "How Many In Stock?" + "\t");
 
         //For Each Item In The Enum
-        for (Item item : sortedActorList) {
+        for (Item item : sortedItemList) {
             //This Will Display The Item And How Many Are In Stock
-            this.console.println(Actor.getType()) + "\t    " + Actor.getStrength());
+            this.console.println(Item.getDescription()) + "\t    " + Item.getQuantityInStock());
         
       }
     }
