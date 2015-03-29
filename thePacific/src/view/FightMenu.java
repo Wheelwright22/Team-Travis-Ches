@@ -5,6 +5,8 @@
  */
 package view;
 
+import Control.MaxStrengthControl;
+import Model.Actor;
 import java.util.Scanner;
 
 /**
@@ -23,6 +25,8 @@ public class FightMenu extends View {
                 + "\nS- Shoot                               "
                 + "\nK- Knife                               "
                 + "\nE- Run                                 "
+                + "\nP- Print The Strength Of The Actors    "
+                + "\nI- Print A List Of Items / In Stock    "
                 + "\n---------------------------------------");
 
     }
@@ -42,6 +46,12 @@ public class FightMenu extends View {
             case 'K'://use your knife to attack
                 this.useKnife();
                 break;
+            case 'P'://This Will Print Out The Strength Of The Actors
+                this.strengthPrint();
+                break;
+            case 'I'://This Will Print Out The Strength Of The Actors
+                this.itemPrint();
+                break;
             case 'E':// Run Away
                 break;
             default:
@@ -59,4 +69,45 @@ public class FightMenu extends View {
         this.console.println("USe Knife Function Called");
     }
 
+    private void itemPrint() {
+        Actor[] sortedActorList = MaxStrengthControl.getSortedActorList();
+
+        this.console.println("\n### Items ###");
+        this.console.println("Item" + "\t" + "How Many In Stock?" + "\t");
+
+        //For Each Item In The Enum
+        for (Actor actor : sortedActorList) {
+            //This Will Display The Item And How Many Are In Stock
+            this.console.println(Actor.getType()) + "\t    " + Actor.getStrength());
+        
+      }
+    }
+    
+    
+    
+    private void strengthPrint() {
+        Actor[] sortedActorList = MaxStrengthControl.getSortedActorList();
+
+        this.console.println("\n### Strength Of Actors ###");
+        this.console.println("Actor " + "\t" + "Actor Strength" + "\t");
+
+        //For Each Actor In The Enum
+        for (Actor actor : sortedActorList) {
+            //This Will Display The Actors Names And Their Strength Number
+            this.console.println(Actor.getType()) + "\t    " + Actor.getStrength());
+        
+      }
+    }
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
