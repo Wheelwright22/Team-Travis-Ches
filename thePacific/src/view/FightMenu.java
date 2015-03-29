@@ -5,6 +5,7 @@
  */
 package view;
 
+import Control.GameControl;
 import Control.MaxStrengthControl;
 import Model.Actor;
 import java.util.Scanner;
@@ -51,7 +52,7 @@ public class FightMenu extends View {
                 break;
             case 'I'://This Will Print Out The Strength Of The Actors
                 this.itemPrint();
-                break;
+                break; 
             case 'E':// Run Away
                 break;
             default:
@@ -71,6 +72,17 @@ public class FightMenu extends View {
 
     private void itemPrint() {
         Actor[] sortedActorList = MaxStrengthControl.getSortedActorList();
+        
+        this.console.println("\n\nEnter The File Path For Items" + " To Be Saved:");
+        
+        String filePath = this.getInput();
+        
+        try{
+            GameControl.getExistingGame(filePath);
+        }catch (Exception ex){
+            ErrorView.display("FightMenu", ex.getMessage());
+        }
+        
 
         this.console.println("\n### Items ###");
         this.console.println("Item" + "\t" + "How Many In Stock?" + "\t");
@@ -88,6 +100,18 @@ public class FightMenu extends View {
     private void strengthPrint() {
         Actor[] sortedActorList = MaxStrengthControl.getSortedActorList();
 
+    
+        this.console.println("\n\nEnter The File Path For Strength Values" + " To Be Saved:");
+        
+        String filePath = this.getInput();
+        
+        try{
+            FightMenu.strengthPrint(filePath);
+        }catch (Exception ex){
+            ErrorView.display("FightMenu", ex.getMessage());
+        }
+    
+    
         this.console.println("\n### Strength Of Actors ###");
         this.console.println("Actor " + "\t" + "Actor Strength" + "\t");
 
@@ -97,5 +121,17 @@ public class FightMenu extends View {
             this.console.println(Actor.getType()) + "\t    " + Actor.getStrength());
         
       }
-    }
+    } 
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
