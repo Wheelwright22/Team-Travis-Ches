@@ -76,7 +76,7 @@ public class FightMenu extends View {
         this.console.println("Item" + "\t" + "How Many In Stock?" + "\t");
 
         //For Each Item In The Enum
-        for (Actor actor : sortedActorList) {
+        for (Item item : sortedActorList) {
             //This Will Display The Item And How Many Are In Stock
             this.console.println(Actor.getType()) + "\t    " + Actor.getStrength());
         
@@ -98,16 +98,4 @@ public class FightMenu extends View {
         
       }
     }
-}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
