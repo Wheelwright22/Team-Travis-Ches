@@ -46,7 +46,7 @@ public class MaxStrengthControl {
         public static Item[] getSortedItemList() {
 
         //This Gets The Actor List.
-        Item[] unsortedItemList = ThePacific.getCurrentGame().getActor();
+        Item[] unsortedItemList = Item.getType();
 
         //This Command Makes A Clone Of The Original List.
         Item[] itemList = unsortedItemList.clone();
