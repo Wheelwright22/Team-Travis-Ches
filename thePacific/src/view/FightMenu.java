@@ -96,8 +96,9 @@ public class FightMenu extends View {
 
         //Each Item In The Sorted Item List
         for (Item item : sortedItemList) {
-            //This Will Display The Item And How Many Are In Stock
-            this.console.println(Item.getDescription() + "\t" + Item.getQuantityInStock());
+            //This Will Display The Item And How Many Are In Stock.
+            //Using the \t Will add a Tab (~6 Spaces) In Between The Actor Type And The Strength Number.
+            this.console.println(item.getDescription() + "\t" + item.getQuantityInStock());
         
       }
     }
@@ -125,9 +126,9 @@ public class FightMenu extends View {
 
         //Each Actor In The Sorted Actor List
         for (Actor actor : sortedActorList) {
-            //This Will Display The Actors Names And Their Strength Number
-            //Using the \t Will add a Tab (~6 Spaces) In Between The Actor Type And The Strength Number
-            this.console.println(Actor.getType() + "\t" + Actor.getStrength());
+            //This Will Display The Actors Names And Their Strength Number.
+            //Using the \t Will add a Tab (~6 Spaces) In Between The Actor Type And The Strength Number.
+            this.console.println(actor.getType() + "\t" + actor.getStrength());
         
       }
     } 
