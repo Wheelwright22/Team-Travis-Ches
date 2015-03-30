@@ -9,6 +9,9 @@ import Control.GameControl;
 import Control.MaxStrengthControl;
 import Model.Actor;
 import Model.Item;
+import Model.Location;
+import Model.Map;
+import thepacific.ThePacific;
 
 /**
  *
@@ -80,9 +83,29 @@ public boolean doAction(Object obj){
 }
     }
     
-    private void displayMap() {
-         this.console.println("Calls The DisplayMap Stub Function.");
+    private Location[][] displayMap() {
+             
+        Map map = ThePacific.getCurrentGame().getMap();
+        Location[][] locations = map.getLocations();
+        this.console.println(
+                  "\n ------------------------ "
+                + "\n|      Shikoku Map       |"
+                + "\n ------------------------ ");
+        this.console.println("\n      1 ,  2 ,  3 ,  4 ,  5"
+                + "\n#############################");
+               
+        for (int i = 0; i < map.getRowCount(); i++) {
+            this.console.println(i + " | ");
+            for (int j = 0; j< map.getColumnCount(); j++) {
+                Location location = locations[i][j];
+                String symbol = location.getScene().getSymbol();
+                this.console.println(symbol + " | ");
+            }
+            this.console.println("################################");
+        }
+        return locations;
     }
+    
 
     private void viewActors() {
       Actor[] sortedActorList = MaxStrengthControl.getSortedActorList();

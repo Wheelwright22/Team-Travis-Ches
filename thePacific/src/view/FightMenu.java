@@ -89,13 +89,15 @@ public class FightMenu extends View {
         }
         
 
-        this.console.println("\n### Items ###");
-        this.console.println("Item" + "\t" + "How Many In Stock?" + "\t");
+        this.console.println("\n-----------------------------"
+                           + "\n|    ## Items In Stock ##    |"
+                           + "\n-----------------------------"
+                           + "\n|| Item ||" + "\t" + "|| Stock? ||");
 
-        //For Each Item In The Enum
+        //Each Item In The Sorted Item List
         for (Item item : sortedItemList) {
             //This Will Display The Item And How Many Are In Stock
-            this.console.println(Item.getDescription()) + "\t    " + Item.getQuantityInStock());
+            this.console.println(Item.getDescription() + "\t" + Item.getQuantityInStock());
         
       }
     }
@@ -116,14 +118,16 @@ public class FightMenu extends View {
             ErrorView.display("FightMenu", ex.getMessage());
         }
     
-    
-        this.console.println("\n### Strength Of Actors ###");
-        this.console.println("Actor " + "\t" + "Actor Strength" + "\t");
+        this.console.println("\n----------------------------"
+                           + "\n| ## Strength Of Actors ##  |"
+                           + "\n----------------------------"
+                           + "\n|| Actor ||" + "\t" + "|| Strength ||");
 
-        //For Each Actor In The Enum
+        //Each Actor In The Sorted Actor List
         for (Actor actor : sortedActorList) {
             //This Will Display The Actors Names And Their Strength Number
-            this.console.println(Actor.getType()) + "\t    " + Actor.getStrength());
+            //Using the \t Will add a Tab (~6 Spaces) In Between The Actor Type And The Strength Number
+            this.console.println(Actor.getType() + "\t" + Actor.getStrength());
         
       }
     } 
