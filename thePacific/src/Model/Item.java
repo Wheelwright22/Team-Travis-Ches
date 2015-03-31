@@ -14,7 +14,14 @@ import java.util.Objects;
  * @author travi_000
  */
 public class Item {
+    
     private int quantityInStock;
+    private String type;
+    private String description;
+    private int RequiredAmount;
+    
+     public Item() {
+    }
 
 public enum ItemType {
 
@@ -31,11 +38,6 @@ public enum ItemType {
         Sickle;
         
 }
-    
-    private String type;
-    private String description;
-    private int RequiredAmount;
-    private int QuantityInStock;
 
     //Constructor
 public static Item[] createItemList() {
@@ -123,8 +125,8 @@ public static Item[] createItemList() {
         return description;
     }
 
-    public void setDecription(String decription) {
-        this.description = decription;
+    public void setDescription(String description) {
+        this.description = description;
     }
     
     private void setQuantityInStock(int quantityInStock) {
@@ -141,20 +143,5 @@ public static Item[] createItemList() {
 
     public void setRequiredAmount(int i) {
         this.RequiredAmount = RequiredAmount;
-    }
-    
-    
-//toString
-    @Override
-    public String toString() {
-        return "Items{" + "type=" + type + ", decription=" + description + '}';
-    }
-    public void setDescription(String m16_Rifle) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
-    
-    
-     
+    }    
 }
