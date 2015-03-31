@@ -41,7 +41,7 @@ public enum ItemType {
 
     //Constructor
 public static Item[] createItemList() {
-      Item[] item = new Item[10];
+      Item[] item = new Item[11];
       
       Item M16 = new Item();
       M16.setDescription("M16 Rifle");

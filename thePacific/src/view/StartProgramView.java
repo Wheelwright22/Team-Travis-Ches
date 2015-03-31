@@ -66,16 +66,16 @@ public class StartProgramView extends View {
         infectionView.displayMenu();
 
         */
-         
+        String name = obj.toString(); 
         // Display the banner screen
         
-        this.console.println(this.getPromptMessage());
+        //this.console.println(this.getPromptMessage());
         
         // Get the player's name
-        String playersName = this.getPlayersName();
+        //String playersName = this.getPlayersName();
 
          //Create and save the player object
-        Player player = ProgramControl.createPlayer(playersName);
+        Player player = ProgramControl.createPlayer(name);
         
         // Display a personalized welcome message
         this.displayWelcomeMessage(player);
@@ -87,7 +87,34 @@ public class StartProgramView extends View {
         
         }
 
-    public String getPlayersName() {
+    @Override
+    public String getInput() {
+        //keyboard input stream
+        boolean valid = false; // indicates if the name is retrieved
+        String selection = null;
+        try{
+                 while (!valid) { // while valid is not yet retrieved.
+               
+            this.console.println("Please Enter Your Name: ");
+            //get the name from the keyboard
+            selection = keyboard.readLine();
+            selection = selection.trim();
+
+            //if the name is invalid (If it is less than 2 characters)
+            if (selection.length() < 2) {
+                ErrorView.display(this.getClass().getName(),"\nName Must Be Longer Than 2 Characters");
+                continue; // repeat again
+            }
+            break; // get out of the repetition 
+        }
+                 
+        }  catch(Exception e){
+                ErrorView.display(this.getClass().getName(), "Error reading input: " + e.getMessage());
+                 }
+        return selection;
+    }
+    
+    /* public String getPlayersName() {
         boolean valid = false; // indicates if the name is retrieved
         String playersName = null;
        //keyboard input stream
@@ -113,7 +140,7 @@ public class StartProgramView extends View {
       }
         
     return playersName; //return the players name
-    }
+    } */
 
     /**
      *

@@ -95,8 +95,8 @@ public boolean doAction(Object obj){
                 + "\n#############################");
                
         for (int i = 0; i < map.getRowCount(); i++) {
-            this.console.println(i + " | ");
-            for (int j = 0; j< map.getColumnCount(); j++) {
+            this.console.print(i + " | ");
+            for (int j = 0; j < map.getColumnCount(); j++) {
                 Location location = locations[i][j];
                 String symbol = location.getScene().getSymbol();
                 this.console.println(symbol + " | ");

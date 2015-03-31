@@ -30,7 +30,7 @@ public abstract class View implements InterfaceView {
 
     @Override
     public void displayMenu() {
-        String value = "";
+        String value;
         boolean done = false;
 
         do {
@@ -50,7 +50,7 @@ public abstract class View implements InterfaceView {
         try{
                  while (!valid) { // while valid is not yet retrieved.
                
-            this.console.println("Enter your name: ");
+            this.console.println("Select: ");
             //get the name from the keyboard
             selection = keyboard.readLine();
             selection = selection.trim();

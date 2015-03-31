@@ -69,10 +69,6 @@ public class GameControl {
         return itemList;
     }
 
-    static void assignScenesToLocations(Map map, Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public static void saveGame(Game game, String filepath) 
         throws GameControlException {
             

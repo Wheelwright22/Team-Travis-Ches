@@ -30,7 +30,7 @@ public class MapControl {
         Scene[] scenes = createScenes();
         
         //Assign The Different Scenes To Locations In The Map
-        GameControl.assignScenesToLocations(map, scenes);
+        assignScenesToLocations(map, scenes);
         
         return map;
         
@@ -47,10 +47,6 @@ public class MapControl {
        }
         return 0;
     }
-
-    private static ImageIcon getImage(Scene startingScene, String citbyuicit260ThePacificimagesstartingPoin) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     public enum SceneType{
         start,
@@ -65,7 +61,6 @@ public class MapControl {
 }
 
 private static Scene[] createScenes() throws MapControlException {
-   BufferedImage image = null;
     
     Game game = ThePacific.getCurrentGame();
     
