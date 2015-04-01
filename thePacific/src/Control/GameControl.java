@@ -57,8 +57,8 @@ public class GameControl {
         Item tempItem;
         for (int i = 0; i < itemList.length - 1; i++) {
             for (int j = 0; j < itemList.length - 1 - i; j++) {
-                if (itemList[j].getDescription().
-                        compareToIgnoreCase(itemList[j + 1].getDescription()) > 0) {
+                if (itemList[j].getType().
+                        compareToIgnoreCase(itemList[j + 1].getType()) > 0) {
                     tempItem = itemList[j];
                     itemList[j] = itemList[j + 1];
                     itemList[j + 1] = tempItem;
@@ -98,13 +98,5 @@ public class GameControl {
             throw new GameControlException(e.getMessage());
         }
         ThePacific.setCurrentGame(game);
-    }
-    
-        
-    
-    
-
-    double calcVolumeOfWaterDrum(double height, double radius) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

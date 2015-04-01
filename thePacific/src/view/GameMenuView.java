@@ -76,7 +76,7 @@ public boolean doAction(Object obj){
     //For Each Inventory Item
     for (Item inventitem: item){
         //Display the description, the required amount and amount in stock
-        this.console.println(inventitem.getDescription() + "\t " +
+        this.console.println(inventitem.getType() + "\t " +
                 inventitem.getRequiredAmount() + "\t" +
                 inventitem.getQuantityInStock());
     

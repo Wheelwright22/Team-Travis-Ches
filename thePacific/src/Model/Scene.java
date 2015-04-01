@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
  * @author Ches
  */
 public class Scene implements Serializable {
-    private String type;
+    private Object type;
     private String symbol;
     private String description;
     private double travelTime;
@@ -30,11 +30,11 @@ public class Scene implements Serializable {
     }
   
     //Getter and Setter Functions
-    public String getType() {
+    public Object getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Object type) {
         this.type = type;
     }
 
@@ -61,6 +61,16 @@ public class Scene implements Serializable {
     public void setTravelTime(double travelTime) {
         this.travelTime = travelTime;
     }
+    
+    public void setBlocked(boolean setBlocked) {
+        this.setBlocked = setBlocked;
+    }
+
+    public boolean isBlocked() {
+        return setBlocked;
+    }
+    
+    
  //toString function
 
     @Override
@@ -102,15 +112,5 @@ public class Scene implements Serializable {
         }
         return true;
     }
-
-    public void setBlocked(boolean setBlocked) {
-        this.setBlocked = setBlocked;
-    }
-
-    public void setMapSymbol(String symbol) {
-        this.symbol = symbol;
-    }
-    
-    
     
 }

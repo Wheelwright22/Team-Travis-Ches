@@ -53,6 +53,22 @@ public class Location implements Serializable{
         this.visited = visited;
     }
     
+        public ArrayList<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actor> actors) {
+        this.actors = actors;
+    }
+  
+   public void setScene(Scene scene) {
+        this.scene = scene;
+    }    
+
+    public Scene getScene() {
+        return scene;
+    }
+    
     //ToString
     @Override
     public String toString() {
@@ -90,13 +106,5 @@ public class Location implements Serializable{
             return false;
         }
         return true;
-    }
-
-   public void setScene(Scene scene) {
-        this.scene = scene;
-    }    
-
-    public Scene getScene() {
-        return scene;
     }
 }

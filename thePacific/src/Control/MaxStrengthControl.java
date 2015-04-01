@@ -32,8 +32,8 @@ public class MaxStrengthControl {
         Actor tempActor;
         for (int i = 0; i < actorList.length - 1; i++) {
             for (int j = 0; j < actorList.length - 1 - i; j++) {
-                if (actorList[j].getDescription().
-                        compareToIgnoreCase(actorList[j + 1].getDescription()) > 0) {
+                if (actorList[j].getType().
+                        compareToIgnoreCase(actorList[j + 1].getType()) > 0) {
                     tempActor = actorList[j];
                     actorList[j] = actorList[j + 1];
                     actorList[j + 1] = tempActor;
@@ -42,38 +42,6 @@ public class MaxStrengthControl {
         }
         return actorList;
     }
-
-        public static Item[] getSortedItemList() {
-
-        //This Gets The Actor List.
-        Item[] unsortedItemList = ThePacific.getCurrentGame().getItem();
-
-        //This Command Makes A Clone Of The Original List.
-        Item[] itemList = unsortedItemList.clone();
-
-        //Bubblesorting The Actor List Into Alphabetical Order.
-        Item tempItem;
-        for (int i = 0; i < itemList.length - 1; i++) {
-            for (int j = 0; j < itemList.length - 1 - i; j++) {
-                if (itemList[j].getDescription().
-                        compareToIgnoreCase(itemList[j + 1].getDescription()) > 0) {
-                    tempItem = itemList[j];
-                    itemList[j] = itemList[j + 1];
-                    itemList[j + 1] = tempItem;
-                }
-            }
-        }
-        return itemList;
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
       public static double calculateMaxStrength() {
         

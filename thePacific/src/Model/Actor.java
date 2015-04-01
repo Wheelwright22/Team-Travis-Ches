@@ -6,14 +6,12 @@
 package Model;
 
 import java.awt.Point;
-import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
  * @author travi_000
  */
-public enum Actor implements Serializable{
+public enum Actor {
     
     General_Smith("The 4-Star General Himself, He Leads The Ivestigation.", 10),
     Private("This Is You, A Brand New Marine!", 5),
@@ -23,10 +21,6 @@ public enum Actor implements Serializable{
     Zombie("A Crazy Experiment Gone Wrong. They Roam The Island.", 7),
     Zombie_Hitler("The Main Zombie In Charge, Patience = 0.", 10),
     Store_Owner_Kim("The Proud Owner of The Happy Mart", 3);    
-
-    public static Object ordinal(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     //Class Instance Variables
     private final String Type;
@@ -51,17 +45,7 @@ public enum Actor implements Serializable{
         return coordinates;
     }
     
-        public int getStrength() {
+    public int getStrength() {
         return Strength;
-    }
-
-    public String getDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    private static class Strength {
-
-        public Strength() {
-        }
     }
 }

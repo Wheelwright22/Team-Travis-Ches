@@ -66,11 +66,6 @@ public class Map implements Serializable {
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
-    
-    private static Scene[] createScenes() {
-        System.out.println("Called the createScenes Function!");
-        return null;
-    }
 
     public Location[][] getLocations() {
         return locations;

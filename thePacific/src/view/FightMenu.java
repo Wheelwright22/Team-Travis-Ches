@@ -76,7 +76,7 @@ public class FightMenu extends View {
     }
 
     private void itemPrint() {
-        Item[] sortedItemList = MaxStrengthControl.getSortedItemList();
+        Item[] sortedItemList = GameControl.getSortedInventoryList();
         
         this.console.println("\n\nEnter The File Path For Items" + " To Be Saved:");
         
@@ -98,7 +98,7 @@ public class FightMenu extends View {
         for (Item item : sortedItemList) {
             //This Will Display The Item And How Many Are In Stock.
             //Using the \t Will add a Tab (~6 Spaces) In Between The Actor Type And The Strength Number.
-            this.console.println(item.getDescription() + "\t" + item.getQuantityInStock());
+            this.console.println(item.getType() + "\t" + item.getQuantityInStock());
         
       }
     }

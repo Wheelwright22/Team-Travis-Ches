@@ -12,16 +12,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import view.StartProgramView;
-import view.View;
 
 /**
  *
  * @author Ches
  */
-public class ThePacific extends View {
+public class ThePacific {
 
-    private static Game currentGame = null;
-    private static Player player = null;
+    private static Game currentGame = new Game();
+    private static Player player = new Player();
 
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
@@ -46,37 +45,31 @@ public class ThePacific extends View {
             System.out.println(te.getMessage());
             te.printStackTrace();
             startProgramView.displayMenu();
-        }
-
-    
-
-    
-        finally {
+        } finally {
             try {
-            if (ThePacific.inFile != null) {
-                ThePacific.inFile.close();
-            }
+                if (ThePacific.inFile != null) {
+                    ThePacific.inFile.close();
+                }
 
-            if (ThePacific.outFile != null) {
-                ThePacific.outFile.close();
-            }
+                if (ThePacific.outFile != null) {
+                    ThePacific.outFile.close();
+                }
 
-            if (ThePacific.logFile != null) {
-                ThePacific.outFile.close();
-            }
+                if (ThePacific.logFile != null) {
+                    ThePacific.outFile.close();
+                }
 
-            if (ThePacific.logFile != null) {
-                ThePacific.outFile.close();
+                if (ThePacific.logFile != null) {
+                    ThePacific.outFile.close();
+                }
+            } catch (IOException ex) {
+                System.out.println("Error Closing File!");
             }
-        } catch (IOException ex) {
-            System.out.println("Error Closing File!");
         }
-        ThePacific.outFile.close();
+
     }
 
-}
-
-public static Player getPlayer() {
+    public static Player getPlayer() {
         return player;
     }
 
@@ -115,14 +108,4 @@ public static Player getPlayer() {
     public static void setLogFile(PrintWriter logFile) {
         ThePacific.logFile = logFile;
     }
-
-    public ThePacific(String promptMessage) {
-        super(promptMessage);
-    }
-
-    @Override
-    public boolean doAction(Object obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }
