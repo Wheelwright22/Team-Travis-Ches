@@ -12,12 +12,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import view.StartProgramView;
+import view.View;
 
 /**
  *
  * @author Ches
  */
-public class ThePacific {
+public class ThePacific extends View {
 
     private static Game currentGame = null;
     private static Player player = null;
@@ -113,6 +114,15 @@ public static Player getPlayer() {
 
     public static void setLogFile(PrintWriter logFile) {
         ThePacific.logFile = logFile;
+    }
+
+    public ThePacific(String promptMessage) {
+        super(promptMessage);
+    }
+
+    @Override
+    public boolean doAction(Object obj) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

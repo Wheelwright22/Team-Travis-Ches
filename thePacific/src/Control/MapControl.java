@@ -150,7 +150,7 @@ private static Scene[] createScenes() throws MapControlException {
         Location[][] locations = map.getLocations();
         
         //Start Point
-        locations[0][0].setScene(scenes [SceneType.start.ordinal()]);
+     /*   locations[0][0].setScene(scenes [SceneType.start.ordinal()]);
         locations[0][1].setScene(scenes [SceneType.beach.ordinal()]);
         locations[0][2].setScene(scenes [SceneType.beach.ordinal()]);
         locations[0][3].setScene(scenes [SceneType.beach.ordinal()]);
@@ -191,7 +191,7 @@ private static Scene[] createScenes() throws MapControlException {
         locations[5][2].setScene(scenes [SceneType.jungle.ordinal()]);
         locations[5][3].setScene(scenes [SceneType.jungle.ordinal()]);
         locations[5][4].setScene(scenes [SceneType.jungle.ordinal()]);
-        locations[5][5].setScene(scenes [SceneType.finish.ordinal()]);
+        locations[5][5].setScene(scenes [SceneType.finish.ordinal()]);*/
     }
  
  public static void moveActorToLocation(Actor actor, Point coordinates)
