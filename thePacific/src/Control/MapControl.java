@@ -12,8 +12,6 @@ import Model.Location;
 import Model.Map;
 import Model.Scene;
 import java.awt.Point;
-import java.awt.image.BufferedImage;
-import javax.swing.ImageIcon;
 import thepacific.ThePacific;
 
 /**
