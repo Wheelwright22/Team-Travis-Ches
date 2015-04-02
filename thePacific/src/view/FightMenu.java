@@ -9,6 +9,7 @@ import Control.GameControl;
 import Control.MaxStrengthControl;
 import Model.Actor;
 import Model.Item;
+import static Model.Item.ItemType.Ammo;
 import java.util.Scanner;
 
 /**
@@ -68,7 +69,9 @@ public class FightMenu extends View {
     }
 
     private void shootGun() {
-        this.console.println("Shoot Gun function called");
+      this.console.println("You Shot the Gun");
+         
+         
     }
 
     private void useKnife() {

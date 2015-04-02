@@ -40,8 +40,10 @@ public GameMenuView(String promptMessage) {
 
 @Override   
 public boolean doAction(Object obj){
-        char selection = ((String) obj).toLowerCase().charAt(0);
-        switch (selection){
+    String  value = (String) obj;
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
+        switch (choice){
             case 'V'://Travel to new my location
                 this.displayMap();
                 break;
