@@ -80,17 +80,6 @@ public class FightMenu extends View {
 
     private void itemPrint() {
         Item[] sortedItemList = GameControl.getSortedInventoryList();
-        
-        this.console.println("\n\nEnter The File Path For Items" + " To Be Saved:");
-        
-        String filePath = this.getInput();
-        
-        try{
-            GameControl.getExistingGame(filePath);
-        }catch (Exception ex){
-            ErrorView.display("FightMenu", ex.getMessage());
-        }
-        
 
         this.console.println("\n-----------------------------"
                            + "\n|    ## Items In Stock ##    |"
@@ -110,17 +99,6 @@ public class FightMenu extends View {
     
     private void strengthPrint() {
         Actor[] sortedActorList = MaxStrengthControl.getSortedActorList();
-
-    
-        this.console.println("\n\nEnter The File Path For Strength Values" + " To Be Saved:");
-        
-        String filePath = this.getInput();
-        
-        try{
-            FightMenu.strengthPrint(filePath);
-        }catch (Exception ex){
-            ErrorView.display("FightMenu", ex.getMessage());
-        }
     
         this.console.println("\n----------------------------"
                            + "\n| ## Strength Of Actors ##  |"
