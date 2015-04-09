@@ -65,7 +65,7 @@ public boolean doAction(Object obj){
                 System.out.println("\n*** Invalid Selection ***");
                 return false;    
         }
-        return true;
+        return false;
     }
 
     private void viewInventory() {
@@ -90,20 +90,24 @@ public boolean doAction(Object obj){
         Map map = ThePacific.getCurrentGame().getMap();
         Location[][] locations = map.getLocations();
         this.console.println(
-                  "\n ------------------------ "
-                + "\n|      Shikoku Map       |"
-                + "\n ------------------------ ");
-        this.console.println("\n      1 ,  2 ,  3 ,  4 ,  5"
-                + "\n#############################");
+                  "\n         ------------------------ "
+                + "\n        |       Shikoku Map      |"
+                + "\n         ------------------------ ");
+        this.console.println("\n      1 ,    2 ,    3 ,    4 ,    5"
+                + "\n#######################################");
                
         for (int i = 0; i < map.getRowCount(); i++) {
-            this.console.print(i + " | ");
+            this.console.print(i + " || ");
             for (int j = 0; j < map.getColumnCount(); j++) {
                 Location location = locations[i][j];
                 String symbol = location.getScene().getSymbol();
-                this.console.println(symbol + " | ");
+                 if (location.isVisited()==false) {
+                    this.console.print("???" + " || "); }
+                 else {              
+                this.console.print(symbol + " || ");
             }
-            this.console.println("################################");
+            }
+            this.console.println("##");
         }
         return locations;
     }

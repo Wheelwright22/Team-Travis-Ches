@@ -64,7 +64,7 @@ public class MainMenuView extends View {
            System.out.println("\n*** Invalid Selection *** Try Again");
            return false;
    }
-        return true;
+        return false;
 }
 
     private void startNewGame() throws MapControlException {
